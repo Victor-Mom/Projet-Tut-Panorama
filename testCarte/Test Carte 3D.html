@@ -2,7 +2,7 @@
 <html lang="en">
 <head>
     <meta charset="UTF-8">
-    <title>Test Carte Englobage demi-cylindre</title>
+    <title>Test Carte 3D</title>
     <script src="https://aframe.io/releases/1.0.4/aframe.min.js"></script>
     <script src="https://unpkg.com/aframe-look-at-component@0.5.1/dist/aframe-look-at-component.min.js"></script>
     <script src="https://unpkg.com/aframe-animation-component@^4.1.2/dist/aframe-animation-component.min.js"></script>
@@ -56,11 +56,11 @@
 
 <a-scene>
     <a-assets>
-        <img id="next" src="image/arrows.png" alt="image de flèche"/>
+        <img id="next" src="image/arrows.png"/>
 
     </a-assets>
 
-    <a-sky color="#621e62"></a-sky>
+
 
     <a-entity id="cam" camera position="0 1.6 0" look-controls>
         <a-entity cursor="fuse:true;fuseTimeout:2000"
@@ -75,43 +75,19 @@
 
         <a-entity id="group-carte">
 
+            <a-entity id="plan" geometry="primitive : plane; width : 1000;height : 1000"
+                      material="color:#362d2a"
+                      look-at="#cam"
+                      position="0 0 0"
+                      rotation="0 180 0"
+            >
+            </a-entity>
 
-
-            <a-cylinder
-                    color="black"
-                    height="30"
-                    radius="15"
-                    theta-start="60"
-                    theta-length="240"
-                    position="0 1.6 0"
-                    side="double"
-                    open-ended="true">
-
-                <a-image src="#next" position="0 0 -10" look-at="#cam">
-                </a-image>
-
-                <a-image src="#next" position="5 0 -8" look-at="#cam">
-                </a-image>
-
-
-                <a-image src="#next" position="-5 0 -8" look-at="#cam">
-                </a-image>
-
-
-                <a-image src="#next" position="0 5 -10" look-at="#cam">
-                </a-image>
-
-                <a-image src="#next" position="-8 0 -5" look-at="#cam">
-                </a-image>
-
-                <a-image src="#next" position="8 0 -5" look-at="#cam">
-                </a-image>
+            <a-entity id="box" geometry="depth: 3" position="1.16542 1.6 -2.72088" rotation="0 23.00196364332203 0"></a-entity>
 
 
 
 
-
-            </a-cylinder>
 
 
             <!--

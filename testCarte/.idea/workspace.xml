@@ -20,12 +20,10 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="06110d4f-84c3-4a7b-8449-751a868961ac" name="Default Changelist" comment="">
-      <change afterPath="$PROJECT_DIR$/Test Carte Englobage Plan.html" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Test Carte Englobage demi-cylindre.html" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Test Carte 3D.html" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/../Clement/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/../Clement/.idea/workspace.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Menu.html" beforeDir="false" afterPath="$PROJECT_DIR$/Test Carte Plan.html" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Menu2.html" beforeDir="false" afterPath="$PROJECT_DIR$/Test Carte 3Screens.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Test Carte Englobage demi-cylindre.html" beforeDir="false" afterPath="$PROJECT_DIR$/Test Carte Englobage demi-cylindre.html" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -54,6 +52,7 @@
     <property name="DefaultHtmlFileTemplate" value="HTML File" />
     <property name="RunOnceActivity.OpenProjectViewOnStart" value="true" />
     <property name="WebServerToolWindowFactoryState" value="false" />
+    <property name="last_opened_file_path" value="$PROJECT_DIR$" />
     <property name="node.js.detected.package.eslint" value="true" />
     <property name="node.js.detected.package.tslint" value="true" />
     <property name="node.js.path.for.package.eslint" value="project" />
@@ -72,6 +71,7 @@
       <updated>1606138062318</updated>
       <workItem from="1606138063783" duration="900000" />
       <workItem from="1606139558358" duration="4539000" />
+      <workItem from="1606149245871" duration="4510000" />
     </task>
     <servers />
   </component>
@@ -88,5 +88,6 @@
         </entry>
       </map>
     </option>
+    <option name="oldMeFiltersMigrated" value="true" />
   </component>
 </project>
