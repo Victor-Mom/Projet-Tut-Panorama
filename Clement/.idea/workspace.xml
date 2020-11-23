@@ -19,7 +19,9 @@
     <select />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="ca8771d1-cdc1-43a4-a827-c6ccf43fa43c" name="Default Changelist" comment="" />
+    <list default="true" id="ca8771d1-cdc1-43a4-a827-c6ccf43fa43c" name="Default Changelist" comment="">
+      <change beforePath="$PROJECT_DIR$/Menu.html" beforeDir="false" afterPath="$PROJECT_DIR$/Menu.html" afterDir="false" />
+    </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
     <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
@@ -54,7 +56,7 @@
     <property name="RunOnceActivity.OpenProjectViewOnStart" value="true" />
     <property name="SHARE_PROJECT_CONFIGURATION_FILES" value="true" />
     <property name="WebServerToolWindowFactoryState" value="false" />
-    <property name="last_opened_file_path" value="$PROJECT_DIR$/../testCarte" />
+    <property name="last_opened_file_path" value="$PROJECT_DIR$/../Victor" />
     <property name="list.type.of.created.stylesheet" value="CSS" />
     <property name="node.js.detected.package.eslint" value="true" />
     <property name="node.js.detected.package.tslint" value="true" />
@@ -85,7 +87,7 @@
       <workItem from="1605713701206" duration="1860000" />
       <workItem from="1605814935232" duration="753000" />
       <workItem from="1606116542924" duration="2717000" />
-      <workItem from="1606123565560" duration="439000" />
+      <workItem from="1606139349271" duration="206000" />
     </task>
     <servers />
   </component>
@@ -112,10 +114,10 @@
       <screen x="0" y="0" width="2194" height="1194" />
     </state>
     <state x="280" y="348" key="#com.intellij.refactoring.safeDelete.UnsafeUsagesDialog/0.0.2194.1194/-1920.1080.1920.1080/3840.1080.1920.1080@0.0.2194.1194" timestamp="1605532520417" />
-    <state x="878" y="352" key="FileChooserDialogImpl" timestamp="1606124007910">
+    <state x="878" y="352" key="FileChooserDialogImpl" timestamp="1606123204982">
       <screen x="0" y="0" width="2194" height="1194" />
     </state>
-    <state x="878" y="352" key="FileChooserDialogImpl/0.0.2194.1194/-1920.1080.1920.1080/3840.1080.1920.1080@0.0.2194.1194" timestamp="1606124007910" />
+    <state x="878" y="352" key="FileChooserDialogImpl/0.0.2194.1194/-1920.1080.1920.1080/3840.1080.1920.1080@0.0.2194.1194" timestamp="1606123204982" />
     <state x="932" y="521" key="NewPhpFileDialog" timestamp="1605529390337">
       <screen x="0" y="0" width="2194" height="1194" />
     </state>
