@@ -11,11 +11,19 @@
             <item index="3" class="java.lang.String" itemvalue="noscript" />
             <item index="4" class="java.lang.String" itemvalue="embed" />
             <item index="5" class="java.lang.String" itemvalue="script" />
+<<<<<<< HEAD
             <item index="6" class="java.lang.String" itemvalue="a-entity" />
             <item index="7" class="java.lang.String" itemvalue="a-image" />
             <item index="8" class="java.lang.String" itemvalue="a-scene" />
             <item index="9" class="java.lang.String" itemvalue="a-sky" />
             <item index="10" class="java.lang.String" itemvalue="a-assets" />
+=======
+            <item index="6" class="java.lang.String" itemvalue="a-assets" />
+            <item index="7" class="java.lang.String" itemvalue="a-scene" />
+            <item index="8" class="java.lang.String" itemvalue="a-sky" />
+            <item index="9" class="java.lang.String" itemvalue="a-entity" />
+            <item index="10" class="java.lang.String" itemvalue="a-image" />
+>>>>>>> 807f1fc3ed394ec8d8f9dfe81422e9964ebe3c05
           </list>
         </value>
       </option>

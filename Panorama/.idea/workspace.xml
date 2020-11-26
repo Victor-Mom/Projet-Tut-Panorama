@@ -19,9 +19,13 @@
     <select />
   </component>
   <component name="ChangeListManager">
+<<<<<<< HEAD
     <list default="true" id="8cf2c44b-26aa-4dcb-9b48-e55f9f509571" name="Default Changelist" comment="[DEV]: mise en place du squellete et des image dans &lt;a-assets/&gt;">
       <change beforePath="$PROJECT_DIR$/Panorama.html" beforeDir="false" afterPath="$PROJECT_DIR$/Panorama.html" afterDir="false" />
     </list>
+=======
+    <list default="true" id="bbad7211-5bda-4b52-ba3d-9d0eef6ae5c6" name="Default Changelist" comment="" />
+>>>>>>> 807f1fc3ed394ec8d8f9dfe81422e9964ebe3c05
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
     <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
@@ -30,6 +34,7 @@
   <component name="ComposerSettings">
     <execution />
   </component>
+<<<<<<< HEAD
   <component name="FileTemplateManagerImpl">
     <option name="RECENT_TEMPLATES">
       <list>
@@ -44,12 +49,22 @@
   <component name="ProjectLevelVcsManager" settingsEditedManually="true">
     <ConfirmationsSetting value="2" id="Add" />
   </component>
+=======
+  <component name="Git.Settings">
+    <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$/.." />
+  </component>
+  <component name="ProjectId" id="1kghWjxb1faZ8UMjFnvwggKAGE3" />
+  <component name="ProjectLevelVcsManager" settingsEditedManually="true" />
+>>>>>>> 807f1fc3ed394ec8d8f9dfe81422e9964ebe3c05
   <component name="ProjectViewState">
     <option name="hideEmptyMiddlePackages" value="true" />
     <option name="showLibraryContents" value="true" />
   </component>
   <component name="PropertiesComponent">
+<<<<<<< HEAD
     <property name="DefaultHtmlFileTemplate" value="HTML File" />
+=======
+>>>>>>> 807f1fc3ed394ec8d8f9dfe81422e9964ebe3c05
     <property name="RunOnceActivity.OpenProjectViewOnStart" value="true" />
     <property name="WebServerToolWindowFactoryState" value="false" />
     <property name="last_opened_file_path" value="$PROJECT_DIR$" />
@@ -58,6 +73,7 @@
   <component name="SpellCheckerSettings" RuntimeDictionaries="0" Folders="0" CustomDictionaries="0" DefaultDictionary="application-level" UseSingleDictionary="true" transferred="true" />
   <component name="TaskManager">
     <task active="true" id="Default" summary="Default task">
+<<<<<<< HEAD
       <changelist id="8cf2c44b-26aa-4dcb-9b48-e55f9f509571" name="Default Changelist" comment="" />
       <created>1606124693093</created>
       <option name="number" value="Default" />
@@ -77,6 +93,15 @@
       <updated>1606126685854</updated>
     </task>
     <option name="localTasksCounter" value="2" />
+=======
+      <changelist id="bbad7211-5bda-4b52-ba3d-9d0eef6ae5c6" name="Default Changelist" comment="" />
+      <created>1606128175516</created>
+      <option name="number" value="Default" />
+      <option name="presentableId" value="Default" />
+      <updated>1606128175516</updated>
+      <workItem from="1606128179976" duration="626000" />
+    </task>
+>>>>>>> 807f1fc3ed394ec8d8f9dfe81422e9964ebe3c05
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -92,6 +117,7 @@
         </entry>
       </map>
     </option>
+<<<<<<< HEAD
     <option name="oldMeFiltersMigrated" value="true" />
   </component>
   <component name="VcsManagerConfiguration">
@@ -107,5 +133,7 @@
       <screen x="0" y="0" width="1440" height="900" />
     </state>
     <state x="320" y="187" key="Vcs.Push.Dialog.v2/0.0.1440.900@0.0.1440.900" timestamp="1606126708924" />
+=======
+>>>>>>> 807f1fc3ed394ec8d8f9dfe81422e9964ebe3c05
   </component>
 </project>
