@@ -4,13 +4,5 @@
     <content url="file://$MODULE_DIR$" />
     <orderEntry type="inheritedJdk" />
     <orderEntry type="sourceFolder" forTests="false" />
-<<<<<<< HEAD
-    <orderEntry type="library" name="aframe-look-at-component" level="application" />
-    <orderEntry type="library" name="aframe-animation-component" level="application" />
-=======
-    <orderEntry type="library" name="aframe-animation-component" level="application" />
-    <orderEntry type="library" name="aframe-look-at-component" level="application" />
-    <orderEntry type="library" name="aframe" level="application" />
->>>>>>> 807f1fc3ed394ec8d8f9dfe81422e9964ebe3c05
   </component>
 </module>
