@@ -2,10 +2,7 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="26a6bfd8-8cba-4860-a651-b66ba8164a3c" name="Default Changelist" comment="">
-      <change beforePath="$PROJECT_DIR$/Panorama/.idea/Panorama.iml" beforeDir="false" afterPath="$PROJECT_DIR$/Panorama/.idea/Panorama.iml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Panorama/.idea/inspectionProfiles/Project_Default.xml" beforeDir="false" afterPath="$PROJECT_DIR$/Panorama/.idea/inspectionProfiles/Project_Default.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Panorama/.idea/jsLibraryMappings.xml" beforeDir="false" afterPath="$PROJECT_DIR$/Panorama/.idea/jsLibraryMappings.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Panorama/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/Panorama/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/Panorama/Panorama.html" beforeDir="false" afterPath="$PROJECT_DIR$/Panorama/Panorama.html" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
@@ -44,5 +41,15 @@
   </component>
   <component name="TypeScriptGeneratedFilesManager">
     <option name="version" value="3" />
+  </component>
+  <component name="WindowStateProjectService">
+    <state x="521" y="368" key="com.intellij.openapi.vcs.update.UpdateOrStatusOptionsDialogupdate-v2" timestamp="1606516222632">
+      <screen x="0" y="0" width="1440" height="900" />
+    </state>
+    <state x="521" y="368" key="com.intellij.openapi.vcs.update.UpdateOrStatusOptionsDialogupdate-v2/0.0.1440.900@0.0.1440.900" timestamp="1606516222632" />
+    <state x="385" y="196" width="670" height="676" key="search.everywhere.popup" timestamp="1606521760889">
+      <screen x="0" y="0" width="1440" height="900" />
+    </state>
+    <state x="385" y="196" width="670" height="676" key="search.everywhere.popup/0.0.1440.900@0.0.1440.900" timestamp="1606521760889" />
   </component>
 </project>

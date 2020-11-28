@@ -85,7 +85,7 @@
         <img id="couloirB20B21B22B23" src="image/couloirB20B21B22B23.JPG" height="2688" width="5376" alt=""/>
         <img id="croisementChemin" src="image/croisementChemin.JPG" height="2688" width="5376" alt=""/>
         <img id="devantAmphi" src="image/devantAmphi.jpg" height="2688" width="5376" alt=""/>
-        <img id="devantBibliothèque" src="image/devantBibliotheque.jpg" height="2688" width="5376" alt=""/>
+        <img id="devantBibliotheque" src="image/devantBibliotheque.jpg" height="2688" width="5376" alt=""/>
         <img id="droitCentral" src="image/droitCentral.jpg" height="2688" width="5376" alt=""/>
         <img id="entreeCafet" src="image/entreeCafet.jpg" height="2688" width="5376" alt=""/>
         <img id="escalierGaucheA" src="image/escalierGaucheA.JPG" height="2688" width="5376" alt=""/>
@@ -303,6 +303,21 @@
         </a-entity>
 
 
+        <a-entity id="group-escalierMilieuA" scale ="0 0 0">
+            <a-image spot="linkto:#millieuA;spotgroup:group-millieuA" color="transparent" position="0.8 1.65 5"></a-image>
+            <a-entity geometry="primitive : plane; width : 2;height : auto;"
+                      material="color:red" look-at="#cam" position="0.8 1 5"
+                      text="value:Vers le centre niveau A; color:black;width:4;align:center">
+            </a-entity>
+
+            <a-image spot="linkto:#escalierMilieuB;spotgroup:group-escalierMilieuB" color="transparent" position="-0.8 -1.65 -5"></a-image>
+            <a-entity geometry="primitive : plane; width : 2;height : auto;"
+                      material="color:red" look-at="#cam" position="-0.8 -1 -5"
+                      text="value:Vers l'escalier supérieur'; color:black;width:4;align:center">
+            </a-entity>
+        </a-entity>
+
+
         <a-entity id="group-milieuA" scale ="0 0 0">
             <a-image spot="linkto:#couloirA12;spotgroup:group-couloirA12" color="transparent" position="-0.8 -1.65 -5"></a-image>
             <a-entity geometry="primitive : plane; width : 2;height : auto;"
@@ -323,19 +338,7 @@
             </a-entity>
         </a-entity>
 
-        <a-entity id="group-escalierMilieuA" scale ="0 0 0">
-            <a-image spot="linkto:#millieuA;spotgroup:group-millieuA" color="transparent" position="0.8 1.65 5"></a-image>
-            <a-entity geometry="primitive : plane; width : 2;height : auto;"
-                      material="color:red" look-at="#cam" position="0.8 1 5"
-                      text="value:Vers le centre niveau A; color:black;width:4;align:center">
-            </a-entity>
 
-            <a-image spot="linkto:#escalierMilieuB;spotgroup:group-escalierMilieuB" color="transparent" position="-0.8 -1.65 -5"></a-image>
-            <a-entity geometry="primitive : plane; width : 2;height : auto;"
-                      material="color:red" look-at="#cam" position="-0.8 -1 -5"
-                      text="value:Vers l'escalier supérieur'; color:black;width:4;align:center">
-            </a-entity>
-        </a-entity>
 
 
         <!-- GROUPE B -->
@@ -397,7 +400,7 @@
             <a-image spot="linkto:#couloirB20B21B22B23;spotgroup:group-couloirB20B21B22B23" color="transparent" position="-7.5 1.8 -0.35"></a-image>
             <a-entity geometry="primitive : plane; width : 1;height : auto;"
                       material="color:red" look-at="#cam" position="-7 1.8 -0.35"
-                      text="value:Vers le couloir A; color:black;width:3;align:center">
+                      text="value:Vers le couloir B; color:black;width:3;align:center">
             </a-entity>
         </a-entity>
 
@@ -406,7 +409,7 @@
             <a-image spot="linkto:#couloirB20B21B22B23;spotgroup:group-couloirB20B21B22B23" color="transparent" position="-7.5 1.8 -0.35"></a-image>
             <a-entity geometry="primitive : plane; width : 1;height : auto;"
                       material="color:red" look-at="#cam" position="-7 1.8 -0.35"
-                      text="value:Vers le couloir A; color:black;width:3;align:center">
+                      text="value:Vers le couloir B; color:black;width:3;align:center">
             </a-entity>
         </a-entity>
 
@@ -415,7 +418,7 @@
             <a-image spot="linkto:#couloirB20B21B22B23;spotgroup:group-couloirB20B21B22B23" color="transparent" position="-7.5 1.8 -0.35"></a-image>
             <a-entity geometry="primitive : plane; width : 1;height : auto;"
                       material="color:red" look-at="#cam" position="-7 1.8 -0.35"
-                      text="value:Vers le couloir A; color:black;width:3;align:center">
+                      text="value:Vers le couloir B; color:black;width:3;align:center">
             </a-entity>
         </a-entity>
 
@@ -426,7 +429,460 @@
                       material="color:red" look-at="#cam" position="-7 1.8 -0.35"
                       text="value:Vers le couloir A; color:black;width:3;align:center">
             </a-entity>
+
+            <a-image spot="linkto:#gaucheB;spotgroup:group-gaucheB" color="transparent" position="0.8 1.65 5"></a-image>
+            <a-entity geometry="primitive : plane; width : 2;height : auto;"
+                      material="color:red" look-at="#cam" position="0.8 1 5"
+                      text="value:Vers la fin du niveau B; color:black;width:4;align:center">
+            </a-entity>
         </a-entity>
+
+
+        <a-entity id="group-secretariat" scale="0 0 0">
+            <a-image spot="linkto:#couloirB12;spotgroup:group-couloirB12" color="transparent" position="-7.5 1.8 -0.35"></a-image>
+            <a-entity geometry="primitive : plane; width : 1;height : auto;"
+                      material="color:red" look-at="#cam" position="-7 1.8 -0.35"
+                      text="value:Vers le couloir B; color:black;width:3;align:center">
+            </a-entity>
+        </a-entity>
+
+
+        <a-entity id="group-couloirB12" scale="0 0 0">
+            <a-image spot="linkto:#B12;spotgroup:group-B12" color="transparent" position="-7.5 1.8 -0.35"></a-image>
+            <a-entity geometry="primitive : plane; width : 1;height : auto;"
+                      material="color:red" look-at="#cam" position="-7 1.8 -0.35"
+                      text="value:Vers la salle B12; color:black;width:3;align:center">
+            </a-entity>
+
+            <a-image spot="linkto:#secretariat;spotgroup:group-secretariat" color="transparent" position="-7.5 1.8 -0.35"></a-image>
+            <a-entity geometry="primitive : plane; width : 1;height : auto;"
+                      material="color:red" look-at="#cam" position="-7 1.8 -0.35"
+                      text="value:Vers le secretariat; color:black;width:3;align:center">
+            </a-entity>
+
+            <a-image spot="linkto:#couloirB14B17;spotgroup:group-couloirB14B17" color="transparent" position="0.8 1.65 5"></a-image>
+            <a-entity geometry="primitive : plane; width : 2;height : auto;"
+                      material="color:red" look-at="#cam" position="0.8 1 5"
+                      text="value:Vers la suite du couloir B; color:black;width:4;align:center">
+            </a-entity>
+
+            <a-image spot="linkto:#millieuB;spotgroup:group-millieuB" color="transparent" position="0.8 1.65 5"></a-image>
+            <a-entity geometry="primitive : plane; width : 2;height : auto;"
+                      material="color:red" look-at="#cam" position="0.8 1 5"
+                      text="value:Vers le centre niveau B; color:black;width:4;align:center">
+            </a-entity>
+        </a-entity>
+
+
+        <a-entity id="group-couloirB14B17" scale="0 0 0">
+            <a-image spot="linkto:#B14;spotgroup:group-B14" color="transparent" position="-7.5 1.8 -0.35"></a-image>
+            <a-entity geometry="primitive : plane; width : 1;height : auto;"
+                      material="color:red" look-at="#cam" position="-7 1.8 -0.35"
+                      text="value:Vers la salle B14; color:black;width:3;align:center">
+            </a-entity>
+
+            <a-image spot="linkto:#B17;spotgroup:group-B17" color="transparent" position="-7.5 1.8 -0.35"></a-image>
+            <a-entity geometry="primitive : plane; width : 1;height : auto;"
+                      material="color:red" look-at="#cam" position="-7 1.8 -0.35"
+                      text="value:Vers la salle B17; color:black;width:3;align:center">
+            </a-entity>
+
+            <a-image spot="linkto:#couloirB12;spotgroup:group-couloirB12" color="transparent" position="0.8 1.65 5"></a-image>
+            <a-entity geometry="primitive : plane; width : 2;height : auto;"
+                      material="color:red" look-at="#cam" position="0.8 1 5"
+                      text="value:Vers la suite du couloir B; color:black;width:4;align:center">
+            </a-entity>
+
+            <a-image spot="linkto:#couloirB18B19;spotgroup:group-couloirB18B19" color="transparent" position="0.8 1.65 5"></a-image>
+            <a-entity geometry="primitive : plane; width : 2;height : auto;"
+                      material="color:red" look-at="#cam" position="0.8 1 5"
+                      text="value:Vers le centre niveau B; color:black;width:4;align:center">
+            </a-entity>
+        </a-entity>
+
+
+        <a-entity id="group-couloirB18B19" scale="0 0 0">
+            <a-image spot="linkto:#B18;spotgroup:group-B18" color="transparent" position="-7.5 1.8 -0.35"></a-image>
+            <a-entity geometry="primitive : plane; width : 1;height : auto;"
+                      material="color:red" look-at="#cam" position="-7 1.8 -0.35"
+                      text="value:Vers la salle B18; color:black;width:3;align:center">
+            </a-entity>
+
+            <a-image spot="linkto:#B19;spotgroup:group-B19" color="transparent" position="-7.5 1.8 -0.35"></a-image>
+            <a-entity geometry="primitive : plane; width : 1;height : auto;"
+                      material="color:red" look-at="#cam" position="-7 1.8 -0.35"
+                      text="value:Vers la salle B19; color:black;width:3;align:center">
+            </a-entity>
+
+            <a-image spot="linkto:#couloirB14B17;spotgroup:group-couloirB14B17" color="transparent" position="0.8 1.65 5"></a-image>
+            <a-entity geometry="primitive : plane; width : 2;height : auto;"
+                      material="color:red" look-at="#cam" position="0.8 1 5"
+                      text="value:Vers la suite du couloir B; color:black;width:4;align:center">
+            </a-entity>
+
+            <a-image spot="linkto:#couloirB20B21B22B23;spotgroup:group-couloirB20B21B22B23" color="transparent" position="0.8 1.65 5"></a-image>
+            <a-entity geometry="primitive : plane; width : 2;height : auto;"
+                      material="color:red" look-at="#cam" position="0.8 1 5"
+                      text="value:Vers le centre niveau B; color:black;width:4;align:center">
+            </a-entity>
+        </a-entity>
+
+
+        <a-entity id="group-couloirB20B21B22B23" scale="0 0 0">
+            <a-image spot="linkto:#B20;spotgroup:group-B20" color="transparent" position="-7.5 1.8 -0.35"></a-image>
+            <a-entity geometry="primitive : plane; width : 1;height : auto;"
+                      material="color:red" look-at="#cam" position="-7 1.8 -0.35"
+                      text="value:Vers la salle B20; color:black;width:3;align:center">
+            </a-entity>
+
+            <a-image spot="linkto:#B21;spotgroup:group-B21" color="transparent" position="-7.5 1.8 -0.35"></a-image>
+            <a-entity geometry="primitive : plane; width : 1;height : auto;"
+                      material="color:red" look-at="#cam" position="-7 1.8 -0.35"
+                      text="value:Vers la salle B21; color:black;width:3;align:center">
+            </a-entity>
+
+            <a-image spot="linkto:#B22;spotgroup:group-B22" color="transparent" position="-7.5 1.8 -0.35"></a-image>
+            <a-entity geometry="primitive : plane; width : 1;height : auto;"
+                      material="color:red" look-at="#cam" position="-7 1.8 -0.35"
+                      text="value:Vers la salle B22; color:black;width:3;align:center">
+            </a-entity>
+
+            <a-image spot="linkto:#B23;spotgroup:group-B23" color="transparent" position="-7.5 1.8 -0.35"></a-image>
+            <a-entity geometry="primitive : plane; width : 1;height : auto;"
+                      material="color:red" look-at="#cam" position="-7 1.8 -0.35"
+                      text="value:Vers la salle B23; color:black;width:3;align:center">
+            </a-entity>
+
+            <a-image spot="linkto:#couloirB18B19;spotgroup:group-couloirB18B19" color="transparent" position="0.8 1.65 5"></a-image>
+            <a-entity geometry="primitive : plane; width : 2;height : auto;"
+                      material="color:red" look-at="#cam" position="0.8 1 5"
+                      text="value:Vers la suite du couloir B; color:black;width:4;align:center">
+            </a-entity>
+
+            <a-image spot="linkto:#gaucheB;spotgroup:group-gaucheB" color="transparent" position="0.8 1.65 5"></a-image>
+            <a-entity geometry="primitive : plane; width : 2;height : auto;"
+                      material="color:red" look-at="#cam" position="0.8 1 5"
+                      text="value:Vers la fin du niveau B; color:black;width:4;align:center">
+            </a-entity>
+        </a-entity>
+
+
+        <a-entity id="group-escalierGaucheB" scale="0 0 0">
+            <a-image spot="linkto:#gaucheB;spotgroup:group-gaucheB" color="transparent" position="0.8 1.65 5"></a-image>
+            <a-entity geometry="primitive : plane; width : 2;height : auto;"
+                      material="color:red" look-at="#cam" position="0.8 1 5"
+                      text="value:Vers la fin du niveau B; color:black;width:4;align:center">
+            </a-entity>
+
+            <a-image spot="linkto:#escalierGaucheA;spotgroup:group-escalierGaucheA" color="transparent" position="-0.8 -1.65 -5"></a-image>
+            <a-entity geometry="primitive : plane; width : 2;height : auto;"
+                      material="color:red" look-at="#cam" position="-0.8 -1 -5"
+                      text="value:Vers l'étage inférieur'; color:black;width:4;align:center">
+            </a-entity>
+        </a-entity>
+
+
+        <a-entity id="group-escalierMilieuB" scale="0 0 0">
+            <a-image spot="linkto:#escalierMilieuA;spotgroup:group-escalierGaucheA" color="transparent" position="-0.8 -1.65 -5"></a-image>
+            <a-entity geometry="primitive : plane; width : 2;height : auto;"
+                      material="color:red" look-at="#cam" position="-0.8 -1 -5"
+                      text="value:Vers l'étage inférieur'; color:black;width:4;align:center">
+            </a-entity>
+
+            <a-image spot="linkto:#millieuB;spotgroup:group-millieuB" color="transparent" position="0.8 1.65 5"></a-image>
+            <a-entity geometry="primitive : plane; width : 2;height : auto;"
+                      material="color:red" look-at="#cam" position="0.8 1 5"
+                      text="value:Vers le centre niveau B; color:black;width:4;align:center">
+            </a-entity>
+        </a-entity>
+
+
+        <a-entity id="group-gaucheB" scale="0 0 0">
+            <a-image spot="linkto:#B23;spotgroup:group-B23" color="transparent" position="-7.5 1.8 -0.35"></a-image>
+            <a-entity geometry="primitive : plane; width : 1;height : auto;"
+                      material="color:red" look-at="#cam" position="-7 1.8 -0.35"
+                      text="value:Vers la salle B23; color:black;width:3;align:center">
+            </a-entity>
+
+            <a-image spot="linkto:#escalierGaucheB;spotgroup:group-escalierGaucheB" color="transparent" position="-0.8 -1.65 -5"></a-image>
+            <a-entity geometry="primitive : plane; width : 2;height : auto;"
+                      material="color:red" look-at="#cam" position="-0.8 -1 -5"
+                      text="value:Vers l'escalier'; color:black;width:4;align:center">
+            </a-entity>
+        </a-entity>
+
+
+        <a-entity id="group-milieuB" scale="0 0 0">
+            <a-image spot="linkto:#B10;spotgroup:group-B22" color="transparent" position="-7.5 1.8 -0.35"></a-image>
+            <a-entity geometry="primitive : plane; width : 1;height : auto;"
+                      material="color:red" look-at="#cam" position="-7 1.8 -0.35"
+                      text="value:Vers la salle B22; color:black;width:3;align:center">
+            </a-entity>
+
+            <a-image spot="linkto:#couloirB12;spotgroup:group-couloirB12" color="transparent" position="-7.5 1.8 -0.35"></a-image>
+            <a-entity geometry="primitive : plane; width : 1;height : auto;"
+                      material="color:red" look-at="#cam" position="-7 1.8 -0.35"
+                      text="value:Vers le couloir B; color:black;width:3;align:center">
+            </a-entity>
+
+            <a-image spot="linkto:#escalierMilieuB;spotgroup:group-escalierMilieuB" color="transparent" position="-0.8 -1.65 -5"></a-image>
+            <a-entity geometry="primitive : plane; width : 2;height : auto;"
+                      material="color:red" look-at="#cam" position="-0.8 -1 -5"
+                      text="value:Vers l'escalier'; color:black;width:4;align:center">
+            </a-entity>
+        </a-entity>
+
+
+        <!-- GROUPE EXTERIEUR -->
+        <a-entity id="group-exterieurMilieu" scale="0 0 0">
+            <a-image spot="linkto:#milieuA;spotgroup:group-milieuA" color="transparent" position="-0.8 -1.65 -5"></a-image>
+            <a-entity geometry="primitive : plane; width : 2;height : auto;"
+                      material="color:red" look-at="#cam" position="-0.8 -1 -5"
+                      text="value:Entrée du batiment informatique'; color:black;width:4;align:center">
+            </a-entity>
+
+            <a-image spot="linkto:#croisementChemin;spotgroup:group-croisementChemin" color="transparent" position="-0.8 -1.65 -5"></a-image>
+            <a-entity geometry="primitive : plane; width : 2;height : auto;"
+                      material="color:red" look-at="#cam" position="-0.8 -1 -5"
+                      text="value:Vers les Amphis'; color:black;width:4;align:center">
+            </a-entity>
+
+            <a-image spot="linkto:#parking;spotgroup:parking" color="transparent" position="-0.8 -1.65 -5"></a-image>
+            <a-entity geometry="primitive : plane; width : 2;height : auto;"
+                      material="color:red" look-at="#cam" position="-0.8 -1 -5"
+                      text="value:vers le parking'; color:black;width:4;align:center">
+            </a-entity>
+        </a-entity>
+
+
+        <a-entity id="group-parking" scale="0 0 0">
+            <a-image spot="linkto:#exterieurMilieu;spotgroup:group-exterieurMilieu" color="transparent" position="-0.8 -1.65 -5"></a-image>
+            <a-entity geometry="primitive : plane; width : 2;height : auto;"
+                      material="color:red" look-at="#cam" position="-0.8 -1 -5"
+                      text="value:Vers l'entrée du batiment informatique'; color:black;width:4;align:center">
+            </a-entity>
+
+            <a-image spot="linkto:#exterieurDroit;spotgroup:group-exterieurDroit" color="transparent" position="-0.8 -1.65 -5"></a-image>
+            <a-entity geometry="primitive : plane; width : 2;height : auto;"
+                      material="color:red" look-at="#cam" position="-0.8 -1 -5"
+                      text="value:Vers l'entrée droite du batiment informatique'; color:black;width:4;align:center">
+            </a-entity>
+
+            <a-image spot="linkto:#exterieurCentral;spotgroup:group-exterieurCentral" color="transparent" position="-0.8 -1.65 -5"></a-image>
+            <a-entity geometry="primitive : plane; width : 2;height : auto;"
+                      material="color:red" look-at="#cam" position="-0.8 -1 -5"
+                      text="value:Vers l'entrée du batiment central'; color:black;width:4;align:center">
+            </a-entity>
+        </a-entity>
+
+
+        <a-entity id="group-exterieurDroit" scale="0 0 0">
+            <a-image spot="linkto:#parking;spotgroup:parking" color="transparent" position="-0.8 -1.65 -5"></a-image>
+            <a-entity geometry="primitive : plane; width : 2;height : auto;"
+                      material="color:red" look-at="#cam" position="-0.8 -1 -5"
+                      text="value:vers le parking'; color:black;width:4;align:center">
+            </a-entity>
+        </a-entity>
+
+
+        <a-entity id="group-exterieurCentral" scale="0 0 0">
+            <a-image spot="linkto:#parking;spotgroup:parking" color="transparent" position="-0.8 -1.65 -5"></a-image>
+            <a-entity geometry="primitive : plane; width : 2;height : auto;"
+                      material="color:red" look-at="#cam" position="-0.8 -1 -5"
+                      text="value:vers le parking'; color:black;width:4;align:center">
+            </a-entity>
+
+            <a-image spot="linkto:#accueilCentral;spotgroup:accueilCentral" color="transparent" position="-0.8 -1.65 -5"></a-image>
+            <a-entity geometry="primitive : plane; width : 2;height : auto;"
+                      material="color:red" look-at="#cam" position="-0.8 -1 -5"
+                      text="value:Entrée du batiment central'; color:black;width:4;align:center">
+            </a-entity>
+        </a-entity>
+
+
+        <a-entity id="group-croisementChemin" scale="0 0 0">
+            <a-image spot="linkto:#exterieurMilieu;spotgroup:group-exterieurMilieu" color="transparent" position="-0.8 -1.65 -5"></a-image>
+            <a-entity geometry="primitive : plane; width : 2;height : auto;"
+                      material="color:red" look-at="#cam" position="-0.8 -1 -5"
+                      text="value:Vers l'entrée du batiment informatique'; color:black;width:4;align:center">
+            </a-entity>
+
+            <a-image spot="linkto:#devantAmphi;spotgroup:group-devantAmphi" color="transparent" position="-0.8 -1.65 -5"></a-image>
+            <a-entity geometry="primitive : plane; width : 2;height : auto;"
+                      material="color:red" look-at="#cam" position="-0.8 -1 -5"
+                      text="value:Vers les amphis'; color:black;width:4;align:center">
+            </a-entity>
+
+            <a-image spot="linkto:#coinGauche;spotgroup:group-coinGauche" color="transparent" position="-0.8 -1.65 -5"></a-image>
+            <a-entity geometry="primitive : plane; width : 2;height : auto;"
+                      material="color:red" look-at="#cam" position="-0.8 -1 -5"
+                      text="value:Vers l'entrée gauche du batiment informatique'; color:black;width:4;align:center">
+            </a-entity>
+        </a-entity>
+
+
+        <a-entity id="group-coinGauche" scale="0 0 0">
+            <a-image spot="linkto:#croisementChemin;spotgroup:group-croisementChemin" color="transparent" position="-0.8 -1.65 -5"></a-image>
+            <a-entity geometry="primitive : plane; width : 2;height : auto;"
+                      material="color:red" look-at="#cam" position="-0.8 -1 -5"
+                      text="value:Vers les Amphis'; color:black;width:4;align:center">
+            </a-entity>
+
+            <a-image spot="linkto:#exterieurGauche;spotgroup:group-exterieurGauche" color="transparent" position="-0.8 -1.65 -5"></a-image>
+            <a-entity geometry="primitive : plane; width : 2;height : auto;"
+                      material="color:red" look-at="#cam" position="-0.8 -1 -5"
+                      text="value:Vers l'entrée gauche du batiment informatique'; color:black;width:4;align:center">
+            </a-entity>
+        </a-entity>
+
+
+        <a-entity id="group-exterieurGauche" scale="0 0 0">
+            <a-image spot="linkto:#coinGauche;spotgroup:group-coinGauche" color="transparent" position="-0.8 -1.65 -5"></a-image>
+            <a-entity geometry="primitive : plane; width : 2;height : auto;"
+                      material="color:red" look-at="#cam" position="-0.8 -1 -5"
+                      text="value:Vers les amphis'; color:black;width:4;align:center">
+            </a-entity>
+
+            <a-image spot="linkto:#gaucheA;spotgroup:group-gaucheA" color="transparent" position="-0.8 -1.65 -5"></a-image>
+            <a-entity geometry="primitive : plane; width : 2;height : auto;"
+                      material="color:red" look-at="#cam" position="-0.8 -1 -5"
+                      text="value:Entrée côté gauche du batiment informatique'; color:black;width:4;align:center">
+            </a-entity>
+        </a-entity>
+
+
+        <a-entity id="group-devantAmphi" scale="0 0 0">
+            <a-image spot="linkto:#croisementChemin;spotgroup:group-croisementChemin" color="transparent" position="-0.8 -1.65 -5"></a-image>
+            <a-entity geometry="primitive : plane; width : 2;height : auto;"
+                      material="color:red" look-at="#cam" position="-0.8 -1 -5"
+                      text="value:Vers le batiment informatique'; color:black;width:4;align:center">
+            </a-entity>
+
+            <a-image spot="linkto:#coincafet;spotgroup:group-croisementChemin" color="transparent" position="-0.8 -1.65 -5"></a-image>
+            <a-entity geometry="primitive : plane; width : 2;height : auto;"
+                      material="color:red" look-at="#cam" position="-0.8 -1 -5"
+                      text="value:Vers la caféteria'; color:black;width:4;align:center">
+            </a-entity>
+        </a-entity>
+
+
+        <!-- GROUPE CENTRAL -->
+        <a-entity id="group-coinCafet" scale="0 0 0">
+            <a-image spot="linkto:#devantAmphi;spotgroup:group-devantAmphi" color="transparent" position="-0.8 -1.65 -5"></a-image>
+            <a-entity geometry="primitive : plane; width : 2;height : auto;"
+                      material="color:red" look-at="#cam" position="-0.8 -1 -5"
+                      text="value:Vers les amphis'; color:black;width:4;align:center">
+            </a-entity>
+
+            <a-image spot="linkto:#entreeCafet;spotgroup:group-entreeCafet" color="transparent" position="-0.8 -1.65 -5"></a-image>
+            <a-entity geometry="primitive : plane; width : 2;height : auto;"
+                      material="color:red" look-at="#cam" position="-0.8 -1 -5"
+                      text="value:Entrée caféteria'; color:black;width:4;align:center">
+            </a-entity>
+
+            <a-image spot="linkto:#devantBibliotheque;spotgroup:group-devantBibliotheque" color="transparent" position="-0.8 -1.65 -5"></a-image>
+            <a-entity geometry="primitive : plane; width : 2;height : auto;"
+                      material="color:red" look-at="#cam" position="-0.8 -1 -5"
+                      text="value:Vers la bibliothèque'; color:black;width:4;align:center">
+            </a-entity>
+        </a-entity>
+
+
+        <a-entity id="group-entreeCafet" scale="0 0 0">
+            <a-image spot="linkto:#coincafet;spotgroup:group-croisementChemin" color="transparent" position="-0.8 -1.65 -5"></a-image>
+            <a-entity geometry="primitive : plane; width : 2;height : auto;"
+                      material="color:red" look-at="#cam" position="-0.8 -1 -5"
+                      text="value:Couloir central'; color:black;width:4;align:center">
+            </a-entity>
+
+            <a-image spot="linkto:#cafet;spotgroup:group-cafet" color="transparent" position="-0.8 -1.65 -5"></a-image>
+            <a-entity geometry="primitive : plane; width : 2;height : auto;"
+                      material="color:red" look-at="#cam" position="-0.8 -1 -5"
+                      text="value:Caféteria'; color:black;width:4;align:center">
+            </a-entity>
+
+            <a-image spot="linkto:#sandwich;spotgroup:group-sandwich" color="transparent" position="-0.8 -1.65 -5"></a-image>
+            <a-entity geometry="primitive : plane; width : 2;height : auto;"
+                      material="color:red" look-at="#cam" position="-0.8 -1 -5"
+                      text="value:Coin sandwich'; color:black;width:4;align:center">
+            </a-entity>
+        </a-entity>
+
+
+        <a-entity id="group-sandwich" scale="0 0 0">
+            <a-image spot="linkto:#entreeCafet;spotgroup:group-entreeCafet" color="transparent" position="-0.8 -1.65 -5"></a-image>
+            <a-entity geometry="primitive : plane; width : 2;height : auto;"
+                      material="color:red" look-at="#cam" position="-0.8 -1 -5"
+                      text="value:Entrée caféteria'; color:black;width:4;align:center">
+            </a-entity>
+        </a-entity>
+
+
+        <a-entity id="group-cafet" scale="0 0 0">
+            <a-image spot="linkto:#entreeCafet;spotgroup:group-entreeCafet" color="transparent" position="-0.8 -1.65 -5"></a-image>
+            <a-entity geometry="primitive : plane; width : 2;height : auto;"
+                      material="color:red" look-at="#cam" position="-0.8 -1 -5"
+                      text="value:Entrée caféteria'; color:black;width:4;align:center">
+            </a-entity>
+        </a-entity>
+
+
+        <a-entity id="group-devantBibliothèque" scale="0 0 0">
+            <a-image spot="linkto:#coincafet;spotgroup:group-croisementChemin" color="transparent" position="-0.8 -1.65 -5"></a-image>
+            <a-entity geometry="primitive : plane; width : 2;height : auto;"
+                      material="color:red" look-at="#cam" position="-0.8 -1 -5"
+                      text="value:Coin caféteria'; color:black;width:4;align:center">
+            </a-entity>
+
+            <a-image spot="linkto:#droitCentral;spotgroup:group-droitCentral" color="transparent" position="-0.8 -1.65 -5"></a-image>
+            <a-entity geometry="primitive : plane; width : 2;height : auto;"
+                      material="color:red" look-at="#cam" position="-0.8 -1 -5"
+                      text="value:Entrée principale'; color:black;width:4;align:center">
+            </a-entity>
+
+            <a-image spot="linkto:#centreCentral;spotgroup:group-centreCentral" color="transparent" position="-0.8 -1.65 -5"></a-image>
+            <a-entity geometry="primitive : plane; width : 2;height : auto;"
+                      material="color:red" look-at="#cam" position="-0.8 -1 -5"
+                      text="value:Cour centrale en exterieur'; color:black;width:4;align:center">
+            </a-entity>
+        </a-entity>
+
+
+        <a-entity id="group-droitCentral" scale="0 0 0">
+            <a-image spot="linkto:#devantBibliotheque;spotgroup:group-devantBibliotheque" color="transparent" position="-0.8 -1.65 -5"></a-image>
+            <a-entity geometry="primitive : plane; width : 2;height : auto;"
+                      material="color:red" look-at="#cam" position="-0.8 -1 -5"
+                      text="value:Vers la bibliothèque'; color:black;width:4;align:center">
+            </a-entity>
+
+            <a-image spot="linkto:#accueilCentral;spotgroup:accueilCentral" color="transparent" position="-0.8 -1.65 -5"></a-image>
+            <a-entity geometry="primitive : plane; width : 2;height : auto;"
+                      material="color:red" look-at="#cam" position="-0.8 -1 -5"
+                      text="value:Entrée du batiment central'; color:black;width:4;align:center">
+            </a-entity>
+        </a-entity>
+
+
+        <a-entity id="group-accueilCentral" scale="0 0 0">
+            <a-image spot="linkto:#droitCentral;spotgroup:group-droitCentral" color="transparent" position="-0.8 -1.65 -5"></a-image>
+            <a-entity geometry="primitive : plane; width : 2;height : auto;"
+                      material="color:red" look-at="#cam" position="-0.8 -1 -5"
+                      text="value:Vers la bibliothèque'; color:black;width:4;align:center">
+            </a-entity>
+
+            <a-image spot="linkto:#centreCentral;spotgroup:group-centreCentral" color="transparent" position="-0.8 -1.65 -5"></a-image>
+            <a-entity geometry="primitive : plane; width : 2;height : auto;"
+                      material="color:red" look-at="#cam" position="-0.8 -1 -5"
+                      text="value:Vers la bibliothèque'; color:black;width:4;align:center">
+            </a-entity>
+
+            <a-image spot="linkto:#exterieurCentral;spotgroup:group-exterieurCentral" color="transparent" position="-0.8 -1.65 -5"></a-image>
+            <a-entity geometry="primitive : plane; width : 2;height : auto;"
+                      material="color:red" look-at="#cam" position="-0.8 -1 -5"
+                      text="value:Sortie du batiment principal'; color:black;width:4;align:center">
+            </a-entity>
+        </a-entity>
+
     </a-entity>
 </a-scene>
 </body>
