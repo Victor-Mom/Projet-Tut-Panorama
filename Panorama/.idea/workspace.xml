@@ -46,6 +46,7 @@
   <component name="PropertiesComponent">
     <property name="RunOnceActivity.OpenProjectViewOnStart" value="true" />
     <property name="WebServerToolWindowFactoryState" value="false" />
+    <property name="last_opened_file_path" value="$PROJECT_DIR$" />
     <property name="vue.rearranger.settings.migration" value="true" />
   </component>
   <component name="RecentsManager">
@@ -62,6 +63,7 @@
       <option name="presentableId" value="Default" />
       <updated>1606524990238</updated>
       <workItem from="1606524991315" duration="62000" />
+      <workItem from="1606725377300" duration="304000" />
     </task>
     <servers />
   </component>
@@ -78,5 +80,6 @@
         </entry>
       </map>
     </option>
+    <option name="oldMeFiltersMigrated" value="true" />
   </component>
 </project>
