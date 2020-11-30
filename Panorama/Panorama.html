@@ -92,21 +92,21 @@
         <img id="escalierGaucheB" src="../Panorama/image/escalierGaucheB.JPG" height="2688" width="5376" alt=""/>
         <img id="escalierMilieuA" src="../Panorama/image/escalierMilieuA.JPG" height="2688" width="5376" alt=""/>
         <img id="escalierMilieuB" src="../Panorama/image/escalierMilieuB.JPG" height="2688" width="5376" alt=""/>
-        <img id="exterieuurCentral" src="../Panorama/image/exterieurCentral.jpg" height="2688" width="5376" alt=""/>
+        <img id="exterieurCentral" src="../Panorama/image/exterieurCentral.jpg" height="2688" width="5376" alt=""/>
         <img id="exterieurDroit" src="../Panorama/image/exterieurDroit.jpg" height="2688" width="5376" alt=""/>
         <img id="exterieurGauche" src="../Panorama/image/exterieurGauche.JPG" height="2688" width="5376" alt=""/>
         <img id="exterieurMilieu" src="../Panorama/image/exterieurMilieu.JPG" height="2688" width="5376" alt=""/>
         <img id="gaucheA" src="../Panorama/image/gaucheA.JPG" height="2688" width="5376" alt=""/>
         <img id="gaucheB" src="../Panorama/image/gaucheB.JPG" height="2688" width="5376" alt=""/>
-        <img id="milieurA" src="../Panorama/image/milieuA.JPG" height="2688" width="5376" alt=""/>
-        <img id="milieurB" src="../Panorama/image/milieuB.JPG" height="2688" width="5376" alt=""/>
+        <img id="milieuA" src="../Panorama/image/milieuA.JPG" height="2688" width="5376" alt=""/>
+        <img id="milieuB" src="../Panorama/image/milieuB.JPG" height="2688" width="5376" alt=""/>
         <img id="parking" src="../Panorama/image/parking.jpg" height="2688" width="5376" alt=""/>
         <img id="sandwich" src="../Panorama/image/sandwich.jpg" height="2688" width="5376" alt=""/>
         <img id="secretariat" src="../Panorama/image/secretariat.JPG" height="2688" width="5376" alt=""/>
     </a-assets>
 
 
-    <a-sky id="skybox" src="#couloirA12"></a-sky>
+    <a-sky id="skybox" src="#parking"></a-sky>
 
     <a-entity id="cam" camera position="0 1.6 0" look-controls>
         <a-entity cursor="fuse:true;fuseTimeout:2000"
@@ -173,20 +173,20 @@
         </a-entity>
 
 
-        <a-entity id="group-couloirA12">
+        <a-entity id="group-couloirA12" scale="0 0 0">
             <a-image spot="linkto:#A12;spotgroup:group-A12" color="transparent" position="-7.5 1.8 -0.35"></a-image>
             <a-entity geometry="primitive : plane; width : 1;height : auto;"
                       material="color:red" look-at="#cam" position="-7 1.8 -0.35"
                       text="value:Vers la salle A12; color:black;width:3;align:center">
             </a-entity>
 
-            <a-image spot="linkto:#couloirA18A19;spotgroup:group-couloirA18" color="transparent" position="0.8 1.65 5"></a-image>
+            <a-image spot="linkto:#couloirA18A19;spotgroup:group-couloirA18A19" color="transparent" position="7 1.65 5"></a-image>
             <a-entity geometry="primitive : plane; width : 2;height : auto;"
-                      material="color:red" look-at="#cam" position="0.8 1 5"
+                      material="color:red" look-at="#cam" position="7 1 5"
                       text="value:Vers la suite du couloir A; color:black;width:4;align:center">
             </a-entity>
 
-            <a-image spot="linkto:#millieuA;spotgroup:group-millieuA" color="transparent" position="0.8 1.65 5"></a-image>
+            <a-image spot="linkto:#milieuA;spotgroup:group-milieuA" color="transparent" position="0.8 1.65 5"></a-image>
             <a-entity geometry="primitive : plane; width : 2;height : auto;"
                       material="color:red" look-at="#cam" position="0.8 1 5"
                       text="value:Vers le centre niveau A; color:black;width:4;align:center">
@@ -655,48 +655,31 @@
         </a-entity>
 
 
-        <a-entity id="group-parking" scale="0 0 0">
-            <a-image spot="linkto:#exterieurMilieu;spotgroup:group-exterieurMilieu" color="transparent" position="-0.8 -1.65 -5"></a-image>
-            <a-entity geometry="primitive : plane; width : 2;height : auto;"
-                      material="color:red" look-at="#cam" position="-0.8 -1 -5"
-                      text="value:Vers l'entrée du batiment informatique'; color:black;width:4;align:center">
-            </a-entity>
+        <a-entity id="group-parking">
+            <a-image spot="linkto: #exterieurMilieu; spotgroup: group-exterieurMilieu" color="transparent" position="-1.78061 1.36917 -9.74148" material="src: " geometry="" src="#hotspot" look-at="#cam"></a-image>
 
-            <a-image spot="linkto:#exterieurDroit;spotgroup:group-exterieurDroit" color="transparent" position="-0.8 -1.65 -5"></a-image>
-            <a-entity geometry="primitive : plane; width : 2;height : auto;"
-                      material="color:red" look-at="#cam" position="-0.8 -1 -5"
-                      text="value:Vers l'entrée droite du batiment informatique'; color:black;width:4;align:center">
-            </a-entity>
 
-            <a-image spot="linkto:#exterieurCentral;spotgroup:group-exterieurCentral" color="transparent" position="-0.8 -1.65 -5"></a-image>
-            <a-entity geometry="primitive : plane; width : 2;height : auto;"
-                      material="color:red" look-at="#cam" position="-0.8 -1 -5"
-                      text="value:Vers l'entrée du batiment central'; color:black;width:4;align:center">
-            </a-entity>
+            <a-image spot="linkto: #exterieurDroit; spotgroup: group-exterieurDroit" color="transparent" position="5.00142 1.28607 -6.87479" material="src: " geometry="" src="#hotspot" look-at="#cam"></a-image>
+
+
+            <a-image spot="linkto: #exterieurCentral; spotgroup: group-exterieurCentral" color="transparent" position="-6.80577 1.63066 1.25103" material="src: " geometry="" src="#hotspot" look-at="#cam"></a-image>
+
         </a-entity>
 
 
-        <a-entity id="group-exterieurDroit" scale="0 0 0">
-            <a-image spot="linkto:#parking;spotgroup:parking" color="transparent" position="-0.8 -1.65 -5"></a-image>
-            <a-entity geometry="primitive : plane; width : 2;height : auto;"
-                      material="color:red" look-at="#cam" position="-0.8 -1 -5"
-                      text="value:vers le parking'; color:black;width:4;align:center">
-            </a-entity>
+
+        <a-entity id="group-exterieurDroit" scale="">
+            <a-image spot="linkto: #parking; spotgroup: group-parking" color="transparent" position="7.26916 1.13569 3.76474" material="src: " geometry="" src="#hotspot" look-at="#cam"></a-image>
+
         </a-entity>
 
 
         <a-entity id="group-exterieurCentral" scale="0 0 0">
-            <a-image spot="linkto:#parking;spotgroup:parking" color="transparent" position="-0.8 -1.65 -5"></a-image>
-            <a-entity geometry="primitive : plane; width : 2;height : auto;"
-                      material="color:red" look-at="#cam" position="-0.8 -1 -5"
-                      text="value:vers le parking'; color:black;width:4;align:center">
-            </a-entity>
+            <a-image spot="linkto: #parking; spotgroup: parking" color="transparent" position="-3.72751 0.89279 -6.31928" material="src: " geometry="" src="#hotspot" look-at="#cam"></a-image>
 
-            <a-image spot="linkto:#accueilCentral;spotgroup:accueilCentral" color="transparent" position="-0.8 -1.65 -5"></a-image>
-            <a-entity geometry="primitive : plane; width : 2;height : auto;"
-                      material="color:red" look-at="#cam" position="-0.8 -1 -5"
-                      text="value:Entrée du batiment central'; color:black;width:4;align:center">
-            </a-entity>
+
+            <a-image spot="linkto: #accueilCentral; spotgroup: group-accueilCentral" color="transparent" position="-5.80567 0.71139 3.12434" material="src: " geometry="" src="#hotspot" look-at="#cam"></a-image>
+
         </a-entity>
 
 
@@ -827,7 +810,7 @@
         </a-entity>
 
 
-        <a-entity id="group-devantBibliothèque" scale="0 0 0">
+        <a-entity id="group-devantBibliotheque" scale="0 0 0">
             <a-image spot="linkto:#coincafet;spotgroup:group-croisementChemin" color="transparent" position="-0.8 -1.65 -5"></a-image>
             <a-entity geometry="primitive : plane; width : 2;height : auto;"
                       material="color:red" look-at="#cam" position="-0.8 -1 -5"
@@ -855,33 +838,20 @@
                       text="value:Vers la bibliothèque'; color:black;width:4;align:center">
             </a-entity>
 
-            <a-image spot="linkto:#accueilCentral;spotgroup:accueilCentral" color="transparent" position="-0.8 -1.65 -5"></a-image>
+            <a-image spot="linkto:#accueilCentral;spotgroup:group-accueilCentral" color="transparent" position="-0.8 -1.65 -5"></a-image>
             <a-entity geometry="primitive : plane; width : 2;height : auto;"
                       material="color:red" look-at="#cam" position="-0.8 -1 -5"
                       text="value:Entrée du batiment central'; color:black;width:4;align:center">
             </a-entity>
         </a-entity>
 
-
         <a-entity id="group-accueilCentral" scale="0 0 0">
-            <a-image spot="linkto:#droitCentral;spotgroup:group-droitCentral" color="transparent" position="-0.8 -1.65 -5"></a-image>
-            <a-entity geometry="primitive : plane; width : 2;height : auto;"
-                      material="color:red" look-at="#cam" position="-0.8 -1 -5"
-                      text="value:Vers la bibliothèque'; color:black;width:4;align:center">
-            </a-entity>
-
-            <a-image spot="linkto:#centreCentral;spotgroup:group-centreCentral" color="transparent" position="-0.8 -1.65 -5"></a-image>
-            <a-entity geometry="primitive : plane; width : 2;height : auto;"
-                      material="color:red" look-at="#cam" position="-0.8 -1 -5"
-                      text="value:Vers la bibliothèque'; color:black;width:4;align:center">
-            </a-entity>
-
-            <a-image spot="linkto:#exterieurCentral;spotgroup:group-exterieurCentral" color="transparent" position="-0.8 -1.65 -5"></a-image>
-            <a-entity geometry="primitive : plane; width : 2;height : auto;"
-                      material="color:red" look-at="#cam" position="-0.8 -1 -5"
-                      text="value:Sortie du batiment principal'; color:black;width:4;align:center">
+            <a-image spot="linkto: #devantBibliotheque; spotgroup: group-devantBibliotheque" color="transparent" position="-0.8 -1.65 -5" material="src: " geometry="" src="#hotspot" look-at="#cam"></a-image>
+            <a-entity geometry="primitive: plane; width: 2; height: auto" material="color: red" look-at="#cam" position="2 1 3" text="value: Vers la bibliothèque'; color: black; width: 4; align: center">
             </a-entity>
         </a-entity>
+
+
 
     </a-entity>
 </a-scene>
