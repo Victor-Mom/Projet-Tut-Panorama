@@ -167,6 +167,10 @@
 
 
         <a-entity id="group-couloirA12" scale="0 0 0">
+            <a-entity geometry="primitive : plane; width : 4;height : auto;"
+                      material="color:grey" look-at="#cam" position="-7.5 1.8 -0.35"
+                      text="value:A12-Salle de TP;wrap-count:15; color:black;width:5;align:center">
+            </a-entity>
             <a-image spot="linkto:#A12;spotgroup:group-A12" color="transparent"
                      position="-5 -0.8 1"></a-image>
             <a-image spot="linkto:#couloirA18A19;spotgroup:group-couloirA18A19" color="transparent"
@@ -178,6 +182,11 @@
 
 
         <a-entity id="group-couloirA18A19" scale ="0 0 0">
+            <a-entity geometry="primitive : plane; width : 4;height : auto;"
+                      material="color:grey" look-at="#cam" position="10.750 -0.336 2.441"
+                      text="value:A19-Salle de TP libre service;wrap-count:15; color:black;width:5;align:center">
+            </a-entity>
+
             <a-image spot="linkto:#A18;spotgroup:group-A18" color="transparent"
                      position="-4.2 0 -1.6"></a-image>
             <a-image spot="linkto:#A19;spotgroup:group-A19" color="transparent"
@@ -225,6 +234,14 @@
         </a-entity>
 
         <a-entity id="group-escalierGaucheA" scale ="0 0 0">
+            <a-entity geometry="primitive : plane; width : 4;height : auto;"
+                      material="color:grey" look-at="#cam" position="-0.8 -1 -5"
+                      text="value:Premier etage : couloir B;wrap-count:15; color:black;width:5;align:center">
+            </a-entity>
+            <a-entity geometry="primitive : plane; width : 4;height : auto;"
+                      material="color:grey" look-at="#cam" position="-0.8 -1 -5"
+                      text="value:Deuxième etage : bureaux des professeurs;wrap-count:15; color:black;width:5;align:center">
+            </a-entity>
             <a-image spot="linkto:#gaucheA;spotgroup:group-gaucheA" color="transparent"
                      position="1 -1.5 -5"></a-image>
             <a-image spot="linkto:#escalierGaucheB;spotgroup:group-escalierGaucheB" color="transparent"
@@ -243,6 +260,19 @@
 
 
         <a-entity id="group-milieuA" scale ="0 0 0">
+            <a-entity geometry="primitive : plane; width : 4;height : 1;"
+                      material="color:grey" look-at="#cam" position="12.334 -1.526 5.999" rotation="-4.768 2.249 0"
+                      text="value:Escalier ; color:black;width:5;align:center">
+            </a-entity>
+            <a-entity geometry="primitive : plane; width : 4;height : 1;"
+                      material="color:grey" look-at="#cam" position="0.369 -0.549 10.419" rotation="-4.768 2.249 0"
+                      text="value:Couloir informatique (A) ; color:black;width:5;align:center">
+            </a-entity>
+
+            <a-entity geometry="primitive : plane; width : 4;height : 1;"
+                      material="color:grey" look-at="#cam" position="-5.060 -0.784 -14.613" rotation="-4.768 2.249 0"
+                      text="value:Couloir RT ; color:black;width:5;align:center">
+            </a-entity>
             <a-image spot="linkto:#exterieurMilieu;spotgroup:group-exterieurMilieu" color="transparent"
                      position="7.9 -0.5 -1.58"></a-image>
             <a-image spot="linkto:#couloirA12;spotgroup:group-couloirA12" color="transparent"
@@ -433,6 +463,17 @@
 
         <!-- GROUPE EXTERIEUR -->
         <a-entity id="group-exterieurMilieu" scale="0 0 0">
+
+            <a-entity geometry="primitive : plane; width : 5;height : auto;"
+                      material="color:grey" look-at="#cam" position="-8.346 1.154 7.389"
+                      text="value:Entree principale batiment informatique et RT ; wrap-count:15; color:black;width:5;align:center">
+            </a-entity>
+
+            <a-entity geometry="primitive : plane; width : 5;height : 1;"
+                      material="color:grey" look-at="#cam" position="6.213 1.120 10.868"
+                      text="value: Amphitheatres ; color:black;width:5;align:center">
+            </a-entity>
+
             <a-image spot="linkto:#milieuA;spotgroup:group-milieuA" color="transparent"
                      position="-7 0 0.5" src="#fleche" look-at="#cam"></a-image>
             <a-image spot="linkto:#croisementChemin;spotgroup:group-croisementChemin" color="transparent"
@@ -444,6 +485,29 @@
 
 
         <a-entity id="group-parking">
+
+            <a-entity geometry="primitive : plane; width : 4;height : 1;"
+                      material="color:grey" look-at="#cam" position="-0.660 0.271 -12.804" rotation="-4.768 2.249 0"
+                      text="value:Departement Informatique ; color:black;width:5;align:center">
+            </a-entity>
+
+            <a-entity geometry="primitive : plane; width : 4;height : 1;"
+                      material="color:grey" look-at="#cam" position="5.585 -0.127 -12" rotation="-7.768 -17.725 0"
+                      text="value:Departement RT ; color:black;width:5;align:center">
+            </a-entity>
+
+            <a-entity geometry="primitive : plane; width : 4;height : 1;"
+                      material="color:grey" look-at="#cam" position="-11 0.636 -0.717" rotation="-7.768 -17.725 0"
+                      text="value:Batiment Central ; color:black;width:5;align:center">
+            </a-entity>
+
+            <a-entity geometry="primitive : plane; width : 7;height : autp;"
+                      material="color:grey" look-at="#cam" position="4.111 0.636 21.696" rotation="-4.998 86.271 0"
+                      text="value:Cette visite virtuelle a ete cree par Victor Mommalier, Clement Ferrere, Enzo Mazella,
+                      Clara Poncet et Lucile Velut dans le cadre du projet tutore de deuxieme annee de DUT Informatique ;
+                      color:black;width:5;align:center;wrap-count:15">
+            </a-entity>
+
             <a-image spot="linkto: #exterieurMilieu; spotgroup: group-exterieurMilieu" color="transparent"
                      position="-1.78061 0 -9.74148"></a-image>
             <a-image spot="linkto: #exterieurDroit; spotgroup: group-exterieurDroit" color="transparent"
@@ -463,6 +527,10 @@
 
 
         <a-entity id="group-exterieurCentral" scale="0 0 0">
+            <a-entity geometry="primitive : plane; width : 4;height : 1;"
+                      material="color:grey" look-at="#cam" position="-10.571 3.779 5.809" rotation="9.590 124.880 0"
+                      text="value:Entree du batiment central ; color:black;width:5;align:center">
+            </a-entity>
             <a-image spot="linkto: #parking; spotgroup: group-parking" color="transparent"
                      position="-3.72751 0.89279 -6.31928" src="#hotspot" look-at="#cam"></a-image>
             <a-image spot="linkto: #accueilCentral; spotgroup: group-accueilCentral" color="transparent"
@@ -472,6 +540,15 @@
 
 
         <a-entity id="group-croisementChemin" scale="0 0 0">
+            <a-entity geometry="primitive : plane; width : 6.5;height : auto;"
+                      material="color:grey" look-at="#cam" position="-16.350 0 1.414"
+                      text="value:Amphi et entree arriere batiment central ;wrap-count:15; color:black;width:5;align:center">
+            </a-entity>
+
+            <a-entity geometry="primitive : plane; width : 6.5;height : auto;"
+                      material="color:grey" look-at="#cam" position="-1.323 0.614 -19.618"
+                      text="value:Departement biologie et entree arriere batiment informatique ; wrap-count:15; color:black;width:5;align:center">
+            </a-entity>
             <a-image spot="linkto:#exterieurMilieu;spotgroup:group-exterieurMilieu" color="transparent"
                      position="0 -0.8 8" src="#hotspot" look-at="#cam"></a-image>
             <a-image spot="linkto:#devantAmphi;spotgroup:group-devantAmphi" color="transparent"
@@ -483,6 +560,16 @@
 
 
         <a-entity id="group-coinGauche" scale="0 0 0">
+            <a-entity geometry="primitive : plane; width : 5;height : 1;"
+                      material="color:grey" look-at="#cam" position="10.350 1.684 -3.803"
+                      text="value:Entree arriere batiment informatique ; color:black;width:5;align:center">
+            </a-entity>
+
+            <a-entity geometry="primitive : plane; width : 4;height : 1;"
+                      material="color:grey" look-at="#cam" position="-10.8 0.163 -4.246"
+                      text="value:Departement Biologie ; color:black;width:5;align:center">
+            </a-entity>
+
             <a-image spot="linkto:#croisementChemin;spotgroup:group-croisementChemin" color="transparent"
                      position="2.4 -0.17 15.36" src="#hotspot" look-at="#cam"></a-image>
             <a-image spot="linkto:#exterieurGauche;spotgroup:group-exterieurGauche" color="transparent"
@@ -501,6 +588,25 @@
 
 
         <a-entity id="group-devantAmphi" scale="0 0 0">
+            <a-entity geometry="primitive : plane; width : 4;height : 1;"
+                      material="color:grey" look-at="#cam" position="-7.560 -0.637 -11.469"
+                      text="value:Departement Informatique ; color:black;width:5;align:center">
+            </a-entity>
+
+            <a-entity geometry="primitive : plane; width : 4;height : 1;"
+                      material="color:grey" look-at="#cam" position="-5.271 -0.327 11.579"
+                      text="value:Amphi A ; color:black;width:5;align:center">
+            </a-entity>
+
+            <a-entity geometry="primitive : plane; width : 4;height : 1;"
+                      material="color:grey" look-at="#cam" position="-11.571 -0.244 4.487"
+                      text="value:Amphi B ; color:black;width:5;align:center">
+            </a-entity>
+
+            <a-entity geometry="primitive : plane; width : 4;height : 1;"
+                      material="color:grey" look-at="#cam" position="9.304 0.992 -7.843"
+                      text="value:Entree arriere batiment central ; color:black;width:5;align:center">
+            </a-entity>
             <a-image spot="linkto:#croisementChemin;spotgroup:group-croisementChemin" color="transparent"
                      position="-6.239 -1.17 -7.336" src="#hotspot" look-at="#cam"></a-image>
             <a-image spot="linkto:#coinCafet;spotgroup:group-coinCafet" color="transparent"
@@ -511,6 +617,18 @@
 
         <!-- GROUPE CENTRAL -->
         <a-entity id="group-coinCafet" scale="0 0 0">
+            <a-entity geometry="primitive : plane; width : 4;height : 1;"
+                      material="color:grey" look-at="#cam" position="7.779 -1.183 3.935"
+                      text="value:Cafeteria ; color:black;width:5;align:center">
+            </a-entity>
+            <a-entity geometry="primitive : plane; width : 4;height : 1;"
+                      material="color:grey" look-at="#cam" position="-5.694 -0.762 6.374"
+                      text="value:Sortie vers amphi ; color:black;width:5;align:center">
+            </a-entity>
+            <a-entity geometry="primitive : plane; width : 4;height : 1;"
+                      material="color:grey" look-at="#cam" position="4.497 0.074 -4.625"
+                      text="value:Bibliotheque et acceuil ; color:black;width:5;align:center">
+            </a-entity>
             <a-image spot="linkto: #devantAmphi; spotgroup: group-devantAmphi" color="transparent"
                      position="-4.67079 -1.65 5.53263" look-at="#cam"></a-image>
             <a-image spot="linkto: #entreeCafet; spotgroup: group-entreeCafet" color="transparent"
@@ -522,6 +640,14 @@
 
 
         <a-entity id="group-entreeCafet" scale="0 0 0">
+            <a-entity geometry="primitive : plane; width : 4;height : 1;"
+                      material="color:grey" look-at="#cam" position="9.216 0.059 -2.446"
+                      text="value:Cafeteria : plats chauds ; color:black;width:5;align:center">
+            </a-entity>
+            <a-entity geometry="primitive : plane; width : 4;height : 1;"
+                      material="color:grey" look-at="#cam" position="-1.642 0.006 -8.530"
+                      text="value:Cafeteria : sandwichs ; color:black;width:5;align:center">
+            </a-entity>
             <a-image spot="linkto: #coinCafet; spotgroup:group-coinCafet" color="transparent"
                      position="0.80785 -2.27172 6.03043" look-at="#cam"></a-image>
             <a-image spot="linkto: #cafet; spotgroup: group-cafet" color="transparent"
@@ -533,6 +659,10 @@
 
 
         <a-entity id="group-sandwich" scale="0 0 0">
+            <a-entity geometry="primitive : plane; width : 4;height : 1;"
+                      material="color:grey" look-at="#cam" position="7.675 0.170 4.792"
+                      text="value:Vente sandwichs ; color:black;width:5;align:center">
+            </a-entity>
             <a-image spot="linkto: #entreeCafet; spotgroup: group-entreeCafet" color="transparent"
                      position="-3.45167 -1.65 5.05973" look-at="#cam"></a-image>
 
@@ -547,6 +677,22 @@
 
 
         <a-entity id="group-devantBibliotheque" scale="0 0 0" >
+            <a-entity geometry="primitive : plane; width : 4;height : 1;"
+                      material="color:grey" look-at="#cam" position="1.928 0.157 8.622"
+                      text="value:Bibliotheque ; color:black;width:5;align:center">
+            </a-entity>
+            <a-entity geometry="primitive : plane; width : 4;height : 1;"
+                      material="color:grey" look-at="#cam" position="-8.448 -2.065 -7.040"
+                      text="value:Cour ; color:black;width:5;align:center">
+            </a-entity>
+            <a-entity geometry="primitive : plane; width : 4;height : 1;"
+                      material="color:grey" look-at="#cam" position="7.570 -0.210 -0.718"
+                      text="value:Cafeteria et sortie vers amphi; color:black;width:5;align:center">
+            </a-entity>
+            <a-entity geometry="primitive : plane; width : 4;height : 1;"
+                      material="color:grey" look-at="#cam" position="-9.989 -0.425 1.691"
+                      text="value:Acceuil batiment central; color:black;width:5;align:center">
+            </a-entity>
             <a-image spot="linkto: #coinCafet; spotgroup: group-coinCafet" color="transparent"
                      position="7.70431 -1.65 -0.61523" look-at="#cam"></a-image>
             <a-image spot="linkto: #droitCentral; spotgroup: group-droitCentral" color="transparent"
@@ -567,6 +713,18 @@
 
 
         <a-entity id="group-droitCentral" scale="0 0 0">
+            <a-entity geometry="primitive : plane; width : 4;height : 1;"
+                      material="color:grey" look-at="#cam" position="-8.631 -1.257 0.481"
+                      text="value:Bibliotheque et cafeteria ; color:black;width:5;align:center">
+            </a-entity>
+            <a-entity geometry="primitive : plane; width : 5;height : 1;"
+                      material="color:grey" look-at="#cam" position="-3.604 -0.754 -9.348"
+                      text="value:Departement GEA et salles d'anglais ; color:black;width:5;align:center">
+            </a-entity>
+            <a-entity geometry="primitive : plane; width : 4;height : 1;"
+                      material="color:grey" look-at="#cam" position="9.972 -1.121 6.725"
+                      text="value:Sortie ; color:black;width:5;align:center">
+            </a-entity>
             <a-image spot="linkto: #devantBibliotheque; spotgroup: group-devantBibliotheque" color="transparent"
                      position="-6.68105 -1.65 1.00882" look-at="#cam"></a-image>
             <a-image spot="linkto: #accueilCentral; spotgroup: group-accueilCentral" color="transparent"
@@ -576,6 +734,18 @@
 
 
         <a-entity id="group-accueilCentral" scale="0 0 0">
+            <a-entity geometry="primitive : plane; width : 4;height : 1;"
+                      material="color:grey" look-at="#cam" position="-4.37679 -1.061 7.2518"
+                      text="value:Cour ; color:black;width:5;align:center">
+            </a-entity>
+            <a-entity geometry="primitive : plane; width : 4;height : 1;"
+                      material="color:grey" look-at="#cam" position="-10.298 -1.284 1.112"
+                      text="value:Bibliotheque et cafeteria ; color:black;width:5;align:center">
+            </a-entity>
+            <a-entity geometry="primitive : plane; width : 4;height : 1;"
+                      material="color:grey" look-at="#cam" position="8.248 -0.804 6.951"
+                      text="value:Infirmerie et administration ; color:black;width:5;align:center">
+            </a-entity>
             <a-image spot="linkto: #droitCentral; spotgroup: group-droitCentral" color="transparent"
                      position="-7.385 -1.65 0.73417" look-at="#cam"></a-image>
             <a-image spot="linkto: #accueilCentral; spotgroup: group-accueilCentral" color="transparent"
