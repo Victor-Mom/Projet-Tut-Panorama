@@ -33,7 +33,6 @@
                 //add image source of hotspot icon
                 this.el.setAttribute("src","#fleche");
                 //make the icon look at the camera all the time
-                //this.el.setAttribute("rotation","-45 0 0");
                 this.el.setAttribute("look-at","#cam");
 
 
@@ -83,7 +82,7 @@
         <img id="coinGauche" src="../Panorama/image/coinGauche.JPG" height="2688" width="5376" alt=""/>
         <img id="couloirA12" src="../Panorama/image/couloirA12.JPG" height="2688" width="5376" alt=""/>
         <img id="couloirA18A19" src="../Panorama/image/couloirA18A19.JPG" height="2688" width="5376" alt=""/>
-        <img id="couloirA2122" src="../Panorama/image/couloirA21A22.JPG" height="2688" width="5376" alt=""/>
+        <img id="couloirA21A22" src="../Panorama/image/couloirA21A22.JPG" height="2688" width="5376" alt=""/>
         <img id="couloirA23" src="../Panorama/image/couloirA23.JPG" height="2688" width="5376" alt=""/>
         <img id="couloirB12" src="../Panorama/image/couloirB12.JPG" height="2688" width="5376" alt=""/>
         <img id="couloirB14B17" src="../Panorama/image/couloirB14B17.JPG" height="2688" width="5376" alt=""/>
@@ -112,7 +111,7 @@
     </a-assets>
 
 
-    <a-sky id="skybox" src="#parking"></a-sky>
+    <a-sky id="skybox" src="#couloirA18A19"></a-sky>
 
     <a-entity id="cam" camera position="0 1.6 0" look-controls>
         <a-entity cursor="fuse:true;fuseTimeout:2000"
@@ -126,11 +125,8 @@
 
         <!-- GROUPE A -->
         <a-entity id="group-A12" scale="0 0 0">
-            <a-image spot="linkto:#couloirA12;spotgroup:group-couloirA12" color="transparent" position="-7.5 1.8 -0.35"></a-image>
-            <a-entity geometry="primitive : plane; width : 1;height : auto;"
-                      material="color:red" look-at="#cam" position="-7 1.8 -0.35"
-                      text="value:Vers le couloir A; color:black;width:3;align:center">
-            </a-entity>
+            <a-image spot="linkto:#couloirA12;spotgroup:group-couloirA12" color="transparent"
+                     position="-7.5 -0.18 -0.7"></a-image>
         </a-entity>
 
 
@@ -180,77 +176,36 @@
 
 
         <a-entity id="group-couloirA12" scale="0 0 0">
-            <a-image spot="linkto:#A12;spotgroup:group-A12" color="transparent" position="-7.5 1.8 -0.35"></a-image>
-            <a-entity geometry="primitive : plane; width : 1;height : auto;"
-                      material="color:red" look-at="#cam" position="-7 1.8 -0.35"
-                      text="value:Vers la salle A12; color:black;width:3;align:center">
-            </a-entity>
-
-            <a-image spot="linkto:#couloirA18A19;spotgroup:group-couloirA18A19" color="transparent" position="7 1.65 5"></a-image>
-            <a-entity geometry="primitive : plane; width : 2;height : auto;"
-                      material="color:red" look-at="#cam" position="7 1 5"
-                      text="value:Vers la suite du couloir A; color:black;width:4;align:center">
-            </a-entity>
-
-            <a-image spot="linkto:#milieuA;spotgroup:group-milieuA" color="transparent" position="0.8 1.65 5"></a-image>
-            <a-entity geometry="primitive : plane; width : 2;height : auto;"
-                      material="color:red" look-at="#cam" position="0.8 1 5"
-                      text="value:Vers le centre niveau A; color:black;width:4;align:center">
-            </a-entity>
+            <a-image spot="linkto:#A12;spotgroup:group-A12" color="transparent"
+                     position="-5 -0.8 1"></a-image>
+            <a-image spot="linkto:#couloirA18A19;spotgroup:group-couloirA18A19" color="transparent"
+                     position="1.6 -0.6 8.9"></a-image>
+            <a-image spot="linkto:#milieuA;spotgroup:group-milieuA" color="transparent"
+                     position="-1.2 -1 -7.5"></a-image>
         </a-entity>
 
 
-        <a-entity id="group-couloirA18A19" scale ="0 0 0">
-            <a-image spot="linkto:#A18;spotgroup:group-A18" color="transparent" position="4.5 1.8 0"></a-image>
-            <a-entity geometry="primitive : plane; width : 2;height : auto;"
-                      material="color:red" look-at="#cam" position="0.8 1 5"
-                      text="value:Vers la salle A18; color:black;width:4;align:center">
-            </a-entity>
-
-            <a-image spot="linkto:#A19;spotgroup:group-A19" color="transparent" position="4.5 1.8 0"></a-image>
-            <a-entity geometry="primitive : plane; width : 2;height : auto;"
-                      material="color:red" look-at="#cam" position="0.8 1 5"
-                      text="value:Vers la salle A19; color:black;width:4;align:center">
-            </a-entity>
-
-            <a-image spot="linkto:#couloirA12;spotgroup:group-couloirA12" color="transparent" position="-0.8 -1.65 -5"></a-image>
-            <a-entity geometry="primitive : plane; width : 2;height : auto;"
-                      material="color:red" look-at="#cam" position="-0.8 -1 -5"
-                      text="value:Vers la suite du couloir'; color:black;width:4;align:center">
-            </a-entity>
-
-            <a-image spot="linkto:#couloirA21A22;spotgroup:group-couloirA21A22" color="transparent" position="-0.8 -1.65 -5"></a-image>
-            <a-entity geometry="primitive : plane; width : 2;height : auto;"
-                      material="color:red" look-at="#cam" position="-0.8 -1 -5"
-                      text="value:Vers la suite du couloir'; color:black;width:4;align:center">
-            </a-entity>
+        <a-entity id="group-couloirA18A19">
+            <a-image spot="linkto:#A18;spotgroup:group-A18" color="transparent"
+                     position="-4.2 0 -1.6"></a-image>
+            <a-image spot="linkto:#A19;spotgroup:group-A19" color="transparent"
+                     position="4.6 0 2.6"></a-image>
+            <a-image spot="linkto:#couloirA12;spotgroup:group-couloirA12" color="transparent"
+                     position="-0.8 -1 -6.7"></a-image>
+            <a-image spot="linkto:#couloirA21A22;spotgroup:group-couloirA21A22" color="transparent"
+                     position="0.4 -0.8 8.9"></a-image>
         </a-entity>
 
 
         <a-entity id="group-couloirA21A22" scale ="0 0 0">
-            <a-image spot="linkto:#A21;spotgroup:group-A21" color="transparent" position="4.5 1.8 0"></a-image>
-            <a-entity geometry="primitive : plane; width : 2;height : auto;"
-                      material="color:red" look-at="#cam" position="0.8 1 5"
-                      text="value:Vers la salle A21; color:black;width:4;align:center">
-            </a-entity>
-
-            <a-image spot="linkto:#A22;spotgroup:group-A22" color="transparent" position="4.5 1.8 0"></a-image>
-            <a-entity geometry="primitive : plane; width : 2;height : auto;"
-                      material="color:red" look-at="#cam" position="0.8 1 5"
-                      text="value:Vers la salle A22; color:black;width:4;align:center">
-            </a-entity>
-
-            <a-image spot="linkto:#couloirA18A19;spotgroup:group-couloirA18A19" color="transparent" position="-0.8 -1.65 -5"></a-image>
-            <a-entity geometry="primitive : plane; width : 2;height : auto;"
-                      material="color:red" look-at="#cam" position="-0.8 -1 -5"
-                      text="value:Vers la suite du couloir'; color:black;width:4;align:center">
-            </a-entity>
-
-            <a-image spot="linkto:#couloirA23;spotgroup:group-couloirA23" color="transparent" position="-0.8 -1.65 -5"></a-image>
-            <a-entity geometry="primitive : plane; width : 2;height : auto;"
-                      material="color:red" look-at="#cam" position="-0.8 -1 -5"
-                      text="value:Vers la suite du couloir'; color:black;width:4;align:center">
-            </a-entity>
+            <a-image spot="linkto:#A21;spotgroup:group-A21" color="transparent"
+                     position="4.2 0.2 2.8"></a-image>
+            <a-image spot="linkto:#A22;spotgroup:group-A22" color="transparent"
+                     position="-4.2 0.5 -2.6"></a-image>
+            <a-image spot="linkto:#couloirA18A19;spotgroup:group-couloirA18A19" color="transparent"
+                     position="-0.4 -0.5 -7"></a-image>
+            <a-image spot="linkto:#couloirA23;spotgroup:group-couloirA23" color="transparent"
+                     position="0 -1.2 6.6"></a-image>
         </a-entity>
 
 
@@ -310,35 +265,20 @@
 
 
         <a-entity id="group-escalierMilieuA" scale ="0 0 0">
-            <a-image spot="linkto:#millieuA;spotgroup:group-millieuA" color="transparent" position="0.8 1.65 5"></a-image>
-            <a-entity geometry="primitive : plane; width : 2;height : auto;"
-                      material="color:red" look-at="#cam" position="0.8 1 5"
-                      text="value:Vers le centre niveau A; color:black;width:4;align:center">
-            </a-entity>
-
-            <a-image spot="linkto:#escalierMilieuB;spotgroup:group-escalierMilieuB" color="transparent" position="-0.8 -1.65 -5"></a-image>
-            <a-entity geometry="primitive : plane; width : 2;height : auto;"
-                      material="color:red" look-at="#cam" position="-0.8 -1 -5"
-                      text="value:Vers l'escalier supérieur'; color:black;width:4;align:center">
-            </a-entity>
+            <a-image spot="linkto:#milieuA;spotgroup:group-milieuA" color="transparent"
+                     position="0 -1.2 -5.4"></a-image>
+            <a-image spot="linkto:#escalierMilieuB;spotgroup:group-escalierMilieuB" color="transparent"
+                     position="-6.2 -0.2 -1"></a-image>
         </a-entity>
 
 
         <a-entity id="group-milieuA" scale ="0 0 0">
             <a-image spot="linkto:#exterieurMilieu;spotgroup:group-exterieurMilieu" color="transparent"
-                     position="7.9 -0.26 -1.278" src="#hotspot" look-at="#cam" rotation="0 -30 0"></a-image>
-
-            <a-image spot="linkto:#couloirA12;spotgroup:group-couloirA12" color="transparent" position="-0.8 -1.65 -5"></a-image>
-            <a-entity geometry="primitive : plane; width : 2;height : auto;"
-                      material="color:red" look-at="#cam" position="-0.8 -1 -5"
-                      text="value:Sortie'; color:black;width:4;align:center">
-            </a-entity>
-
-            <a-image spot="linkto:#escalierMilieuA;spotgroup:group-escalierMilieuA" color="transparent" position="-0.8 -1.65 -5"></a-image>
-            <a-entity geometry="primitive : plane; width : 2;height : auto;"
-                      material="color:red" look-at="#cam" position="-0.8 -1 -5"
-                      text="value:Vers l'escalier'; color:black;width:4;align:center">
-            </a-entity>
+                     position="7.9 -0.5 -1.58"></a-image>
+            <a-image spot="linkto:#couloirA12;spotgroup:group-couloirA12" color="transparent"
+                     position="0.6 -0.8 8.9"></a-image>
+            <a-image spot="linkto:#escalierMilieuA;spotgroup:group-escalierMilieuA" color="transparent"
+                     position="9.9 -0.5 4.3"></a-image>
         </a-entity>
 
 
@@ -647,13 +587,13 @@
         </a-entity>
 
 
-        <a-entity id="group-parking">
+        <a-entity id="group-parking" scale="0 0 0">
             <a-image spot="linkto: #exterieurMilieu; spotgroup: group-exterieurMilieu" color="transparent"
-                     position="-1.78061 0 -9.74148" src="#hotspot" rotation="-45 0 0"></a-image>
+                     position="-1.78061 0 -9.74148"></a-image>
             <a-image spot="linkto: #exterieurDroit; spotgroup: group-exterieurDroit" color="transparent"
-                     position="4.1 0 -5.9" src="#hotspot"></a-image>
+                     position="4.1 0 -5.9"></a-image>
             <a-image spot="linkto: #exterieurCentral; spotgroup: group-exterieurCentral" color="transparent"
-                     position="-6.80577 0 1.25103" src="#hotspot"></a-image>
+                     position="-6.80577 0 1.25103"></a-image>
         </a-entity>
 
 
