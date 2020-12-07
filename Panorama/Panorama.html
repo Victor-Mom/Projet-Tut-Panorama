@@ -96,6 +96,7 @@
         <img id="exterieurDroit" src="../Panorama/image/exterieurDroit.jpg" height="2688" width="5376" alt=""/>
         <img id="exterieurGauche" src="../Panorama/image/exterieurGauche.JPG" height="2688" width="5376" alt=""/>
         <img id="exterieurMilieu" src="../Panorama/image/exterieurMilieu.JPG" height="2688" width="5376" alt=""/>
+        <img id="fondBlanc" src="image/FondBlanc.png" height="2688" width="5376" alt=""/>
         <img id="gaucheA" src="../Panorama/image/gaucheA.JPG" height="2688" width="5376" alt=""/>
         <img id="gaucheB" src="../Panorama/image/gaucheB.JPG" height="2688" width="5376" alt=""/>
         <img id="milieuA" src="../Panorama/image/milieuA.JPG" height="2688" width="5376" alt=""/>
@@ -120,6 +121,16 @@
 
 
 
+
+
+        <a-entity id="group-carte-info" scale="0 0 0">
+            <a-plane position="-2 1.6 -2" color="black">
+
+                <a-image spot="linkto:#milieuA;spotgroup:group-milieuA" color="transparent" position="0 0.1 0"></a-image>
+            </a-plane>
+
+
+        </a-entity>
 
 
 
@@ -656,6 +667,10 @@
                      position="5.00142 1.28607 -6.87479" src="#hotspot" look-at="#cam"></a-image>
             <a-image spot="linkto: #exterieurCentral; spotgroup: group-exterieurCentral" color="transparent"
                      position="-6.80577 1.63066 1.25103" src="#hotspot" look-at="#cam"></a-image>
+
+
+            <a-image spot="linkto: #fondBlanc; spotgroup: group-carte-info" color="transparent"
+                     position="-3 1.6 -3" src="#hotspot" look-at="#cam"></a-image>
         </a-entity>
 
 
