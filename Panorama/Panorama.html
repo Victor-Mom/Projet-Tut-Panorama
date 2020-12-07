@@ -60,6 +60,9 @@
         <img id="fleche" src="../Panorama/icones/fleche.png" height="350" width="350" alt=""/>
 
         //IMAGES 360
+        <img id="carte" src="../Panorama/image/fondgris.png" height="2688" width="5376" alt=""/>
+
+
         <img id="A12" src="../Panorama/image/A12.JPG" height="2688" width="5376" alt=""/>
         <img id="A18" src="../Panorama/image/A18.JPG" height="2688" width="5376" alt=""/>
         <img id="A19" src="../Panorama/image/A19.JPG" height="2688" width="5376" alt="">
@@ -112,7 +115,7 @@
     </a-assets>
 
 
-    <a-sky id="skybox" src="#parking"></a-sky>
+    <a-sky id="skybox" src="#carte"></a-sky>
 
     <a-entity id="cam" camera position="0 1.6 0" look-controls>
         <a-entity cursor="fuse:true;fuseTimeout:2000"
@@ -125,7 +128,13 @@
     <a-entity id="spots" hotspots>
 
 
+        <a-entity id="group-carte">
 
+            <a-plane position="0 2.6 -3" src look-at="#cam" height="6" width="6">
+
+            </a-plane>
+            
+        </a-entity>
 
 
 
@@ -652,7 +661,7 @@
         </a-entity>
 
 
-        <a-entity id="group-parking">
+        <a-entity id="group-parking" scale="0 0 0">
             <a-image spot="linkto: #exterieurMilieu; spotgroup: group-exterieurMilieu" color="transparent"
                      position="-1.78061 0 -9.74148" src="#hotspot" rotation="-45 0 0"></a-image>
             <a-image spot="linkto: #exterieurDroit; spotgroup: group-exterieurDroit" color="transparent"
