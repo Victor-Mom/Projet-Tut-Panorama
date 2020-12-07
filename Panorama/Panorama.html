@@ -101,6 +101,7 @@
         <img id="gaucheB" src="../Panorama/image/gaucheB.JPG" height="2688" width="5376" alt=""/>
         <img id="milieuA" src="../Panorama/image/milieuA.JPG" height="2688" width="5376" alt=""/>
         <img id="milieuB" src="../Panorama/image/milieuB.JPG" height="2688" width="5376" alt=""/>
+        <img id="planIUT" src="image/planIUT.png" alt=""/>
         <img id="parking" src="../Panorama/image/parking.jpg" height="2688" width="5376" alt=""/>
         <img id="sandwich" src="../Panorama/image/sandwich.jpg" height="2688" width="5376" alt=""/>
         <img id="secretariat" src="../Panorama/image/secretariat.JPG" height="2688" width="5376" alt=""/>
@@ -124,10 +125,20 @@
 
 
         <a-entity id="group-carte-info" scale="0 0 0">
-            <a-plane position="-2 1.6 -2" color="black">
+            <a-plane position="0 2.6 -3" src="#planIUT" color="black" look-at="#cam" height="6" width="6">
+                <a-text align="center" value="Carte principale" position="2 2.2 0.1"></a-text>
+                <a-text align="center" value="Rez-De-Chaussee" position="-2 2.2 0.1"></a-text>
+                <a-text align="center" value="Premier Etage" position="2 -2.2 0.1"></a-text>
+                <a-text align="center" value="Secretariat" position="-2 -2.2 0.1"></a-text>
+                <a-text align="center" value="Carte du Batiment Informatique" position="0 0 0.1"></a-text>
 
-                <a-image spot="linkto:#milieuA;spotgroup:group-milieuA" color="transparent" position="0 0.1 0"></a-image>
             </a-plane>
+            <a-circle radius="0.15" spot="linkto:#milieuB;spotgroup:group-milieuB" color="red" position="2 1 -2.9"></a-circle>
+            <a-circle radius="0.15" spot="linkto:#secretariat;spotgroup:group-carte" color="red" position="-2 1 -2.9"></a-circle>
+            <a-circle radius="0.15" spot="linkto:#carteEnzo; spotgroup: group-milieuA" color="red" position="2 4 -2.2"></a-circle>
+            <a-circle radius="0.15" spot="linkto:#milieuA;spotgroup:group-milieuA" color="red" position="-2 4 -2.2"></a-circle>
+
+
 
 
         </a-entity>
