@@ -31,9 +31,11 @@
             init:function(){
 
                 //add image source of hotspot icon
-                this.el.setAttribute("src","#hotspot");
+                this.el.setAttribute("src","#fleche");
                 //make the icon look at the camera all the time
+                //this.el.setAttribute("rotation","-45 0 0");
                 this.el.setAttribute("look-at","#cam");
+
 
                 var data=this.data;
 
@@ -54,6 +56,10 @@
 <body>
 <a-scene>
     <a-assets>
+        //ICONES
+        <img id="fleche" src="../Panorama/icones/fleche.png" height="350" width="350" alt=""/>
+
+        //IMAGES 360
         <img id="A12" src="../Panorama/image/A12.JPG" height="2688" width="5376" alt=""/>
         <img id="A18" src="../Panorama/image/A18.JPG" height="2688" width="5376" alt=""/>
         <img id="A19" src="../Panorama/image/A19.JPG" height="2688" width="5376" alt="">
@@ -324,13 +330,10 @@
 
 
         <a-entity id="group-milieuA" scale ="0 0 0">
-            <a-image spot="linkto:#couloirA12;spotgroup:group-couloirA12" color="transparent" position="-0.8 -1.65 -5"></a-image>
-            <a-entity geometry="primitive : plane; width : 2;height : auto;"
-                      material="color:red" look-at="#cam" position="-0.8 -1 -5"
-                      text="value:Vers la suite du couloir'; color:black;width:4;align:center">
-            </a-entity>
+            <a-image spot="linkto:#exterieurMilieu;spotgroup:group-exterieurMilieu" color="transparent"
+                     position="7.9 -0.26 -1.278" src="#hotspot" look-at="#cam" rotation="0 -30 0"></a-image>
 
-            <a-image spot="linkto:#exterieurMilieu;spotgroup:group-exterieurMilieu" color="transparent" position="-0.8 -1.65 -5"></a-image>
+            <a-image spot="linkto:#couloirA12;spotgroup:group-couloirA12" color="transparent" position="-0.8 -1.65 -5"></a-image>
             <a-entity geometry="primitive : plane; width : 2;height : auto;"
                       material="color:red" look-at="#cam" position="-0.8 -1 -5"
                       text="value:Sortie'; color:black;width:4;align:center">
@@ -641,9 +644,9 @@
         <!-- GROUPE EXTERIEUR -->
         <a-entity id="group-exterieurMilieu" scale="0 0 0">
             <a-image spot="linkto:#milieuA;spotgroup:group-milieuA" color="transparent"
-                     position="-7 0 0.5" src="#hotspot" look-at="#cam"></a-image>
+                     position="-7 0 0.5" src="#fleche" look-at="#cam"></a-image>
             <a-image spot="linkto:#croisementChemin;spotgroup:group-croisementChemin" color="transparent"
-                     position="1.5 1 7" src="#hotspot" look-at="#cam"></a-image>
+                     position="1.6 0 7.77" src="#hotspot" look-at="#cam"></a-image>
             <a-image spot="linkto:#parking;spotgroup:group-parking" color="transparent"
                      position="-1 0 -9" src="#hotspot" look-at="#cam"></a-image>
         </a-entity>
@@ -651,11 +654,11 @@
 
         <a-entity id="group-parking">
             <a-image spot="linkto: #exterieurMilieu; spotgroup: group-exterieurMilieu" color="transparent"
-                     position="-1.78061 1.36917 -9.74148" src="#hotspot" look-at="#cam"></a-image>
+                     position="-1.78061 0 -9.74148" src="#hotspot" rotation="-45 0 0"></a-image>
             <a-image spot="linkto: #exterieurDroit; spotgroup: group-exterieurDroit" color="transparent"
-                     position="5.00142 1.28607 -6.87479" src="#hotspot" look-at="#cam"></a-image>
+                     position="4.1 0 -5.9" src="#hotspot"></a-image>
             <a-image spot="linkto: #exterieurCentral; spotgroup: group-exterieurCentral" color="transparent"
-                     position="-6.80577 1.63066 1.25103" src="#hotspot" look-at="#cam"></a-image>
+                     position="-6.80577 0 1.25103" src="#hotspot"></a-image>
         </a-entity>
 
 
@@ -678,11 +681,11 @@
 
         <a-entity id="group-croisementChemin" scale="0 0 0">
             <a-image spot="linkto:#exterieurMilieu;spotgroup:group-exterieurMilieu" color="transparent"
-                     position="0 -1.65 8" src="#hotspot" look-at="#cam"></a-image>
+                     position="0 -0.8 8" src="#hotspot" look-at="#cam"></a-image>
             <a-image spot="linkto:#devantAmphi;spotgroup:group-devantAmphi" color="transparent"
-                     position="-5.5 0.5 0" src="#hotspot" look-at="#cam"></a-image>
+                     position="-8 0 0" src="#hotspot" look-at="#cam"></a-image>
             <a-image spot="linkto:#coinGauche;spotgroup:group-coinGauche" color="transparent"
-                     position="0.167 -0.868 -10.8" src="#hotspot" look-at="#cam"></a-image>
+                     position="0.167 -0.5 -10.8" src="#hotspot" look-at="#cam"></a-image>
         </a-entity>
 
 
