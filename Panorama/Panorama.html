@@ -90,7 +90,7 @@
         <img id="couloirB20B21B22B23" src="../Panorama/image/couloirB20B21B22B23.JPG" height="2688" width="5376" alt=""/>
         <img id="croisementChemin" src="../Panorama/image/croisementChemin.JPG" height="2688" width="5376" alt=""/>
         <img id="devantAmphi" src="../Panorama/image/devantAmphi.jpg" height="2688" width="5376" alt=""/>
-        <img id="devantBibliotheque" src="../Panorama/image/devantBibliotheque.jpg" height="2688" width="5376" alt=""/>
+        <img id="devantBibliotheque" src="../Panorama/image/devantBibliotheque.jpg" height="2688" width="5376" alt="" />
         <img id="droitCentral" src="../Panorama/image/droitCentral.jpg" height="2688" width="5376" alt=""/>
         <img id="entreeCafet" src="../Panorama/image/entreeCafet.jpg" height="2688" width="5376" alt=""/>
         <img id="escalierGaucheA" src="../Panorama/image/escalierGaucheA.JPG" height="2688" width="5376" alt=""/>
@@ -599,113 +599,125 @@
         <a-entity id="group-devantAmphi" scale="0 0 0">
             <a-image spot="linkto:#croisementChemin;spotgroup:group-croisementChemin" color="transparent"
                      position="-6.239 -1.17 -7.336" src="#hotspot" look-at="#cam"></a-image>
-            <a-image spot="linkto:#coincafet;spotgroup:group-coinCafet" color="transparent"
+            <a-image spot="linkto:#coinCafet;spotgroup:group-coinCafet" color="transparent"
                      position="8.139 -0.184 -6.7"  src="#hotspot" look-at="#cam"></a-image>
         </a-entity>
 
 
         <!-- GROUPE CENTRAL -->
         <a-entity id="group-coinCafet" scale="0 0 0">
-            <a-image spot="linkto:#devantAmphi;spotgroup:group-devantAmphi" color="transparent" position="-0.8 -1.65 -5"></a-image>
-            <a-entity geometry="primitive : plane; width : 2;height : auto;"
-                      material="color:red" look-at="#cam" position="-0.8 -1 -5"
-                      text="value:Vers les amphis'; color:black;width:4;align:center">
-            </a-entity>
+            <a-image spot="linkto: #devantAmphi; spotgroup: group-devantAmphi" color="transparent"
+                     position="-4.67079 -1.65 5.53263" material="" geometry="" src="#fleche" look-at="#cam"
+                     rotation="60 -42.55 0">
+            </a-image>
 
-            <a-image spot="linkto:#entreeCafet;spotgroup:group-entreeCafet" color="transparent" position="-0.8 -1.65 -5"></a-image>
-            <a-entity geometry="primitive : plane; width : 2;height : auto;"
-                      material="color:red" look-at="#cam" position="-0.8 -1 -5"
-                      text="value:Entrée caféteria'; color:black;width:4;align:center">
-            </a-entity>
+            <a-image spot="linkto: #entreeCafet; spotgroup: group-entreeCafet" color="transparent"
+                     position="4.35943 -1.65 3.59501" material="" geometry="" src="#fleche" look-at="#cam"
+                     rotation="60 52.34 4.939453">
+            </a-image>
 
-            <a-image spot="linkto:#devantBibliotheque;spotgroup:group-devantBibliotheque" color="transparent" position="-0.8 -1.65 -5"></a-image>
-            <a-entity geometry="primitive : plane; width : 2;height : auto;"
-                      material="color:red" look-at="#cam" position="-0.8 -1 -5"
-                      text="value:Vers la bibliothèque'; color:black;width:4;align:center">
-            </a-entity>
+            <a-image spot="linkto: #devantBibliotheque; spotgroup: group-devantBibliotheque" color="transparent"
+                     position="5.02151 -1.65 -5.60137" material="" geometry="" src="#fleche" look-at="#cam"
+                     rotation="-70 -47.53 4.93945366701696">
+            </a-image>
         </a-entity>
 
 
         <a-entity id="group-entreeCafet" scale="0 0 0">
-            <a-image spot="linkto:#coincafet;spotgroup:group-croisementChemin" color="transparent" position="-0.8 -1.65 -5"></a-image>
-            <a-entity geometry="primitive : plane; width : 2;height : auto;"
-                      material="color:red" look-at="#cam" position="-0.8 -1 -5"
-                      text="value:Couloir central'; color:black;width:4;align:center">
-            </a-entity>
+            <a-image spot="linkto: #coinCafet; spotgroup:group-coinCafet" color="transparent"
+                     position="0.80785 -2.27172 6.03043" material="" geometry="" src="#fleche" look-at="#cam"
+                     rotation="-89.99999998209505 -183.02 9.090276920822317">
+            </a-image>
 
-            <a-image spot="linkto:#cafet;spotgroup:group-cafet" color="transparent" position="-0.8 -1.65 -5"></a-image>
-            <a-entity geometry="primitive : plane; width : 2;height : auto;"
-                      material="color:red" look-at="#cam" position="-0.8 -1 -5"
-                      text="value:Caféteria'; color:black;width:4;align:center">
-            </a-entity>
+            <a-image spot="linkto: #cafet; spotgroup: group-cafet" color="transparent"
+                     position="7.22524 -1.65 -1.28208" material="" geometry="" src="#fleche" look-at="#cam"
+                     rotation="-70 -81.92 0" scale="">
+            </a-image>
 
-            <a-image spot="linkto:#sandwich;spotgroup:group-sandwich" color="transparent" position="-0.8 -1.65 -5"></a-image>
-            <a-entity geometry="primitive : plane; width : 2;height : auto;"
-                      material="color:red" look-at="#cam" position="-0.8 -1 -5"
-                      text="value:Coin sandwich'; color:black;width:4;align:center">
-            </a-entity>
+            <a-image spot="linkto: #sandwich; spotgroup: group-sandwich" color="transparent"
+                     position="-0.8 -1.65 -9.73296" material="" geometry="" src="#fleche" look-at="#cam"
+                     rotation="-70 5.430000000000001 0">
+            </a-image>
         </a-entity>
 
 
         <a-entity id="group-sandwich" scale="0 0 0">
-            <a-image spot="linkto:#entreeCafet;spotgroup:group-entreeCafet" color="transparent" position="-0.8 -1.65 -5"></a-image>
-            <a-entity geometry="primitive : plane; width : 2;height : auto;"
-                      material="color:red" look-at="#cam" position="-0.8 -1 -5"
-                      text="value:Entrée caféteria'; color:black;width:4;align:center">
-            </a-entity>
+            <a-image spot="linkto: #entreeCafet; spotgroup: group-entreeCafet" color="transparent"
+                     position="-3.45167 -1.65 5.05973" material="" geometry="" src="#fleche" look-at="#cam"
+                     rotation="-90 150 9.09027">
+            </a-image>
         </a-entity>
 
 
         <a-entity id="group-cafet" scale="0 0 0">
-            <a-image spot="linkto:#entreeCafet;spotgroup:group-entreeCafet" color="transparent" position="-0.8 -1.65 -5"></a-image>
-            <a-entity geometry="primitive : plane; width : 2;height : auto;"
-                      material="color:red" look-at="#cam" position="-0.8 -1 -5"
-                      text="value:Entrée caféteria'; color:black;width:4;align:center">
-            </a-entity>
+            <a-image spot="linkto: #entreeCafet; spotgroup: group-entreeCafet" color="transparent"
+                     position="6.05826 -1.65 3.84593" material="" geometry="" src="#fleche" look-at="#cam"
+                     rotation="70 64.09 4.93945366701696">
+            </a-image>
         </a-entity>
 
 
-        <a-entity id="group-devantBibliotheque" scale="0 0 0">
-            <a-image spot="linkto:#coincafet;spotgroup:group-croisementChemin" color="transparent" position="-0.8 -1.65 -5"></a-image>
-            <a-entity geometry="primitive : plane; width : 2;height : auto;"
-                      material="color:red" look-at="#cam" position="-0.8 -1 -5"
-                      text="value:Coin caféteria'; color:black;width:4;align:center">
-            </a-entity>
+        <a-entity id="group-devantBibliotheque" scale="0 0 0" >
+            <a-image spot="linkto: #coinCafet; spotgroup: group-coinCafet" color="transparent"
+                     position="7.70431 -1.65 -0.61523" material="" geometry="" src="#fleche" look-at="#cam"
+                     rotation="-76.364 -89.57000000000001 4.93945366701696">
+            </a-image>
 
-            <a-image spot="linkto:#droitCentral;spotgroup:group-droitCentral" color="transparent" position="-0.8 -1.65 -5"></a-image>
-            <a-entity geometry="primitive : plane; width : 2;height : auto;"
-                      material="color:red" look-at="#cam" position="-0.8 -1 -5"
-                      text="value:Entrée principale'; color:black;width:4;align:center">
-            </a-entity>
+            <a-image spot="linkto: #droitCentral; spotgroup: group-droitCentral" color="transparent"
+                     position="-10.87405 -1.65 0.67964" material="" geometry="" src="#fleche" look-at="#cam"
+                     rotation="-70 91.31 4.93945366701696">
+            </a-image>
 
-            <a-image spot="linkto:#centreCentral;spotgroup:group-centreCentral" color="transparent" position="-0.8 -1.65 -5"></a-image>
-            <a-entity geometry="primitive : plane; width : 2;height : auto;"
-                      material="color:red" look-at="#cam" position="-0.8 -1 -5"
-                      text="value:Cour centrale en exterieur'; color:black;width:4;align:center">
-            </a-entity>
+            <a-image spot="linkto: #centreCentral; spotgroup: group-centreCentral" color="transparent"
+                     position="-6.15781 -2.63442 -5" material="" geometry="" src="#fleche" look-at="#cam"
+                     rotation="-70 32.48 4.93945366701696">
+            </a-image>
+        </a-entity>
+
+
+        <a-entity id="group-centreCentral" scale="0 0 0">
+            <a-image spot="linkto: #accueilCentral; spotgroup: group-accueilCentral" color="transparent"
+                     position="1.95497 -2.70104 22.20621" material="" geometry="" src="#fleche" look-at="#cam"
+                     rotation="-50 -159.66 0" scale="2 2 1">
+            </a-image>
+
+            <a-image spot="linkto: #devantBibliotheque; spotgroup: group-devantBibliotheque" color="transparent"
+                     position="16.55044 -1.65 -0.79826" material="" geometry="" src="#fleche" look-at="#cam"
+                     rotation="-25.68746006940646 98.58663682921708 1.764676994569168e-15">
+            </a-image>
         </a-entity>
 
 
         <a-entity id="group-droitCentral" scale="0 0 0">
-            <a-image spot="linkto:#devantBibliotheque;spotgroup:group-devantBibliotheque" color="transparent" position="-0.8 -1.65 -5"></a-image>
-            <a-entity geometry="primitive : plane; width : 2;height : auto;"
-                      material="color:red" look-at="#cam" position="-0.8 -1 -5"
-                      text="value:Vers la bibliothèque'; color:black;width:4;align:center">
-            </a-entity>
+            <a-image spot="linkto: #devantBibliotheque; spotgroup: group-devantBibliotheque" color="transparent"
+                     position="-6.68105 -1.65 1.00882" material="" geometry="" src="#fleche" look-at="#cam"
+                     rotation="-70 95 4.93945366701696">
+            </a-image>
 
-            <a-image spot="linkto:#accueilCentral;spotgroup:group-accueilCentral" color="transparent" position="-0.8 -1.65 -5"></a-image>
-            <a-entity geometry="primitive : plane; width : 2;height : auto;"
-                      material="color:red" look-at="#cam" position="-0.8 -1 -5"
-                      text="value:Entrée du batiment central'; color:black;width:4;align:center">
-            </a-entity>
+            <a-image spot="linkto: #accueilCentral; spotgroup: group-accueilCentral" color="transparent"
+                     position="7.16276 -1.65 5.56906" material="" geometry="" src="#fleche" look-at="#cam"
+                     rotation="-75.47 -129.68 4.93945366701696" scale="1.18 1.18 -0.82">
+            </a-image>
         </a-entity>
+
 
         <a-entity id="group-accueilCentral" scale="0 0 0">
-            <a-image spot="linkto: #devantBibliotheque; spotgroup: group-devantBibliotheque" color="transparent" position="-0.8 -1.65 -5" material="src: " geometry="" src="#hotspot" look-at="#cam"></a-image>
-            <a-entity geometry="primitive: plane; width: 2; height: auto" material="color: red" look-at="#cam" position="2 1 3" text="value: Vers la bibliothèque'; color: black; width: 4; align: center">
-            </a-entity>
-        </a-entity>
+            <a-image spot="linkto: #droitCentral; spotgroup: group-droitCentral" color="transparent"
+                     position="-7.385 -1.65 0.73417" material="" geometry="" src="#fleche" look-at="#cam"
+                     rotation="-70 110 3.4721638733628116e-15">
 
+            </a-image>
+
+            <a-image spot="linkto: #accueilCentral; spotgroup: group-accueilCentral" color="transparent"
+                     position="2.99072 -2.46 -4.97548" material="" geometry="" src="#fleche" look-at="#cam"
+                     rotation="-64.78387000000001 -36.33 4.689">
+            </a-image>
+
+            <a-image spot="linkto: #centreCentral; spotgroup: group-centreCentral" color="transparent"
+                     position="-4.37679 -2.46 7.25185" material="" geometry="" src="#fleche" look-at="#cam"
+                     rotation="70 -30 -1.9406143">
+            </a-image>
+        </a-entity>
 
 
     </a-entity>
