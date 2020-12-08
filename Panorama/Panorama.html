@@ -186,6 +186,10 @@
                       material="color:grey" look-at="#cam" position="10.750 -0.336 2.441"
                       text="value:A19-Salle de TP libre service;wrap-count:15; color:black;width:5;align:center">
             </a-entity>
+            <a-entity geometry="primitive : plane; width : 4;height : auto;"
+                      material="color:grey" look-at="#cam" position="-7.5 1.8 -0.35"
+                      text="value:A18-Salle de TP;wrap-count:15; color:black;width:5;align:center">
+            </a-entity>
 
             <a-image spot="linkto:#A18;spotgroup:group-A18" color="transparent"
                      position="-4.2 0 -1.6"></a-image>
@@ -213,6 +217,10 @@
 
 
         <a-entity id="group-couloirA23" scale ="0 0 0">
+            <a-entity geometry="primitive : plane; width : 4;height : auto;"
+                      material="color:grey" look-at="#cam" position="6.312 1.052 -0.047"
+                      text="value:A23-Salle de TP;wrap-count:15; color:black;width:5;align:center">
+            </a-entity>
             <a-image spot="linkto:#A23;spotgroup:group-A23" color="transparent"
                      position="5.4 0 0"></a-image>
             <a-image spot="linkto:#couloirA21A22;spotgroup:group-couloirA21A22" color="transparent"
@@ -224,6 +232,14 @@
 
 
         <a-entity id="group-gaucheA" scale="0 0 0">
+            <a-entity geometry="primitive : plane; width : 4;height : auto;"
+                      material="color:grey" look-at="#cam" position="-7.5 1.8 -0.35"
+                      text="value:Sortie arriere du batiment;wrap-count:15; color:black;width:5;align:center">
+            </a-entity>
+            <a-entity geometry="primitive : plane; width : 4;height : auto;"
+                      material="color:grey" look-at="#cam" position="8.514 -0.832 -1.886"
+                      text="value:Escaliers vers etages superieurs;wrap-count:15; color:black;width:5;align:center">
+            </a-entity>
             <a-image spot="linkto:#couloirA23;spotgroup:group-couloirA23" color="transparent"
                      position="3.1 -1 6.6"></a-image>
             <a-image spot="linkto:#escalierGaucheA;spotgroup:group-escalierGaucheA" color="transparent"
@@ -235,12 +251,12 @@
 
         <a-entity id="group-escalierGaucheA" scale ="0 0 0">
             <a-entity geometry="primitive : plane; width : 4;height : auto;"
-                      material="color:grey" look-at="#cam" position="-0.8 -1 -5"
-                      text="value:Premier etage : couloir B;wrap-count:15; color:black;width:5;align:center">
+                      material="color:grey" look-at="#cam" position="-13.825 -0.664 -5.000"
+                      text="value:Escaliers vers etage 1 et 2;wrap-count:15; color:black;width:5;align:center">
             </a-entity>
             <a-entity geometry="primitive : plane; width : 4;height : auto;"
-                      material="color:grey" look-at="#cam" position="-0.8 -1 -5"
-                      text="value:Deuxième etage : bureaux des professeurs;wrap-count:15; color:black;width:5;align:center">
+                      material="color:grey" look-at="#cam" position="-0.219 1.857 3.321"
+                      text="value:Toilettes;wrap-count:15; color:black;width:5;align:center">
             </a-entity>
             <a-image spot="linkto:#gaucheA;spotgroup:group-gaucheA" color="transparent"
                      position="1 -1.5 -5"></a-image>
@@ -251,6 +267,11 @@
 
 
         <a-entity id="group-escalierMilieuA" scale ="0 0 0">
+            <a-entity geometry="primitive : plane; width : 4;height : auto;"
+                      material="color:grey" look-at="#cam" position="-8.563 1.454 -1.324"
+                      text="value:1er etage : couloir B;wrap-count:15; color:black;width:5;align:center">
+            </a-entity>
+
             <a-image spot="linkto:#milieuA;spotgroup:group-milieuA" color="transparent"
                      position="0 -1.2 -5.4"></a-image>
             <a-image spot="linkto:#escalierMilieuB;spotgroup:group-escalierMilieuB" color="transparent"
@@ -261,7 +282,7 @@
 
         <a-entity id="group-milieuA" scale ="0 0 0">
             <a-entity geometry="primitive : plane; width : 4;height : 1;"
-                      material="color:grey" look-at="#cam" position="12.334 -1.526 5.999" rotation="-4.768 2.249 0"
+                      material="color:grey" look-at="#cam" position="12.334 0 5.999" rotation="-4.768 2.249 0"
                       text="value:Escalier ; color:black;width:5;align:center">
             </a-entity>
             <a-entity geometry="primitive : plane; width : 4;height : 1;"
@@ -315,6 +336,7 @@
 
 
         <a-entity id="group-B18" scale="0 0 0">
+
             <a-image spot="linkto: #couloirB18B19; spotgroup: group-couloirB18B19" color="transparent"
                      position="5.87991 0.49525 4.74003" look-at="#cam"></a-image>
 
@@ -322,6 +344,7 @@
 
 
         <a-entity id="group-B19" scale="0 0 0">
+
             <a-image spot="linkto: #couloirB18B19; spotgroup: group-couloirB18B19" color="transparent"
                      position="6.02163 0.31623 -5.18968" look-at="#cam"></a-image>
 
@@ -329,6 +352,7 @@
 
 
         <a-entity id="group-B20" scale="0 0 0">
+
             <a-image spot="linkto: #couloirB20B21B22B23; spotgroup: group-couloirB20B21B22B23" color="transparent"
                      position="-7.75788 0.83569 -4.53381" look-at="#cam"></a-image>
 
@@ -359,6 +383,8 @@
 
 
         <a-entity id="group-secretariat" scale="0 0 0">
+
+
             <a-image spot="linkto: #couloirB12; spotgroup: group-couloirB12" color="transparent"
                      position="5.35987 0.61905 -4.96787" look-at="#cam"></a-image>
 
@@ -366,6 +392,22 @@
 
 
         <a-entity id="group-couloirB12" scale="0 0 0">
+            <a-entity geometry="primitive : plane; width : 6;height : auto;"
+                      material="color:grey" look-at="#cam" position="-9 4 11"
+                      text="value:Panneaux informatifs avec les emplois du temps des eleves;wrap-count:15; color:black;width:5;align:center">
+            </a-entity>
+            <a-entity geometry="primitive : plane; width : 4;height : auto;"
+                      material="color:grey" look-at="#cam" position="-6 2 -7"
+                      text="value:Secreteriat departement Informatique;wrap-count:15; color:black;width:5;align:center">
+            </a-entity>
+            <a-entity geometry="primitive : plane; width : 4;height : auto;"
+                      material="color:grey" look-at="#cam" position="-0.320 1.716 8.479"
+                      text="value:B12-Salle de TP et de tutorat ;wrap-count:15; color:black;width:5;align:center">
+            </a-entity>
+            <a-entity geometry="primitive : plane; width : 4;height : auto;"
+                      material="color:grey" look-at="#cam" position="-15.5 -0.082 7.727"
+                      text="value:Escalier vers rez de chausse;wrap-count:15; color:black;width:5;align:center">
+            </a-entity>
             <a-image spot="linkto: #B12; spotgroup: group-B12" color="transparent"
                      position="1.967 0.1291 5.53" look-at="#cam"></a-image>
             <a-image spot="linkto: #secretariat; spotgroup: group-secretariat" color="transparent"
@@ -392,6 +434,14 @@
 
 
         <a-entity id="group-couloirB18B19" scale="0 0 0">
+            <a-entity geometry="primitive : plane; width : 4;height : auto;"
+                      material="color:grey" look-at="#cam" position="3.636 1.697 -0.932"
+                      text="value:B18-Salle de TP;wrap-count:15; color:black;width:5;align:center">
+            </a-entity>
+            <a-entity geometry="primitive : plane; width : 4;height : auto;"
+                      material="color:grey" look-at="#cam" position="-7.5 1.8 -0.35"
+                      text="value:B19-Salle de TP;wrap-count:15; color:black;width:5;align:center">
+            </a-entity>
             <a-image spot="linkto: #B18; spotgroup: group-B18" color="transparent"
                      position="9.51958 0.36694 -3.28342" look-at="#cam"></a-image>
             <a-image spot="linkto: #B19; spotgroup: group-B19" color="transparent"
@@ -405,6 +455,10 @@
 
 
         <a-entity id="group-couloirB20B21B22B23" scale="0 0 0">
+            <a-entity geometry="primitive : plane; width : 4;height : auto;"
+                      material="color:grey" look-at="#cam" position="-7.5 1.8 -6.3"
+                      text="value:B20-Salle de TP;wrap-count:15; color:black;width:5;align:center">
+            </a-entity>
             <a-image spot="linkto: #B20; spotgroup: group-B20" color="transparent"
                      position="-7.29631 -0.95567 -3.93664" look-at="#cam"></a-image>
             <a-image spot="linkto: #B21; spotgroup: group-B21" color="transparent"
@@ -422,6 +476,7 @@
 
 
         <a-entity id="group-escalierGaucheB" scale="0 0 0">
+
             <a-image spot="linkto: #gaucheB; spotgroup: group-gaucheB" color="transparent"
                      position="1.06712 -2.93894 7.02546" look-at="#cam"></a-image>
             <a-image spot="linkto: #escalierGaucheA; spotgroup: group-escalierGaucheA" color="transparent"
@@ -431,6 +486,18 @@
 
 
         <a-entity id="group-escalierMilieuB" scale="0 0 0">
+            <a-entity geometry="primitive : plane; width : 6;height : auto;"
+                      material="color:grey" look-at="#cam" position="5.406 -2.713 3.923"
+                      text="value:Rez de chausse : couloir A et sortie;wrap-count:15; color:black;width:5;align:center">
+            </a-entity>
+            <a-entity geometry="primitive : plane; width : 6;height : auto;"
+                      material="color:grey" look-at="#cam" position="0.199 0.569 8.327"
+                      text="value:2eme etage : bureaux des professeurs;wrap-count:15; color:black;width:5;align:center">
+            </a-entity>
+            <a-entity geometry="primitive : plane; width : 6;height : auto;"
+                      material="color:grey" look-at="#cam" position="-7.234 0.048 3.094"
+                      text="value:1er etage : couloir B;wrap-count:15; color:black;width:5;align:center">
+            </a-entity>
             <a-image spot="linkto: #escalierMilieuA; spotgroup: group-escalierMilieuA" color="transparent"
                      position="3.59377 -2.53044 3.51972" look-at="#cam"></a-image>
             <a-image spot="linkto: #milieuB; spotgroup: group-milieuB" color="transparent"
@@ -440,6 +507,18 @@
 
 
         <a-entity id="group-gaucheB" scale="0 0 0">
+            <a-entity geometry="primitive : plane; width : 6;height : auto;"
+                      material="color:grey" look-at="#cam" position="-7.5 1.8 -0.35"
+                      text="value:B10-Salle de TP;wrap-count:15; color:black;width:5;align:center">
+            </a-entity>
+            <a-entity geometry="primitive : plane; width : 6;height : auto;"
+                      material="color:grey" look-at="#cam" position="-7.5 1.8 -0.35"
+                      text="value:Departement RT;wrap-count:15; color:black;width:5;align:center">
+            </a-entity>
+            <a-entity geometry="primitive : plane; width : 6;height : auto;"
+                      material="color:grey" look-at="#cam" position="-7.5 1.8 -0.35"
+                      text="value:Escalier vers rez de chausse;wrap-count:15; color:black;width:5;align:center">
+            </a-entity>
             <a-image spot="linkto: #B23; spotgroup: group-B23" color="transparent"
                      position="2.93583 -2.13579 6.11566" look-at="#cam"></a-image>
             <a-image spot="linkto: #couloirB20B21B22B23; spotgroup: group-couloirB20B21B22B23" color="transparent"
@@ -451,6 +530,22 @@
 
 
         <a-entity id="group-milieuB" scale="0 0 0">
+            <a-entity geometry="primitive : plane; width : 6;height : 1;"
+                      material="color:grey" look-at="#cam" position="-15 0.2 -1.825" rotation="-4.768 2.249 0"
+                      text="value:B10-Salle de TP ; color:black;width:5;align:center">
+            </a-entity>
+            <a-entity geometry="primitive : plane; width : 6;height : 1;"
+                      material="color:grey" look-at="#cam" position="10 0.4 -15" rotation="-4.768 2.249 0"
+                      text="value:Rez de chausse : couloir A ; color:black;width:5;align:center">
+            </a-entity>
+            <a-entity geometry="primitive : plane; width :6;height : 1;"
+                      material="color:grey" look-at="#cam" position="-8.8 0.1 -7.259" rotation="-4.768 2.249 0"
+                      text="value:Departement RT ; color:black;width:5;align:center">
+            </a-entity>
+            <a-entity geometry="primitive : plane; width : 6;height : 1;"
+                      material="color:grey" look-at="#cam" position="9 0 6" rotation="-4.768 2.249 0"
+                      text="value:Couloir B ; color:black;width:5;align:center">
+            </a-entity>
             <a-image spot="linkto: #B10; spotgroup: group-B10" color="transparent"
                      position="-7.5 -0.12484 -1.41482" look-at="#cam"></a-image>
             <a-image spot="linkto: #couloirB12; spotgroup: group-couloirB12" color="transparent"
