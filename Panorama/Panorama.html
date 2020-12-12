@@ -102,6 +102,7 @@
         <img id="exterieurDroit" src="../Panorama/image/exterieurDroit.jpg" height="2688" width="5376" alt=""/>
         <img id="exterieurGauche" src="../Panorama/image/exterieurGauche.JPG" height="2688" width="5376" alt=""/>
         <img id="exterieurMilieu" src="../Panorama/image/exterieurMilieu.JPG" height="2688" width="5376" alt=""/>
+        <img id="fondBlanc" src="image/fondBlanc.png" height="2668" width="5376" alt=""/>
         <img id="gaucheA" src="../Panorama/image/gaucheA.JPG" height="2688" width="5376" alt=""/>
         <img id="gaucheB" src="../Panorama/image/gaucheB.JPG" height="2688" width="5376" alt=""/>
         <img id="milieuA" src="../Panorama/image/milieuA.JPG" height="2688" width="5376" alt=""/>
@@ -123,6 +124,26 @@
     </a-entity>
 
     <a-entity id="spots" hotspots>
+
+        <a-entity id="group-carte-info" scale="0 0 0">
+            <a-plane position="0 2.6 -3" color="black" look-at="#cam" height="6" width="6">
+                <a-text align="center" value="Carte principale" position="2 -1.8 0.1"></a-text>
+                <a-text align="center" value="Rez-De-Chaussee" position="0 -0.2 0.1"></a-text>
+                <a-text align="center" value="Premier Etage" position="0.9 1.8 0.1"></a-text>
+                <a-text align="center" value="Sortie Petite Porte" position="-0.9 1.8 0.1"></a-text>
+                <a-text align="center" value="Sortie Petite Porte" position="-0.9 1.8 0.1"></a-text>
+                <a-text align="center" value="Batiment Informatique" position="-1.6 2.5 0.1"></a-text>
+            </a-plane>
+
+            <a-circle radius="0.15" spot="linkto:#milieuB;spotgroup:group-milieuB" position="0.8 3.5 -2.2"></a-circle>
+            <a-circle radius="0.15" spot="linkto:#secretariat;spotgroup:group-carte" position="-0.8 3.5 -2.2"></a-circle>
+            <a-circle radius="0.15" spot="linkto:#secretariat;spotgroup:group-carte" position="-0.8 3.5 -2.2"></a-circle>
+            <a-circle radius="0.15" spot="linkto:#carteEnzo; spotgroup: group-milieuA" position="1.8 0.5 -3.2"></a-circle>
+            <a-circle radius="0.15" spot="linkto:#milieuA;spotgroup:group-milieuA" position="0 1.8 -2.5"></a-circle>
+
+        </a-entity>
+
+
 
         <!-- GROUPE A -->
         <a-entity id="group-A12" scale="0 0 0">
@@ -596,6 +617,9 @@
                      position="4.1 0 -5.9"></a-image>
             <a-image spot="linkto: #exterieurCentral; spotgroup: group-exterieurCentral" color="transparent"
                      position="-6.80577 0 1.25103"></a-image>
+
+            <a-image spot="linkto: #fondBlanc; spotgroup: group-carte-info" color="black"
+                     position="-3 0 -3"></a-image>
 
         </a-entity>
 
