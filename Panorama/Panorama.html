@@ -110,6 +110,7 @@
         <img id="sandwich" src="../Panorama/image/sandwich.jpg" height="2688" width="5376" alt=""/>
         <img id="secretariat" src="../Panorama/image/secretariat.JPG" height="2688" width="5376" alt=""/>
         <img id="fondBlanc" src="image/FondBlanc.png" alt=""/>
+        <img id="batInfo" src="image/batInfo.png" alt=""/>
     </a-assets>
 
 
@@ -129,13 +130,15 @@
         <a-entity id="group-carte-info" scale="0 0 0">
             <a-plane position="-3 1.6 -3" height="6" width="19" look-at="#cam" src="#batInfo" rotation="0">
 
+                <a-entity slice9="width: 1; height: 0.5; left: 20; right: 20; top: 20; bottom: 20;src: tooltip.png"  text="value:Carte Principale; width:3; align:center" ; position="4.428 2.073 0.644"></a-entity>
+                <a-entity slice9="width: 1; height: 0.5; left: 20; right: 20; top: 20; bottom: 20;src: tooltip.png"  text="value:Premier Etage; width:3; align:center" ; position="3.508 0.397 0.247"></a-entity>
+                <a-entity slice9="width: 1; height: 0.5; left: 20; right: 20; top: 20; bottom: 20;src: tooltip.png"  text="value:Rez-De-Chausee; width:3; align:center" ; position="0.1 1 0.1"></a-entity>
+                <a-entity slice9="width: 1; height: 0.5; left: 20; right: 20; top: 20; bottom: 20;src: tooltip.png"  text="value:Couloir A23; width:3; align:center" ; position="0.1 1 0.1"></a-entity>
+                <a-entity slice9="width: 1; height: 0.5; left: 20; right: 20; top: 20; bottom: 20;src: tooltip.png"  text="value:Couloir B21; width:3; align:center" ; position="0.1 1 0.1"></a-entity>
+
+
             </a-plane>
 
-            <a-entity slice9="width: 2; height: 1; left: 20; right: 20; top: 20; bottom: 20;src: tooltip.png"  text="value:Carte Principale; width:5; align:center" ; look-at="#cam" position="0.319 3.799 -4.708"></a-entity>
-            <a-entity slice9="width: 2; height: 1; left: 20; right: 20; top: 20; bottom: 20;src: tooltip.png"  text="value:Premier Etage; width:5; align:center" ; look-at="#cam" position="-1.008 1.290 -3.466"></a-entity>
-            <a-entity slice9="width: 2; height: 1; left: 20; right: 20; top: 20; bottom: 20;src: tooltip.png"  text="value:Rez-De-Chausee; width:5; align:center" ; look-at="#cam" position="1.111 -0.065 -4.708"></a-entity>
-            <a-entity slice9="width: 2; height: 1; left: 20; right: 20; top: 20; bottom: 20;src: tooltip.png"  text="value:Couloir A23; width:5; align:center" ; look-at="#cam" position="-4.678 0.242 -0.078"></a-entity>
-            <a-entity slice9="width: 2; height: 1; left: 20; right: 20; top: 20; bottom: 20;src: tooltip.png"  text="value:Couloir B21; width:5; align:center" ; look-at="#cam" position="-5.296 1.962 0.235"></a-entity>
 
 
 
