@@ -124,6 +124,31 @@
 
     <a-entity id="spots" hotspots>
 
+
+        <a-entity id="group-carte-info" scale="0 0 0">
+            <a-plane position="-3 1.6 -3" height="6" width="19" look-at="#cam" src="#batInfo" rotation="0">
+
+            </a-plane>
+
+            <a-entity slice9="width: 2; height: 1; left: 20; right: 20; top: 20; bottom: 20;src: tooltip.png"  text="value:Carte Principale; width:5; align:center" ; look-at="#cam" position="0.319 3.799 -4.708"></a-entity>
+            <a-entity slice9="width: 2; height: 1; left: 20; right: 20; top: 20; bottom: 20;src: tooltip.png"  text="value:Premier Etage; width:5; align:center" ; look-at="#cam" position="-1.008 1.290 -3.466"></a-entity>
+            <a-entity slice9="width: 2; height: 1; left: 20; right: 20; top: 20; bottom: 20;src: tooltip.png"  text="value:Rez-De-Chausee; width:5; align:center" ; look-at="#cam" position="1.111 -0.065 -4.708"></a-entity>
+            <a-entity slice9="width: 2; height: 1; left: 20; right: 20; top: 20; bottom: 20;src: tooltip.png"  text="value:Couloir A23; width:5; align:center" ; look-at="#cam" position="-4.678 0.242 -0.078"></a-entity>
+            <a-entity slice9="width: 2; height: 1; left: 20; right: 20; top: 20; bottom: 20;src: tooltip.png"  text="value:Couloir B21; width:5; align:center" ; look-at="#cam" position="-5.296 1.962 0.235"></a-entity>
+
+
+
+
+
+            <a-circle radius="0.2" spot="linkto:#milieuB;spotgroup:group-milieuB" position="-0.235 1.407 -5.351" src="#secret"></a-circle>
+            <a-circle radius="0.2" spot="linkto:#couloirB20B21B22B23;spotgroup:group-couloirB20B21B22B23" position="-5.670 1.083 0.283" src="#secret"></a-circle>
+            <a-circle radius="0.2" spot="linkto:#couloirA23;spotgroup:group-couloirA23" position="-6.310 0.151 0.981" src="#secret"></a-circle>
+            <a-circle radius="0.2" spot="linkto:#carteEnzo; spotgroup: group-milieuA" position="0.456 3.204 -5.950" src="#secret"></a-circle>
+            <a-circle radius="0.2" spot="linkto:#milieuA;spotgroup:group-milieuA" position="0.140 0.378 -5.388" src="#secret"></a-circle>
+
+        </a-entity>
+
+
         <!-- GROUPE A -->
         <a-entity id="group-A12" scale="0 0 0">
             <a-image spot="linkto:#couloirA12;spotgroup:group-couloirA12"
@@ -564,6 +589,10 @@
                      position="-1.78061 0 -9.74148" src="#fleche"></a-image>
             <a-image spot="linkto: #exterieurDroit; spotgroup: group-exterieurDroit"
                      position="4.1 0 -5.9" src="#fleche"></a-image>
+            <a-image spot="linkto: #exterieurCentral; spotgroup: group-exterieurCentral"
+                     position="-6.80577 0 1.25103" src="#fleche"></a-image>
+
+
             <a-image spot="linkto: #exterieurCentral; spotgroup: group-exterieurCentral"
                      position="-6.80577 0 1.25103" src="#fleche"></a-image>
 
