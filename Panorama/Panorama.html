@@ -111,7 +111,6 @@
         <img id="secretariat" src="../Panorama/image/secretariat.JPG" height="2688" width="5376" alt=""/>
         <img id="fondBlanc" src="image/FondBlanc.png" alt=""/>
         <img id="batInfo" src="image/batInfo.png" alt=""/>
-        <img id="batCentral" src="image/batCentral.png" alt=""/>
     </a-assets>
 
 
@@ -127,6 +126,19 @@
 
     <a-entity id="spots" hotspots>
 
+        <!--Groupes Cartes-->
+
+        <a-entity id="group-cartePrincipale" scale="0 0 0">
+            <a-plane position="-1.89574 1.6 -1.96425" src="#cartePrincipale" look-at="#cam" height="4" width="6" material="" geometry="" rotation="0 43.98317825991033 0">
+            </a-plane>
+
+            <a-circle radius="0.10" spot="linkto: #accueilCentral; spotgroup: group-accueilCentral" position="-0.82322 1.10509 -2.90986" color="black" look-at="#cam" material="" geometry=""></a-circle>
+            <a-circle radius="0.20" spot="linkto: #fondBlanc; spotgroup: group-carte-info" position="-0.396 2.34755 -3.29399" color="black" look-at="#cam" material="" geometry=""></a-circle>
+            <a-circle radius="0.10" spot="linkto: #parking; spotgroup: group-parking" position="-0.06811 1 -3.62681" color="black" look-at="#cam" material="" geometry=""></a-circle>
+            <a-circle radius="0.10" spot="linkto: #devantAmphi; spotgroup: group-devantAmphi" position="-1.25127 2.15881 -2.40335" color="black" look-at="#cam" material="" geometry=""></a-circle>
+            <a-circle radius="0.10" spot="linkto: #exterieurGauche; spotgroup: group-exterieurGauche" position="-0.86567 2.95873 -2.84189" color="black" look_at="#cam" material="" geometry="" look-at="#cam"></a-circle>
+            <a-circle radius="0.10" spot="linkto: #exterieurMilieu; spotgroup: group-exterieurMilieu" position="-0.63693 2.00661 -3.01714" color="black" look_at="#cam" material="" geometry="" look-at="#cam"></a-circle>
+        </a-entity>
 
         <a-entity id="group-carte-info" scale="0 0 0">
             <a-plane position="-3 1.6 -3" height="6" width="19" look-at="#cam" src="#batInfo">
@@ -137,10 +149,15 @@
                 <a-entity slice9="width: 1; height: 0.5; left: 20; right: 20; top: 20; bottom: 20;src: tooltip.png"  text="value:Couloir B21; width:3; align:center" ; position="-3.341 -0.568 0.116"></a-entity>
             </a-plane>
 
+
+
+
+
+
             <a-circle radius="0.2" spot="linkto:#milieuB;spotgroup:group-milieuB" position="-0.235 1.407 -5.351" ></a-circle>
             <a-circle radius="0.2" spot="linkto:#couloirB20B21B22B23;spotgroup:group-couloirB20B21B22B23" position="-5.670 1.083 0.283" ></a-circle>
             <a-circle radius="0.2" spot="linkto:#couloirA23;spotgroup:group-couloirA23" position="-6.310 0.151 0.981" ></a-circle>
-            <a-circle radius="0.2" spot="linkto:#carteEnzo; spotgroup: group-milieuA" position="0.456 3.204 -5.950" ></a-circle>
+            <a-circle radius="0.2" spot="linkto:#FondBlanc; spotgroup: group-cartePrincipal" position="0.456 3.204 -5.950" ></a-circle>
             <a-circle radius="0.2" spot="linkto:#milieuA;spotgroup:group-milieuA" position="0.140 0.378 -5.388" ></a-circle>
 
         </a-entity>
@@ -587,9 +604,9 @@
                      position="4.1 0 -5.9" src="#fleche"></a-image>
             <a-image spot="linkto: #exterieurCentral; spotgroup: group-exterieurCentral"
                      position="-6.80577 0 1.25103" src="#fleche"></a-image>
-
-
-            <a-image spot="linkto: #fondBlanc; spotgroup: group-carte-centrale"
+            <a-image spot="linkto: #fondBlanc; spotgroup: group-cartePrincipale" color="black"
+                     position="-3 0 -3"></a-image>
+            <a-image spot="linkto: #fondBlanc; spotgroup: group-carte-info"
                      position="-3 0 -3" src="#fleche"></a-image>
 
         </a-entity>
