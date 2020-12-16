@@ -111,6 +111,7 @@
         <img id="secretariat" src="../Panorama/image/secretariat.JPG" height="2688" width="5376" alt=""/>
         <img id="fondBlanc" src="image/FondBlanc.png" alt=""/>
         <img id="batInfo" src="image/batInfo.png" alt=""/>
+        <img id="batCentral" src="image/batCentral.png" alt=""/>
     </a-assets>
 
 
@@ -128,21 +129,13 @@
 
 
         <a-entity id="group-carte-info" scale="0 0 0">
-            <a-plane position="-3 1.6 -3" height="6" width="19" look-at="#cam" src="#batInfo" rotation="0">
-
+            <a-plane position="-3 1.6 -3" height="6" width="19" look-at="#cam" src="#batInfo">
                 <a-entity slice9="width: 1; height: 0.5; left: 20; right: 20; top: 20; bottom: 20;src: tooltip.png"  text="value:Carte Principale; width:3; align:center" ; position="3.680 1.567 0.159"></a-entity>
                 <a-entity slice9="width: 1; height: 0.5; left: 20; right: 20; top: 20; bottom: 20;src: tooltip.png"  text="value:Premier Etage; width:3; align:center" ; position="3.001 -0.189 0.049"></a-entity>
                 <a-entity slice9="width: 1; height: 0.5; left: 20; right: 20; top: 20; bottom: 20;src: tooltip.png"  text="value:Rez-De-Chausee; width:3; align:center" ; position="3.451 -1.313 0.007"></a-entity>
                 <a-entity slice9="width: 1; height: 0.5; left: 20; right: 20; top: 20; bottom: 20;src: tooltip.png"  text="value:Couloir A23; width:3; align:center" ; position="-4.634 -1.603 0.010"></a-entity>
                 <a-entity slice9="width: 1; height: 0.5; left: 20; right: 20; top: 20; bottom: 20;src: tooltip.png"  text="value:Couloir B21; width:3; align:center" ; position="-3.341 -0.568 0.116"></a-entity>
-
-
             </a-plane>
-
-
-
-
-
 
             <a-circle radius="0.2" spot="linkto:#milieuB;spotgroup:group-milieuB" position="-0.235 1.407 -5.351" ></a-circle>
             <a-circle radius="0.2" spot="linkto:#couloirB20B21B22B23;spotgroup:group-couloirB20B21B22B23" position="-5.670 1.083 0.283" ></a-circle>
@@ -151,15 +144,6 @@
             <a-circle radius="0.2" spot="linkto:#milieuA;spotgroup:group-milieuA" position="0.140 0.378 -5.388" ></a-circle>
 
         </a-entity>
-
-        <a-entity id="group-carte-centrale" scale="0 0 0">
-
-            <a-plane position="-3 1.6 -3" height="6" width="19" look-at="#cam" color="blue" rotation="0"></a-plane>
-
-
-        </a-entity>
-
-
 
         <!-- GROUPE A -->
         <a-entity id="group-A12" scale="0 0 0">
@@ -605,7 +589,7 @@
                      position="-6.80577 0 1.25103" src="#fleche"></a-image>
 
 
-            <a-image spot="linkto: #fondBlanc; spotgroup: group-carte-info"
+            <a-image spot="linkto: #fondBlanc; spotgroup: group-carte-centrale"
                      position="-3 0 -3" src="#fleche"></a-image>
 
         </a-entity>
