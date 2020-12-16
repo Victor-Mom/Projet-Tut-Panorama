@@ -60,7 +60,7 @@
         <img id="fleche" src="../Panorama/icones/fleche.png" height="357" width="367" alt=""/>
 
         <!--CARTES-->
-        <img id="cartePrincipale" src="image/shémaDUT.png" height="2000" width="2000"/>
+        <img id="cartePrincipale" src="image/planPrincipal.png" height="1437" width="2048" alt=""/>
         <img id="fondBlanc" src="image/FondBlanc.png" alt=""/>
         <img id="batInfo" src="image/batInfo.png" alt=""/>
 
@@ -114,7 +114,6 @@
         <img id="parking" src="../Panorama/image/parking.jpg" height="2688" width="5376" alt=""/>
         <img id="sandwich" src="../Panorama/image/sandwich.jpg" height="2688" width="5376" alt=""/>
         <img id="secretariat" src="../Panorama/image/secretariat.JPG" height="2688" width="5376" alt=""/>
-
     </a-assets>
 
 
@@ -133,12 +132,15 @@
         <!--Groupes Cartes-->
 
         <a-entity id="group-cartePrincipale" scale="0 0 0">
-            <a-plane position="-3 1.6 -3" src="#cartePrincipale" look-at="#cam" height="6" width="6">
+            <a-plane position="-1.89574 1.6 -1.96425" src="#cartePrincipale" look-at="#cam" height="4" width="6" material="" geometry="" rotation="0 43.98317825991033 0">
             </a-plane>
 
-            <a-circle radius="0.10" spot="linkto: #accueilCentral; spotgroup: group-accueilCentral" position="-0.65483 1.10509 -3.10497" color="black" look-at="#cam"></a-circle>
-            <a-circle radius="0.10" spot="linkto: #fondBlanc; spotgroup: group-carte-info" position="2.02755 2.77193 -2.55253" color="black" look-at="#cam"></a-circle>
-            <a-circle radius="0.10" spot="linkto: #croisementChemin; spotgroup: group-croisementChemin" position="0 1 5" color="black" look-at="#cam"></a-circle>
+            <a-circle radius="0.10" spot="linkto: #accueilCentral; spotgroup: group-accueilCentral" position="-0.82322 1.10509 -2.90986" color="black" look-at="#cam" material="" geometry=""></a-circle>
+            <a-circle radius="0.20" spot="linkto: #fondBlanc; spotgroup: group-carte-info" position="-0.396 2.34755 -3.29399" color="black" look-at="#cam" material="" geometry=""></a-circle>
+            <a-circle radius="0.10" spot="linkto: #parking; spotgroup: group-parking" position="-0.06811 1 -3.62681" color="black" look-at="#cam" material="" geometry=""></a-circle>
+            <a-circle radius="0.10" spot="linkto: #devantAmphi; spotgroup: group-devantAmphi" position="-1.25127 2.15881 -2.40335" color="black" look-at="#cam" material="" geometry=""></a-circle>
+            <a-circle radius="0.10" spot="linkto: #exterieurGauche; spotgroup: group-exterieurGauche" position="-0.86567 2.95873 -2.84189" color="black" look_at="#cam" material="" geometry="" look-at="#cam"></a-circle>
+            <a-circle radius="0.10" spot="linkto: #exterieurMilieu; spotgroup: group-exterieurMilieu" position="-0.63693 2.00661 -3.01714" color="black" look_at="#cam" material="" geometry="" look-at="#cam"></a-circle>
         </a-entity>
 
         <a-entity id="group-carte-info" scale="0 0 0">
