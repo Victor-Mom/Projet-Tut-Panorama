@@ -130,7 +130,7 @@
     <a-sky id="skybox" src="#parking"></a-sky>
 
         <a-entity id="cam" camera position="0 1.6 0" look-controls wasd-controls="enabled:false">
-            <a-entity cursor="fuse:true;fuseTimeout:1500"
+            <a-entity cursor="fuse:true;fuseTimeout:2000"
                       geometry="primitive:ring;radiusInner:0.01;radiusOuter:0.02"
                       position="0 0 -1.8"
                       material="shader:flat;color:blue">
@@ -148,12 +148,12 @@
             <a-plane position="-1.89574 1.6 -1.96425" src="#cartePrincipale" look-at="#cam" height="4" width="6" material="" geometry="" rotation="0 43.98317825991033 0">
             </a-plane>
 
-            <a-image height="0.480" width="0.300" spot="linkto: #accueilCentral; spotgroup: group-accueilCentral" position="-0.852 1.275 -2.810" src="#logoVert"></a-image>
-            <a-image height="0.480" width="0.300" spot="linkto: #fondBlanc; spotgroup: group-carte-info" position="-0.396 2.34755 -3.29399" src="#logoRouge"></a-image>
-            <a-image height="0.480" width="0.300" spot="linkto: #parking; spotgroup: group-parking" position="-0.058 1.125 -3.527" src="#logoJaune"></a-image>
-            <a-image height="0.480" width="0.300" spot="linkto: #devantAmphi; spotgroup: group-devantAmphi" position="-1.296 2.302 -2.487" src="#logoVert"></a-image>
-            <a-image height="0.480" width="0.300" spot="linkto: #exterieurGauche; spotgroup: group-exterieurGauche" position="-0.86567 2.98873 -2.84189" src="#logoJaune"></a-image>
-            <a-image height="0.480" width="0.300" spot="linkto: #exterieurMilieu; spotgroup: group-exterieurMilieu" position="-0.63693 2.00661 -3.01714" src="#logoJaune"></a-image>
+            <a-image height="0.480" width="0.300" spot="linkto: #accueilCentral; spotgroup: group-accueilCentral" position="-0.852 1.275 -2.810" src="#logoVert" sound="src:son/BOUP.mp3; on: click"></a-image>
+            <a-image height="0.480" width="0.300" spot="linkto: #fondBlanc; spotgroup: group-carte-info" position="-0.396 2.34755 -3.29399" src="#logoRouge" sound="src:son/BOUP.mp3; on: click"></a-image>
+            <a-image height="0.480" width="0.300" spot="linkto: #parking; spotgroup: group-parking" position="-0.058 1.125 -3.527" src="#logoJaune" sound="src:son/BOUP.mp3; on: click"></a-image>
+            <a-image height="0.480" width="0.300" spot="linkto: #devantAmphi; spotgroup: group-devantAmphi" position="-1.296 2.302 -2.487" src="#logoVert" sound="src:son/BOUP.mp3; on: click"></a-image>
+            <a-image height="0.480" width="0.300" spot="linkto: #exterieurGauche; spotgroup: group-exterieurGauche" position="-0.86567 2.98873 -2.84189" src="#logoJaune" sound="src:son/BOUP.mp3; on: click"></a-image>
+            <a-image height="0.480" width="0.300" spot="linkto: #exterieurMilieu; spotgroup: group-exterieurMilieu" position="-0.63693 2.00661 -3.01714" src="#logoJaune" sound="src:son/BOUP.mp3; on: click"></a-image>
 
         </a-entity>
 
@@ -167,11 +167,11 @@
 
             </a-plane>
 
-            <a-image height="0.640" width="0.400" spot="linkto:#milieuB;spotgroup:group-milieuB" position="-0.235 1.407 -5.351" src="#logoBleu"></a-image>
-            <a-image height="0.640" width="0.400" spot="linkto:#couloirB20B21B22B23;spotgroup:group-couloirB20B21B22B23" position="-5.670 1.185 0.283" src="#logoBleu"></a-image>
-            <a-image height="0.640" width="0.400" spot="linkto:#couloirA23;spotgroup:group-couloirA23" position="-6.310 0.290 0.981" src="#logoBleu"></a-image>
-            <a-image height="0.640" width="0.400" spot="linkto:#FondBlanc; spotgroup: group-cartePrincipale" position="0.456 3.204 -5.950" src="#logoRouge"></a-image>
-            <a-image height="0.640" width="0.400" spot="linkto:#milieuA;spotgroup:group-milieuA" position="0.140 0.378 -5.388" src="#logoBleu"></a-image>
+            <a-image height="0.640" width="0.400" spot="linkto:#milieuB;spotgroup:group-milieuB" position="-0.235 1.407 -5.351" src="#logoBleu" sound="src:son/BOUP.mp3; on: click"></a-image>
+            <a-image height="0.640" width="0.400" spot="linkto:#couloirB20B21B22B23;spotgroup:group-couloirB20B21B22B23" position="-5.670 1.185 0.283" src="#logoBleu" sound="src:son/BOUP.mp3; on: click"></a-image>
+            <a-image height="0.640" width="0.400" spot="linkto:#couloirA23;spotgroup:group-couloirA23" position="-6.310 0.290 0.981" src="#logoBleu" sound="src:son/BOUP.mp3; on: click"></a-image>
+            <a-image height="0.640" width="0.400" spot="linkto:#FondBlanc; spotgroup: group-cartePrincipale" position="0.456 3.204 -5.950" src="#logoRouge" sound="src:son/BOUP.mp3; on: click"></a-image>
+            <a-image height="0.640" width="0.400" spot="linkto:#milieuA;spotgroup:group-milieuA" position="0.140 0.378 -5.388" src="#logoBleu" sound="src:son/BOUP.mp3; on: click"></a-image>
 
         </a-entity>
 
@@ -179,49 +179,49 @@
         <!-- GROUPE A -->
         <a-entity id="group-A12" scale="0 0 0">
             <a-image spot="linkto:#couloirA12;spotgroup:group-couloirA12"
-                     position="-7.5 -0.18 -0.7" src="#fleche"></a-image>
+                     position="-7.5 -0.18 -0.7" src="#fleche" sound="src:son/BOUP.mp3; on: click"></a-image>
             <a-image spot="linkto:#fondBlanc;spotgroup:group-cartePrincipale"
-                     position="-7 0.5 2.9" src="#map" look-at="#cam"></a-image>
+                     position="-7 0.5 2.9" src="#map" look-at="#cam" sound="src:son/BOUP.mp3; on: click"></a-image>
         </a-entity>
 
 
         <a-entity id="group-A18" scale ="0 0 0">
             <a-image spot="linkto:#couloirA18A19;spotgroup:group-couloirA18A19"
-                     position="8.6 0 -1.2" src="#fleche"></a-image>
+                     position="8.6 0 -1.2" src="#fleche" sound="src:son/BOUP.mp3; on: click"></a-image>
             <a-image spot="linkto:#fondBlanc;spotgroup:group-cartePrincipale"
-                     position="5.8 0 -5.3" src="#map" look-at="#cam"></a-image>
+                     position="5.8 0 -5.3" src="#map" look-at="#cam" sound="src:son/BOUP.mp3; on: click"></a-image>
         </a-entity>
 
 
         <a-entity id="group-A19" scale="0 0 0">
             <a-image spot="linkto:#couloirA18A19;spotgroup:group-couloirA18A19"
-                     position="6.9 0 4.5" src="#fleche"></a-image>
+                     position="6.9 0 4.5" src="#fleche" sound="src:son/BOUP.mp3; on: click"></a-image>
             <a-image spot="linkto:#fondBlanc;spotgroup:group-cartePrincipale"
-                     position="5.2 0 -0.5" src="#map" look-at="#cam"></a-image>
+                     position="5.2 0 -0.5" src="#map" look-at="#cam" sound="src:son/BOUP.mp3; on: click"></a-image>
         </a-entity>
 
 
         <a-entity id="group-A21" scale="0 0 0">
             <a-image spot="linkto:#couloirA21A22;spotgroup:group-couloirA21A22"
-                     position="9 0.5 -4.3" src="#fleche"></a-image>
+                     position="9 0.5 -4.3" src="#fleche" sound="src:son/BOUP.mp3; on: click"></a-image>
             <a-image spot="linkto:#fondBlanc;spotgroup:group-cartePrincipale"
-                     position="4.3 0 -6.2" src="#map" look-at="#cam"></a-image>
+                     position="4.3 0 -6.2" src="#map" look-at="#cam" sound="src:son/BOUP.mp3; on: click"></a-image>
         </a-entity>
 
 
         <a-entity id="group-A22" scale="0 0 0">
             <a-image spot="linkto:#couloirA21A22;spotgroup:group-couloirA21A22"
-                     position="-8.6 0.5 0" src="#fleche"></a-image>
+                     position="-8.6 0.5 0" src="#fleche" sound="src:son/BOUP.mp3; on: click"></a-image>
             <a-image spot="linkto:#fondBlanc;spotgroup:group-cartePrincipale"
-                     position="-7 0 -2.2" src="#map" look-at="#cam"></a-image>
+                     position="-7 0 -2.2" src="#map" look-at="#cam" sound="src:son/BOUP.mp3; on: click"></a-image>
         </a-entity>
 
 
         <a-entity id="group-A23" scale="0 0 0">
             <a-image spot="linkto:#couloirA23;spotgroup:group-couloirA23"
-                     position="-6.2 0 9" src="#fleche"></a-image>
+                     position="-6.2 0 9" src="#fleche" sound="src:son/BOUP.mp3; on: click"></a-image>
             <a-image spot="linkto:#fondBlanc;spotgroup:group-cartePrincipale"
-                     position="-6.2 0 2.8" src="#map" look-at="#cam"></a-image>
+                     position="-6.2 0 2.8" src="#map" look-at="#cam" sound="src:son/BOUP.mp3; on: click"></a-image>
         </a-entity>
 
 
@@ -231,13 +231,13 @@
                       text="value:A12-Salle de TP;wrap-count:15; width:5; align:center;zOffset:0.05" ; look-at="#cam" position="-7.5 1.8 -0.35"></a-entity>
 
             <a-image spot="linkto:#A12;spotgroup:group-A12"
-                     position="-5 -0.8 1" src="#fleche"></a-image>
+                     position="-5 -0.8 1" src="#fleche" sound="src:son/BOUP.mp3; on: click"></a-image>
             <a-image spot="linkto:#couloirA18A19;spotgroup:group-couloirA18A19"
-                     position="1.6 -0.6 8.9" src="#fleche"></a-image>
+                     position="1.6 -0.6 8.9" src="#fleche" sound="src:son/BOUP.mp3; on: click"></a-image>
             <a-image spot="linkto:#milieuA;spotgroup:group-milieuA"
-                     position="-1.2 -1 -7.5" src="#fleche"></a-image>
+                     position="-1.2 -1 -7.5" src="#fleche" sound="src:son/BOUP.mp3; on: click"></a-image>
             <a-image spot="linkto:#fondBlanc;spotgroup:group-cartePrincipale"
-                     position="-3.2 0 7" src="#map" look-at="#cam"></a-image>
+                     position="-3.2 0 7" src="#map" look-at="#cam" sound="src:son/BOUP.mp3; on: click"></a-image>
         </a-entity>
 
 
@@ -251,29 +251,29 @@
 
 
             <a-image spot="linkto:#A18;spotgroup:group-A18"
-                     position="-4.2 0 -1.6" src="#fleche"></a-image>
+                     position="-4.2 0 -1.6" src="#fleche" sound="src:son/BOUP.mp3; on: click"></a-image>
             <a-image spot="linkto:#A19;spotgroup:group-A19"
-                     position="4.6 0 2.6" src="#fleche"></a-image>
+                     position="4.6 0 2.6" src="#fleche" sound="src:son/BOUP.mp3; on: click"></a-image>
             <a-image spot="linkto:#couloirA12;spotgroup:group-couloirA12"
-                     position="-0.8 -1 -6.7" src="#fleche"></a-image>
+                     position="-0.8 -1 -6.7" src="#fleche" sound="src:son/BOUP.mp3; on: click"></a-image>
             <a-image spot="linkto:#couloirA21A22;spotgroup:group-couloirA21A22"
-                     position="0.4 -0.8 8.9" src="#fleche"></a-image>
+                     position="0.4 -0.8 8.9" src="#fleche" sound="src:son/BOUP.mp3; on: click"></a-image>
             <a-image spot="linkto:#fondBlanc;spotgroup:group-cartePrincipale"
-                     position="-3.6 0 5" src="#map" look-at="#cam"></a-image>
+                     position="-3.6 0 5" src="#map" look-at="#cam" sound="src:son/BOUP.mp3; on: click"></a-image>
         </a-entity>
 
 
         <a-entity id="group-couloirA21A22" scale ="0 0 0">
             <a-image spot="linkto:#A21;spotgroup:group-A21"
-                     position="4.2 0.2 2.8" src="#fleche"></a-image>
+                     position="4.2 0.2 2.8" src="#fleche" sound="src:son/BOUP.mp3; on: click"></a-image>
             <a-image spot="linkto:#A22;spotgroup:group-A22"
-                     position="-4.2 0.5 -2.6" src="#fleche"></a-image>
+                     position="-4.2 0.5 -2.6" src="#fleche" sound="src:son/BOUP.mp3; on: click"></a-image>
             <a-image spot="linkto:#couloirA18A19;spotgroup:group-couloirA18A19"
-                     position="-0.4 -0.5 -7" src="#fleche"></a-image>
+                     position="-0.4 -0.5 -7" src="#fleche" sound="src:son/BOUP.mp3; on: click"></a-image>
             <a-image spot="linkto:#couloirA23;spotgroup:group-couloirA23"
-                     position="0 -1.2 6.6" src="#fleche"></a-image>
+                     position="0 -1.2 6.6" src="#fleche" sound="src:son/BOUP.mp3; on: click"></a-image>
             <a-image spot="linkto:#fondBlanc;spotgroup:group-cartePrincipale"
-                     position="-3.6 0 3.4" src="#map" look-at="#cam"></a-image>
+                     position="-3.6 0 3.4" src="#map" look-at="#cam" sound="src:son/BOUP.mp3; on: click"></a-image>
         </a-entity>
 
 
@@ -283,13 +283,13 @@
                       look-at="#cam" position="6.312 1.052 -0.047"></a-entity>
 
             <a-image spot="linkto:#A23;spotgroup:group-A23"
-                     position="5.4 0 0" src="#fleche"></a-image>
+                     position="5.4 0 0" src="#fleche" sound="src:son/BOUP.mp3; on: click"></a-image>
             <a-image spot="linkto:#couloirA21A22;spotgroup:group-couloirA21A22"
-                     position="0.5 -0.6 -7.9" src="#fleche"></a-image>
+                     position="0.5 -0.6 -7.9" src="#fleche" sound="src:son/BOUP.mp3; on: click"></a-image>
             <a-image spot="linkto:#gaucheA;spotgroup:group-gaucheA"
-                     position="-0.3 -0.5 7.8" src="#fleche"></a-image>
+                     position="-0.3 -0.5 7.8" src="#fleche" sound="src:son/BOUP.mp3; on: click"></a-image>
             <a-image spot="linkto:#fondBlanc;spotgroup:group-cartePrincipale"
-                     position="-4.2 0 4.6" src="#map" look-at="#cam"></a-image>
+                     position="-4.2 0 4.6" src="#map" look-at="#cam" sound="src:son/BOUP.mp3; on: click"></a-image>
         </a-entity>
 
 
@@ -303,13 +303,13 @@
 
 
             <a-image spot="linkto:#couloirA23;spotgroup:group-couloirA23"
-                     position="3.1 -1 6.6" src="#fleche"></a-image>
+                     position="3.1 -1 6.6" src="#fleche" sound="src:son/BOUP.mp3; on: click"></a-image>
             <a-image spot="linkto:#escalierGaucheA;spotgroup:group-escalierGaucheA"
-                     position="5.1 -1.2 -1.6" src="#fleche"></a-image>
+                     position="5.1 -1.2 -1.6" src="#fleche" sound="src:son/BOUP.mp3; on: click"></a-image>
             <a-image spot="linkto:#exterieurGauche;spotgroup:group-exterieurGauche"
-                     position="-2 -0.5 -3.8" src="#fleche"></a-image>
+                     position="-2 -0.5 -3.8" src="#fleche" sound="src:son/BOUP.mp3; on: click"></a-image>
             <a-image spot="linkto:#fondBlanc;spotgroup:group-cartePrincipale"
-                     position="4.5 0 1.6" src="#map" look-at="#cam"></a-image>
+                     position="4.5 0 1.6" src="#map" look-at="#cam" sound="src:son/BOUP.mp3; on: click"></a-image>
         </a-entity>
 
         <a-entity id="group-escalierGaucheA" scale ="0 0 0">
@@ -320,11 +320,11 @@
                       text="value:Toilettes;wrap-count:15; width:5; align:center;zOffset:0.05" ; look-at="#cam" position="-0.438 3 6.642"></a-entity>
 
             <a-image spot="linkto:#gaucheA;spotgroup:group-gaucheA"
-                     position="1 -1.5 -5" src="#fleche"></a-image>
+                     position="1 -1.5 -5" src="#fleche" sound="src:son/BOUP.mp3; on: click"></a-image>
             <a-image spot="linkto:#escalierGaucheB;spotgroup:group-escalierGaucheB"
-                     position="-5 0 -2.8" src="#fleche"></a-image>
+                     position="-5 0 -2.8" src="#fleche" sound="src:son/BOUP.mp3; on: click"></a-image>
             <a-image spot="linkto:#fondBlanc;spotgroup:group-cartePrincipale"
-                     position="-4.5 0 2" src="#map" look-at="#cam"></a-image>
+                     position="-4.5 0 2" src="#map" look-at="#cam" sound="src:son/BOUP.mp3; on: click"></a-image>
         </a-entity>
 
 
@@ -333,11 +333,11 @@
                       text="value:1er etage : couloir B;wrap-count:15; width:5; align:center;zOffset:0.05" ; look-at="#cam" position="-8.563 1.454 -1.324"></a-entity>
 
             <a-image spot="linkto:#milieuA;spotgroup:group-milieuA"
-                     position="0 -1.2 -5.4" src="#fleche"></a-image>
+                     position="0 -1.2 -5.4" src="#fleche" sound="src:son/BOUP.mp3; on: click"></a-image>
             <a-image spot="linkto:#escalierMilieuB;spotgroup:group-escalierMilieuB"
-                     position="-6.2 -0.2 -1" src="#fleche"></a-image>
+                     position="-6.2 -0.2 -1" src="#fleche" sound="src:son/BOUP.mp3; on: click"></a-image>
             <a-image spot="linkto:#fondBlanc;spotgroup:group-cartePrincipale"
-                     position="4 0 -3.9" src="#map" look-at="#cam"></a-image>
+                     position="4 0 -3.9" src="#map" look-at="#cam" sound="src:son/BOUP.mp3; on: click"></a-image>
         </a-entity>
 
 
@@ -352,13 +352,13 @@
                       text="value:Couloir RT;wrap-count:15; width:5; align:center;zOffset:0.05" ; look-at="#cam" position="-5.060 -0.784 -14.613"></a-entity>
 
             <a-image spot="linkto:#exterieurMilieu;spotgroup:group-exterieurMilieu"
-                     position="7.9 -0.5 -1.58" src="#fleche"></a-image>
+                     position="7.9 -0.5 -1.58" src="#fleche" sound="src:son/BOUP.mp3; on: click"></a-image>
             <a-image spot="linkto:#couloirA12;spotgroup:group-couloirA12"
-                     position="0.6 -0.8 8.9" src="#fleche"></a-image>
+                     position="0.6 -0.8 8.9" src="#fleche" sound="src:son/BOUP.mp3; on: click"></a-image>
             <a-image spot="linkto:#escalierMilieuA;spotgroup:group-escalierMilieuA"
-                     position="9.9 -0.5 4.3" src="#fleche"></a-image>
+                     position="9.9 -0.5 4.3" src="#fleche" sound="src:son/BOUP.mp3; on: click"></a-image>
             <a-image spot="linkto:#fondBlanc;spotgroup:group-cartePrincipale"
-                     position="-5.2 0 2.4" src="#map" look-at="#cam"></a-image>
+                     position="-5.2 0 2.4" src="#map" look-at="#cam" sound="src:son/BOUP.mp3; on: click"></a-image>
         </a-entity>
 
 
@@ -367,92 +367,92 @@
         <!-- GROUPE B -->
         <a-entity id="group-B10" scale="0 0 0">
             <a-image spot="linkto: #milieuB; spotgroup: group-milieuB"
-                     position="5.64364 -0.45557 -7.09444" look-at="#cam" src="#fleche"></a-image>
+                     position="5.64364 -0.45557 -7.09444" look-at="#cam" src="#fleche" sound="src:son/BOUP.mp3; on: click"></a-image>
             <a-image spot="linkto:#fondBlanc;spotgroup:group-cartePrincipale"
-                     position="-1 0 -6.8" src="#map" look-at="#cam"></a-image>
+                     position="-1 0 -6.8" src="#map" look-at="#cam" sound="src:son/BOUP.mp3; on: click"></a-image>
         </a-entity>
 
 
         <a-entity id="group-B12" scale ="0 0 0">
             <a-image spot="linkto: #couloirB12; spotgroup: group-couloirB12"
-                     position="-7.03551 0.90978 -2.52496" look-at="#cam" src="#fleche"></a-image>
+                     position="-7.03551 0.90978 -2.52496" look-at="#cam" src="#fleche" sound="src:son/BOUP.mp3; on: click"></a-image>
 -           <a-image spot="linkto:#fondBlanc;spotgroup:group-cartePrincipale"
-                     position="-7.5 0.5 2" src="#map" look-at="#cam"></a-image>
+                     position="-7.5 0.5 2" src="#map" look-at="#cam" sound="src:son/BOUP.mp3; on: click"></a-image>
         </a-entity>
 
 
         <a-entity id="group-B14" scale="0 0 0">
             <a-image spot="linkto: #couloirB14B17; spotgroup: group-couloirB14B17"
-                     position="4.3 1.2 4.5" look-at="#cam" src="#fleche"></a-image>
+                     position="4.3 1.2 4.5" look-at="#cam" src="#fleche" sound="src:son/BOUP.mp3; on: click"></a-image>
             <a-image spot="linkto:#fondBlanc;spotgroup:group-cartePrincipale"
-                     position="6.5 0 1.5" src="#map" look-at="#cam"></a-image>
+                     position="6.5 0 1.5" src="#map" look-at="#cam" sound="src:son/BOUP.mp3; on: click"></a-image>
         </a-entity>
 
 
         <a-entity id="group-B17" scale="0 0 0">
             <a-image spot="linkto: #couloirB14B17; spotgroup: group-couloirB14B17"
-                     position="5.04639 0.08424 3.34307" look-at="#cam" src="#fleche"></a-image>
+                     position="5.04639 0.08424 3.34307" look-at="#cam" src="#fleche" sound="src:son/BOUP.mp3; on: click"></a-image>
             <a-image spot="linkto:#fondBlanc;spotgroup:group-cartePrincipale"
-                     position="1 0 5" src="#map" look-at="#cam"></a-image>
+                     position="1 0 5" src="#map" look-at="#cam" sound="src:son/BOUP.mp3; on: click"></a-image>
         </a-entity>
 
 
         <a-entity id="group-B18" scale="0 0 0">
             <a-image spot="linkto: #couloirB18B19; spotgroup: group-couloirB18B19"
-                     position="5.87991 0.49525 4.74003" look-at="#cam" src="#fleche"></a-image>
+                     position="5.87991 0.49525 4.74003" look-at="#cam" src="#fleche" sound="src:son/BOUP.mp3; on: click"></a-image>
             <a-image spot="linkto:#fondBlanc;spotgroup:group-cartePrincipale"
-                     position="2 0 6.5" src="#map" look-at="#cam"></a-image>
+                     position="2 0 6.5" src="#map" look-at="#cam" sound="src:son/BOUP.mp3; on: click"></a-image>
         </a-entity>
 
 
         <a-entity id="group-B19" scale="0 0 0">
             <a-image spot="linkto: #couloirB18B19; spotgroup: group-couloirB18B19"
-                     position="6.02163 0.31623 -5.18968" look-at="#cam" src="#fleche"></a-image>
+                     position="6.02163 0.31623 -5.18968" look-at="#cam" src="#fleche" sound="src:son/BOUP.mp3; on: click"></a-image>
             <a-image spot="linkto:#fondBlanc;spotgroup:group-cartePrincipale"
-                     position="1.5 0 -6.5" src="#map" look-at="#cam"></a-image>
+                     position="1.5 0 -6.5" src="#map" look-at="#cam" sound="src:son/BOUP.mp3; on: click"></a-image>
         </a-entity>
 
 
         <a-entity id="group-B20" scale="0 0 0">
             <a-image spot="linkto: #couloirB20B21B22B23; spotgroup: group-couloirB20B21B22B23"
-                     position="-7.75788 0.83569 -4.53381" look-at="#cam" src="#fleche"></a-image>
+                     position="-7.75788 0.83569 -4.53381" look-at="#cam" src="#fleche" sound="src:son/BOUP.mp3; on: click"></a-image>
             <a-image spot="linkto:#fondBlanc;spotgroup:group-cartePrincipale"
-                     position="-7.2 0 0.35" src="#map" look-at="#cam"></a-image>
+                     position="-7.2 0 0.35" src="#map" look-at="#cam" sound="src:son/BOUP.mp3; on: click"></a-image>
         </a-entity>
 
 
         <a-entity id="group-B21" scale="0 0 0">
             <a-image spot="linkto: #couloirB20B21B22B23; spotgroup: group-couloirB20B21B22B23"
-                     position="6.73426 0.83569 6.77272" look-at="#cam" src="#fleche"></a-image>
+                     position="6.73426 0.83569 6.77272" look-at="#cam" src="#fleche" sound="src:son/BOUP.mp3; on: click"></a-image>
             <a-image spot="linkto:#fondBlanc;spotgroup:group-cartePrincipale"
-                     position="9.3 0 2.4" src="#map" look-at="#cam"></a-image>
+                     position="9.3 0 2.4" src="#map" look-at="#cam" sound="src:son/BOUP.mp3; on: click"></a-image>
         </a-entity>
 
 
         <a-entity id="group-B22" scale="0 0 0">
             <a-image spot="linkto: #couloirB20B21B22B23; spotgroup: group-couloirB20B21B22B23"
-                     position="6.21609 0.5484 6.40724" look-at="#cam" src="#fleche"></a-image>
+                     position="6.21609 0.5484 6.40724" look-at="#cam" src="#fleche" sound="src:son/BOUP.mp3; on: click"></a-image>
             <a-image spot="linkto:#fondBlanc;spotgroup:group-cartePrincipale"
-                     position="6.4 0 2.15" src="#map" look-at="#cam"></a-image>
+                     position="6.4 0 2.15" src="#map" look-at="#cam" sound="src:son/BOUP.mp3; on: click"></a-image>
         </a-entity>
 
 
         <a-entity id="group-B23" scale="0 0 0">
             <a-image spot="linkto: #couloirB20B21B22B23; spotgroup: group-couloirB20B21B22B23"
-                     position="6.23193 0.55887 -6.95401" look-at="#cam" src="#fleche"></a-image>
+                     position="6.23193 0.55887 -6.95401" look-at="#cam" src="#fleche" sound="src:son/BOUP.mp3; on: click"></a-image>
             <a-image spot="linkto: #gaucheB; spotgroup: group-gaucheB"
-                     position="-7.20994 0.00435 -4.4561" look-at="#cam" src="#fleche"></a-image>
+                     position="-7.20994 0.00435 -4.4561" look-at="#cam" src="#fleche" sound="src:son/BOUP.mp3; on: click"></a-image>
             <a-image spot="linkto:#fondBlanc;spotgroup:group-cartePrincipale"
-                     position="0.6 0 -9.7" src="#map" look-at="#cam"></a-image>
+                     position="0.6 0 -9.7" src="#map" look-at="#cam" sound="src:son/BOUP.mp3; on: click"></a-image>
         </a-entity>
 
 
         <a-entity id="group-secretariat" scale="0 0 0">
 
             <a-image spot="linkto: #couloirB12; spotgroup: group-couloirB12"
-                     position="5.35987 0.61905 -4.96787" look-at="#cam" src="#fleche"></a-image>
+                     position="5.35987 0.61905 -4.96787" look-at="#cam" src="#fleche" sound="src:son/BOUP.mp3; on: click"></a-image>
             <a-image spot="linkto:#fondBlanc;spotgroup:group-cartePrincipale"
-                     position="-2.7 0 -4.3" src="#map" look-at="#cam"></a-image>
+                     position="-2.7 0 -4.3" src="#map" look-at="#cam" sound="src:son/BOUP.mp3; on: click"></a-image>
         </a-entity>
 
 
@@ -471,29 +471,29 @@
                       text="value:Escalier vers rez de chaussee;wrap-count:15; width:5; align:center;zOffset:0.05" ; look-at="#cam" position="-15.5 -0.082 7.727"></a-entity>
 
             <a-image spot="linkto: #B12; spotgroup: group-B12"
-                     position="1.967 0.1291 5.53" look-at="#cam" src="#fleche"></a-image>
+                     position="1.967 0.1291 5.53" look-at="#cam" src="#fleche" sound="src:son/BOUP.mp3; on: click"></a-image>
             <a-image spot="linkto: #secretariat; spotgroup: group-secretariat"
-                     position="-1.97284 -0.27046 -6.4716" look-at="#cam" src="#fleche"></a-image>
+                     position="-1.97284 -0.27046 -6.4716" look-at="#cam" src="#fleche" sound="src:son/BOUP.mp3; on: click"></a-image>
             <a-image spot="linkto: #couloirB14B17; spotgroup: group-couloirB14B17"
-                     position="6.25782 0.55436 -1.93283" look-at="#cam" src="#fleche"></a-image>
+                     position="6.25782 0.55436 -1.93283" look-at="#cam" src="#fleche" sound="src:son/BOUP.mp3; on: click"></a-image>
             <a-image spot="linkto: #milieuB; spotgroup: group-milieuB" position="-7.5138 -0.45557 2.28995"
-                     look-at="#cam" src="#fleche"></a-image>
+                     look-at="#cam" src="#fleche" sound="src:son/BOUP.mp3; on: click"></a-image>
             <a-image spot="linkto:#fondBlanc;spotgroup:group-cartePrincipale"
-                     position="4.5 0 1.4" src="#map" look-at="#cam"></a-image>
+                     position="4.5 0 1.4" src="#map" look-at="#cam" sound="src:son/BOUP.mp3; on: click"></a-image>
         </a-entity>
 
 
         <a-entity id="group-couloirB14B17" scale="0 0 0">
             <a-image spot="linkto: #B14; spotgroup: group-B14"
-                     position="-0.90702 0.04163 -7.62626" look-at="#cam" src="#fleche"></a-image>
+                     position="-0.90702 0.04163 -7.62626" look-at="#cam" src="#fleche" sound="src:son/BOUP.mp3; on: click"></a-image>
             <a-image spot="linkto: #B17; spotgroup: group-B17"
-                     position="3.83091 0.24606 6.95009" look-at="#cam" src="#fleche"></a-image>
+                     position="3.83091 0.24606 6.95009" look-at="#cam" src="#fleche" sound="src:son/BOUP.mp3; on: click"></a-image>
             <a-image spot="linkto: #couloirB12; spotgroup: group-couloirB12"
-                     position="5.60677 -0.32639 -1.27354" look-at="#cam" src="#fleche"></a-image>
+                     position="5.60677 -0.32639 -1.27354" look-at="#cam" src="#fleche" sound="src:son/BOUP.mp3; on: click"></a-image>
             <a-image spot="linkto: #couloirB18B19; spotgroup: group-couloirB18B19"
-                     position="-7.02752 -0.0323 1.52582" look-at="#cam" src="#fleche"></a-image>
+                     position="-7.02752 -0.0323 1.52582" look-at="#cam" src="#fleche" sound="src:son/BOUP.mp3; on: click"></a-image>
             <a-image spot="linkto:#fondBlanc;spotgroup:group-cartePrincipale"
-                     position="-4.5 0 -2" src="#map" look-at="#cam"></a-image>
+                     position="-4.5 0 -2" src="#map" look-at="#cam" sound="src:son/BOUP.mp3; on: click"></a-image>
         </a-entity>
 
 
@@ -506,15 +506,15 @@
                       text="value:B19-Salle de TP;wrap-count:15; width:5; align:center;zOffset:0.05" ; look-at="#cam" position="-7.5 1.8 -0.35"></a-entity>
 
             <a-image spot="linkto: #B18; spotgroup: group-B18"
-                     position="5.4 0.36694 -2.2" look-at="#cam" src="#fleche"></a-image>
+                     position="5.4 0.36694 -2.2" look-at="#cam" src="#fleche" sound="src:son/BOUP.mp3; on: click"></a-image>
             <a-image spot="linkto: #B19; spotgroup: group-B19"
-                     position="-7.5 -0.78827 2.4102" look-at="#cam" src="#fleche"></a-image>
+                     position="-7.5 -0.78827 2.4102" look-at="#cam" src="#fleche" sound="src:son/BOUP.mp3; on: click"></a-image>
             <a-image spot="linkto: #couloirB14B17; spotgroup: group-couloirB14B17"
-                     position="0.86101 -0.6179 8.32408" look-at="#cam" src="#fleche"></a-image>
+                     position="0.86101 -0.6179 8.32408" look-at="#cam" src="#fleche" sound="src:son/BOUP.mp3; on: click"></a-image>
             <a-image spot="linkto: #couloirB20B21B22B23; spotgroup: group-couloirB20B21B22B23"
-                     position="-1.12476 -0.55508 -8.41463" look-at="#cam" src="#fleche"></a-image>
+                     position="-1.12476 -0.55508 -8.41463" look-at="#cam" src="#fleche" sound="src:son/BOUP.mp3; on: click"></a-image>
             <a-image spot="linkto:#fondBlanc;spotgroup:group-cartePrincipale"
-                     position="1.5 0 -4.3" src="#map" look-at="#cam"></a-image>
+                     position="1.5 0 -4.3" src="#map" look-at="#cam" sound="src:son/BOUP.mp3; on: click"></a-image>
         </a-entity>
 
 
@@ -524,30 +524,30 @@
                       text="value:B20-Salle de TP;wrap-count:15; width:5; align:center;zOffset:0.05" ; look-at="#cam" position="-7.5 1.8 -6.3"></a-entity>
 
             <a-image spot="linkto: #B20; spotgroup: group-B20"
-                     position="-7.29631 -0.95567 -3.93664" look-at="#cam" src="#fleche"></a-image>
+                     position="-7.29631 -0.95567 -3.93664" look-at="#cam" src="#fleche" sound="src:son/BOUP.mp3; on: click"></a-image>
             <a-image spot="linkto: #B21; spotgroup: group-B21"
-                     position="6.50126 0.53308 -0.61296" look-at="#cam" src="#fleche"></a-image>
+                     position="6.50126 0.53308 -0.61296" look-at="#cam" src="#fleche" sound="src:son/BOUP.mp3; on: click"></a-image>
             <a-image spot="linkto: #B22; spotgroup: group-B22"
-                     position="-7.07326 -0.15 2.16576" look-at="#cam" src="#fleche"></a-image>
+                     position="-7.07326 -0.15 2.16576" look-at="#cam" src="#fleche" sound="src:son/BOUP.mp3; on: click"></a-image>
             <a-image spot="linkto: #B23; spotgroup: group-B23"
-                     position="5.94954 -2.53945 5.15856" look-at="#cam" src="#fleche"></a-image>
+                     position="5.94954 -2.53945 5.15856" look-at="#cam" src="#fleche" sound="src:son/BOUP.mp3; on: click"></a-image>
             <a-image spot="linkto: #couloirB18B19; spotgroup: group-couloirB18B19"
-                     position="-1.69818 -0.69224 -8.02194" look-at="#cam" src="#fleche"></a-image>
+                     position="-1.69818 -0.69224 -8.02194" look-at="#cam" src="#fleche" sound="src:son/BOUP.mp3; on: click"></a-image>
             <a-image spot="linkto: #gaucheB; spotgroup: group-gaucheB"
-                     position="1.7196 -0.95799 8.0488" look-at="#cam" src="#fleche"></a-image>
+                     position="1.7196 -0.95799 8.0488" look-at="#cam" src="#fleche" sound="src:son/BOUP.mp3; on: click"></a-image>
             <a-image spot="linkto:#fondBlanc;spotgroup:group-cartePrincipale"
-                     position="-2.6 0 6.5" src="#map" look-at="#cam"></a-image>
+                     position="-2.6 0 6.5" src="#map" look-at="#cam" sound="src:son/BOUP.mp3; on: click"></a-image>
         </a-entity>
 
 
         <a-entity id="group-escalierGaucheB" scale="0 0 0">
 
             <a-image spot="linkto: #gaucheB; spotgroup: group-gaucheB"
-                     position="1.06712 -2.93894 7.02546" look-at="#cam" src="#fleche"></a-image>
+                     position="1.06712 -2.93894 7.02546" look-at="#cam" src="#fleche" sound="src:son/BOUP.mp3; on: click"></a-image>
             <a-image spot="linkto: #escalierGaucheA; spotgroup: group-escalierGaucheA"
-                     position="3.94315 -2.42705 -2.50985" look-at="#cam" src="#fleche"></a-image>
+                     position="3.94315 -2.42705 -2.50985" look-at="#cam" src="#fleche" sound="src:son/BOUP.mp3; on: click"></a-image>
             <a-image spot="linkto:#fondBlanc;spotgroup:group-cartePrincipale"
-                     position="4.3 0 0.8" src="#map" look-at="#cam"></a-image>
+                     position="4.3 0 0.8" src="#map" look-at="#cam" sound="src:son/BOUP.mp3; on: click"></a-image>
         </a-entity>
 
 
@@ -564,11 +564,11 @@
 
 
             <a-image spot="linkto: #escalierMilieuA; spotgroup: group-escalierMilieuA"
-                     position="3.59377 -2.53044 3.51972" look-at="#cam" src="#fleche"></a-image>
+                     position="3.59377 -2.53044 3.51972" look-at="#cam" src="#fleche" sound="src:son/BOUP.mp3; on: click"></a-image>
             <a-image spot="linkto: #milieuB; spotgroup: group-milieuB"
-                     position="-3.93702 -0.36345 1.78281" look-at="#cam" src="#fleche"></a-image>
+                     position="-3.93702 -0.36345 1.78281" look-at="#cam" src="#fleche" sound="src:son/BOUP.mp3; on: click"></a-image>
             <a-image spot="linkto:#fondBlanc;spotgroup:group-cartePrincipale"
-                     position="-2.5 0 -3.9" src="#map" look-at="#cam"></a-image>
+                     position="-2.5 0 -3.9" src="#map" look-at="#cam" sound="src:son/BOUP.mp3; on: click"></a-image>
         </a-entity>
 
 
@@ -580,13 +580,13 @@
             </a-entity>
 
             <a-image spot="linkto: #B23; spotgroup: group-B23"
-                     position="2.93583 -2.13579 6.11566" look-at="#cam" src="#fleche"></a-image>
+                     position="2.93583 -2.13579 6.11566" look-at="#cam" src="#fleche" sound="src:son/BOUP.mp3; on: click"></a-image>
             <a-image spot="linkto: #couloirB20B21B22B23; spotgroup: group-couloirB20B21B22B23"
-                     position="7.62704 -1.45215 1.46904" look-at="#cam" src="#fleche"></a-image>
+                     position="7.62704 -1.45215 1.46904" look-at="#cam" src="#fleche" sound="src:son/BOUP.mp3; on: click"></a-image>
             <a-image spot="linkto: #escalierGaucheB; spotgroup: group-escalierGaucheB"
-                     position="-0.05834 -2.67086 -5" look-at="#cam" src="#fleche"></a-image>
+                     position="-0.05834 -2.67086 -5" look-at="#cam" src="#fleche" sound="src:son/BOUP.mp3; on: click"></a-image>
             <a-image spot="linkto:#fondBlanc;spotgroup:group-cartePrincipale"
-                     position="4.3 0 -3.3" src="#map" look-at="#cam"></a-image>
+                     position="4.3 0 -3.3" src="#map" look-at="#cam" sound="src:son/BOUP.mp3; on: click"></a-image>
         </a-entity>
 
 
@@ -605,13 +605,13 @@
                       text="value:Couloir B;wrap-count:15; width:5; align:center;zOffset:0.05" ; look-at="#cam" position="9 0 6"></a-entity>
 
             <a-image spot="linkto: #B10; spotgroup: group-B10"
-                     position="-7.5 -0.12484 -1.41482" look-at="#cam" src="#fleche"></a-image>
+                     position="-7.5 -0.12484 -1.41482" look-at="#cam" src="#fleche" sound="src:son/BOUP.mp3; on: click"></a-image>
             <a-image spot="linkto: #couloirB12; spotgroup: group-couloirB12"
-                     position="4.40506 -0.17172 3.28099" look-at="#cam" src="#fleche"></a-image>
+                     position="4.40506 -0.17172 3.28099" look-at="#cam" src="#fleche" sound="src:son/BOUP.mp3; on: click"></a-image>
             <a-image spot="linkto: #escalierMilieuB; spotgroup: group-escalierMilieuB"
-                     position="4.42694 -0.71457 -6.80564" look-at="#cam" src="#fleche"></a-image>
+                     position="4.42694 -0.71457 -6.80564" look-at="#cam" src="#fleche" sound="src:son/BOUP.mp3; on: click"></a-image>
             <a-image spot="linkto:#fondBlanc;spotgroup:group-cartePrincipale"
-                     position="-2.5 0 4.7" src="#map" look-at="#cam"></a-image>
+                     position="-2.5 0 4.7" src="#map" look-at="#cam" sound="src:son/BOUP.mp3; on: click"></a-image>
         </a-entity>
 
 
@@ -625,13 +625,13 @@
                       text="value:Amphitheatres;wrap-count:15; width:5; align:center;zOffset:0.05" ; look-at="#cam" position="6.213 1.120 10.868"></a-entity>
 
             <a-image spot="linkto:#milieuA;spotgroup:group-milieuA"
-                     position="-7 0 0.5" src="#fleche" look-at="#cam"></a-image>
+                     position="-7 0 0.5" src="#fleche" look-at="#cam" sound="src:son/BOUP.mp3; on: click"></a-image>
             <a-image spot="linkto:#croisementChemin;spotgroup:group-croisementChemin"
-                     position="1.6 0 7.77" src="#fleche" look-at="#cam"></a-image>
+                     position="1.6 0 7.77" src="#fleche" look-at="#cam" sound="src:son/BOUP.mp3; on: click"></a-image>
             <a-image spot="linkto:#parking;spotgroup:group-parking"
-                     position="-1 0 -9" src="#fleche" look-at="#cam"></a-image>
+                     position="-1 0 -9" src="#fleche" look-at="#cam" sound="src:son/BOUP.mp3; on: click"></a-image>
             <a-image spot="linkto:#fondBlanc;spotgroup:group-cartePrincipale"
-                     position="-6 0 -5.6" src="#map" look-at="#cam"></a-image>
+                     position="-6 0 -5.6" src="#map" look-at="#cam" sound="src:son/BOUP.mp3; on: click"></a-image>
 
         </a-entity>
 
@@ -647,35 +647,35 @@
 
             <a-image src="#planIUT" look-at="#cam" position="3.58453 0.775 18.16268" material="opacity: 0.25" geometry="" rotation="-175.73018266668285 -9.563956160404992 -179.28929675951915"></a-image>
             <a-image spot="linkto: #exterieurMilieu; spotgroup: group-exterieurMilieu"
-                     position="-1.78061 0 -9.74148" src="#fleche"></a-image>
+                     position="-1.78061 0 -9.74148" src="#fleche" sound="src:son/BOUP.mp3; on: click"></a-image>
             <a-image spot="linkto: #exterieurDroit; spotgroup: group-exterieurDroit"
-                     position="4.1 0 -5.9" src="#fleche"></a-image>
+                     position="4.1 0 -5.9" src="#fleche" sound="src:son/BOUP.mp3; on: click"></a-image>
             <a-image spot="linkto: #exterieurCentral; spotgroup: group-exterieurCentral"
-                     position="-6.80577 0 1.25103" src="#fleche"></a-image>
+                     position="-6.80577 0 1.25103" src="#fleche" sound="src:son/BOUP.mp3; on: click"></a-image>
             <a-image spot="linkto:#fondBlanc;spotgroup:group-cartePrincipale"
-                     position="-6 0 -5.6" src="#map" look-at="#cam"></a-image>
+                     position="-6 0 -5.6" src="#map" look-at="#cam" sound="src:son/BOUP.mp3; on: click"></a-image>
 
         </a-entity>
 
         <a-entity id="group-exterieurDroit" scale="0 0 0">
             <a-image spot="linkto: #parking; spotgroup: group-parking"
-                     position="7.26916 1.13569 3.76474" src="#fleche" look-at="#cam"></a-image>
+                     position="7.26916 1.13569 3.76474" src="#fleche" look-at="#cam" sound="src:son/BOUP.mp3; on: click"></a-image>
             <a-image spot="linkto:#fondBlanc;spotgroup:group-cartePrincipale"
-                     position="4.5 0 7.2" src="#map" look-at="#cam"></a-image>
+                     position="4.5 0 7.2" src="#map" look-at="#cam" sound="src:son/BOUP.mp3; on: click"></a-image>
         </a-entity>
 
 
         <a-entity id="group-exterieurCentral" scale="0 0 0">
 
             <a-entity slice9="width: 6; height: 2; left: 20; right: 43; top: 20; bottom: 43;src: tooltip.png"
-                      text="value:Entree du batiment central;wrap-count:15; width:5; align:center;zOffset:0.05" ; look-at="#cam" position="-10.571 3.779 5.809"></a-entity>
+                      text="value:Entree du batiment central;wrap-count:15; width:5; align:center;zOffset:0.05" ; look-at="#cam" position="-10.571 3.779 5.809" sound="src:son/BOUP.mp3; on: click"></a-entity>
 
             <a-image spot="linkto: #parking; spotgroup: group-parking"
-                     position="-3.72751 0.89279 -6.31928" src="#fleche" look-at="#cam"></a-image>
+                     position="-3.72751 0.89279 -6.31928" src="#fleche" look-at="#cam" sound="src:son/BOUP.mp3; on: click"></a-image>
             <a-image spot="linkto: #accueilCentral; spotgroup: group-accueilCentral"
-                     position="-5.80567 0.71139 3.12434" src="#fleche" look-at="#cam"></a-image>
+                     position="-5.80567 0.71139 3.12434" src="#fleche" look-at="#cam" sound="src:son/BOUP.mp3; on: click"></a-image>
             <a-image spot="linkto:#fondBlanc;spotgroup:group-cartePrincipale"
-                     position="-7.3 0 -2.8" src="#map" look-at="#cam"></a-image>
+                     position="-7.3 0 -2.8" src="#map" look-at="#cam" sound="src:son/BOUP.mp3; on: click"></a-image>
         </a-entity>
 
 
@@ -687,13 +687,13 @@
                       text="value:Departement biologie et entree arriere batiment informatique ;wrap-count:15; width:5; align:center;zOffset:0.05" ; look-at="#cam" position="-1.323 0.614 -19.618"></a-entity>
 
             <a-image spot="linkto:#exterieurMilieu;spotgroup:group-exterieurMilieu"
-                     position="0 -0.8 8" src="#fleche" look-at="#cam"></a-image>
+                     position="0 -0.8 8" src="#fleche" look-at="#cam" sound="src:son/BOUP.mp3; on: click"></a-image>
             <a-image spot="linkto:#devantAmphi;spotgroup:group-devantAmphi"
-                     position="-8 0 0" src="#fleche" look-at="#cam"></a-image>
+                     position="-8 0 0" src="#fleche" look-at="#cam" sound="src:son/BOUP.mp3; on: click"></a-image>
             <a-image spot="linkto:#coinGauche;spotgroup:group-coinGauche"
-                     position="0.167 -0.5 -10.8" src="#fleche" look-at="#cam"></a-image>
+                     position="0.167 -0.5 -10.8" src="#fleche" look-at="#cam" sound="src:son/BOUP.mp3; on: click"></a-image>
             <a-image spot="linkto:#fondBlanc;spotgroup:group-cartePrincipale"
-                     position="-6 0 -5.6" src="#map" look-at="#cam"></a-image>
+                     position="-6 0 -5.6" src="#map" look-at="#cam" sound="src:son/BOUP.mp3; on: click"></a-image>
         </a-entity>
 
 
@@ -706,21 +706,21 @@
                       text="value:Departement biologie ;wrap-count:15; width:5; align:center;zOffset:0.05" ; look-at="#cam" position="-10.8 0.163 -4.246"></a-entity>
 
             <a-image spot="linkto:#croisementChemin;spotgroup:group-croisementChemin"
-                     position="2.4 -0.17 15.36" src="#fleche" look-at="#cam"></a-image>
+                     position="2.4 -0.17 15.36" src="#fleche" look-at="#cam" sound="src:son/BOUP.mp3; on: click"></a-image>
             <a-image spot="linkto:#exterieurGauche;spotgroup:group-exterieurGauche"
-                     position="13 -0.5 -1.6" src="#fleche" look-at="#cam"></a-image>
+                     position="13 -0.5 -1.6" src="#fleche" look-at="#cam" sound="src:son/BOUP.mp3; on: click"></a-image>
             <a-image spot="linkto:#fondBlanc;spotgroup:group-cartePrincipale"
-                     position="-6 0 -5.6" src="#map" look-at="#cam"></a-image>
+                     position="-6 0 -5.6" src="#map" look-at="#cam" sound="src:son/BOUP.mp3; on: click"></a-image>
         </a-entity>
 
 
         <a-entity id="group-exterieurGauche" scale="0 0 0">
             <a-image spot="linkto:#coinGauche;spotgroup:group-coinGauche"
-                     position="-3.128 -0.215 11.827" src="#fleche" look-at="#cam"></a-image>
+                     position="-3.128 -0.215 11.827" src="#fleche" look-at="#cam" sound="src:son/BOUP.mp3; on: click"></a-image>
             <a-image spot="linkto:#gaucheA;spotgroup:group-gaucheA"
-                     position="9.5 0.272 2.8" src="#fleche" look-at="#cam"></a-image>
+                     position="9.5 0.272 2.8" src="#fleche" look-at="#cam" sound="src:son/BOUP.mp3; on: click"></a-image>
             <a-image spot="linkto:#fondBlanc;spotgroup:group-cartePrincipale"
-                     position="3.7 0 7.2" src="#map" look-at="#cam"></a-image>
+                     position="3.7 0 7.2" src="#map" look-at="#cam" sound="src:son/BOUP.mp3; on: click"></a-image>
         </a-entity>
 
 
@@ -742,11 +742,11 @@
                       text="value:Entree arriere batiment central ;wrap-count:15; width:5; align:center;zOffset:0.05" ; look-at="#cam" position="9.304 0.992 -7.843"></a-entity>
 
             <a-image spot="linkto:#croisementChemin;spotgroup:group-croisementChemin"
-                     position="-6.239 -1.17 -7.336" src="#fleche" look-at="#cam"></a-image>
+                     position="-6.239 -1.17 -7.336" src="#fleche" look-at="#cam" sound="src:son/BOUP.mp3; on: click"></a-image>
             <a-image spot="linkto:#coinCafet;spotgroup:group-coinCafet"
-                     position="8.139 -0.184 -6.7"  src="#fleche" look-at="#cam"></a-image>
+                     position="8.139 -0.184 -6.7"  src="#fleche" look-at="#cam" sound="src:son/BOUP.mp3; on: click"></a-image>
             <a-image spot="linkto:#fondBlanc;spotgroup:group-cartePrincipale"
-                     position="-7 0 -2.2" src="#map" look-at="#cam"></a-image>
+                     position="-7 0 -2.2" src="#map" look-at="#cam" sound="src:son/BOUP.mp3; on: click"></a-image>
         </a-entity>
 
 
@@ -763,13 +763,13 @@
                       text="value:Bibliotheque et accueil ;wrap-count:15; width:5; align:center;zOffset:0.05" ; look-at="#cam" position="4.497 0.5 -4.625"></a-entity>
 
             <a-image spot="linkto: #devantAmphi; spotgroup: group-devantAmphi"
-                     position="-4.67079 -1.65 5.53263" look-at="#cam" src="#fleche"></a-image>
+                     position="-4.67079 -1.65 5.53263" look-at="#cam" src="#fleche" sound="src:son/BOUP.mp3; on: click"></a-image>
             <a-image spot="linkto: #entreeCafet; spotgroup: group-entreeCafet"
-                     position="4.35943 -1.65 3.59501" look-at="#cam" src="#fleche"></a-image>
+                     position="4.35943 -1.65 3.59501" look-at="#cam" src="#fleche" sound="src:son/BOUP.mp3; on: click"></a-image>
             <a-image spot="linkto: #devantBibliotheque; spotgroup: group-devantBibliotheque"
-                     position="5.02151 -1.65 -5.60137" look-at="#cam" src="#fleche"></a-image>
+                     position="5.02151 -1.65 -5.60137" look-at="#cam" src="#fleche" sound="src:son/BOUP.mp3; on: click"></a-image>
             <a-image spot="linkto:#fondBlanc;spotgroup:group-cartePrincipale"
-                     position="-3.2 0 -3.8" src="#map" look-at="#cam"></a-image>
+                     position="-3.2 0 -3.8" src="#map" look-at="#cam" sound="src:son/BOUP.mp3; on: click"></a-image>
         </a-entity>
 
 
@@ -781,13 +781,13 @@
                       text="value:Cafeteria : sandwichs;wrap-count:15; width:5; align:center;zOffset:0.05" ; look-at="#cam" position="-1.642 0.5 -8.530"></a-entity>
 
             <a-image spot="linkto: #coinCafet; spotgroup:group-coinCafet"
-                     position="0.80785 -2.27172 6.03043" look-at="#cam" src="#fleche"></a-image>
+                     position="0.80785 -2.27172 6.03043" look-at="#cam" src="#fleche" sound="src:son/BOUP.mp3; on: click"></a-image>
             <a-image spot="linkto: #cafet; spotgroup: group-cafet"
-                     position="7.22524 -1.65 -1.28208" look-at="#cam" src="#fleche"></a-image>
+                     position="7.22524 -1.65 -1.28208" look-at="#cam" src="#fleche" sound="src:son/BOUP.mp3; on: click"></a-image>
             <a-image spot="linkto: #sandwich; spotgroup: group-sandwich"
-                     position="-0.8 -1.65 -9.73296" look-at="#cam" src="#fleche"></a-image>
+                     position="-0.8 -1.65 -9.73296" look-at="#cam" src="#fleche" sound="src:son/BOUP.mp3; on: click"></a-image>
             <a-image spot="linkto:#fondBlanc;spotgroup:group-cartePrincipale"
-                     position="-3.1 0 2.8" src="#map" look-at="#cam"></a-image>
+                     position="-3.1 0 2.8" src="#map" look-at="#cam" sound="src:son/BOUP.mp3; on: click"></a-image>
         </a-entity>
 
 
@@ -797,17 +797,17 @@
                       text="value:Vente sandwichs;wrap-count:15; width:5; align:center;zOffset:0.05" ; look-at="#cam" position="7.675 0.170 4.792"></a-entity>
 
             <a-image spot="linkto: #entreeCafet; spotgroup: group-entreeCafet"
-                     position="-3.45167 -1.65 5.05973" look-at="#cam" src="#fleche"></a-image>
+                     position="-3.45167 -1.65 5.05973" look-at="#cam" src="#fleche" sound="src:son/BOUP.mp3; on: click"></a-image>
             <a-image spot="linkto:#fondBlanc;spotgroup:group-cartePrincipale"
-                     position="-7 0 2.3" src="#map" look-at="#cam"></a-image>
+                     position="-7 0 2.3" src="#map" look-at="#cam" sound="src:son/BOUP.mp3; on: click"></a-image>
         </a-entity>
 
 
         <a-entity id="group-cafet" scale="0 0 0">
             <a-image spot="linkto: #entreeCafet; spotgroup: group-entreeCafet"
-                     position="6.05826 -1.65 3.84593" look-at="#cam" src="#fleche"></a-image>
+                     position="6.05826 -1.65 3.84593" look-at="#cam" src="#fleche" sound="src:son/BOUP.mp3; on: click"></a-image>
             <a-image spot="linkto:#fondBlanc;spotgroup:group-cartePrincipale"
-                     position="2.2 0 5.8" src="#map" look-at="#cam"></a-image>
+                     position="2.2 0 5.8" src="#map" look-at="#cam" sound="src:son/BOUP.mp3; on: click"></a-image>
         </a-entity>
 
 
@@ -827,23 +827,23 @@
                       text="value:Accueil batiment central;wrap-count:15; width:5; align:center;zOffset:0.05" ; look-at="#cam" position="-9.989 0.646 3.155"></a-entity>
 
             <a-image spot="linkto: #coinCafet; spotgroup: group-coinCafet"
-                     position="7.70431 -1.65 -0.61523" look-at="#cam" src="#fleche"></a-image>
+                     position="7.70431 -1.65 -0.61523" look-at="#cam" src="#fleche" sound="src:son/BOUP.mp3; on: click"></a-image>
             <a-image spot="linkto: #droitCentral; spotgroup: group-droitCentral"
-                     position="-10.87405 -1.65 0.67964" look-at="#cam" src="#fleche"></a-image>
+                     position="-10.87405 -1.65 0.67964" look-at="#cam" src="#fleche" sound="src:son/BOUP.mp3; on: click"></a-image>
             <a-image spot="linkto: #centreCentral; spotgroup: group-centreCentral"
-                     position="-6.15781 -2.63442 -5" look-at="#cam" src="#fleche"></a-image>
+                     position="-6.15781 -2.63442 -5" look-at="#cam" src="#fleche" sound="src:son/BOUP.mp3; on: click"></a-image>
             <a-image spot="linkto:#fondBlanc;spotgroup:group-cartePrincipale"
-                     position="2.4 0 -4.6" src="#map" look-at="#cam"></a-image>
+                     position="2.4 0 -4.6" src="#map" look-at="#cam" sound="src:son/BOUP.mp3; on: click"></a-image>
         </a-entity>
 
 
         <a-entity id="group-centreCentral" scale="0 0 0">
             <a-image spot="linkto: #accueilCentral; spotgroup: group-accueilCentral"
-                     position="2 -1 10" look-at="#cam" src="#fleche"></a-image>
+                     position="2 -1 10" look-at="#cam" src="#fleche" sound="src:son/BOUP.mp3; on: click"></a-image>
             <a-image spot="linkto: #devantBibliotheque; spotgroup: group-devantBibliotheque"
-                     position="9.4 0 0" look-at="#cam" src="#fleche"></a-image>
+                     position="9.4 0 0" look-at="#cam" src="#fleche" sound="src:son/BOUP.mp3; on: click"></a-image>
             <a-image spot="linkto:#fondBlanc;spotgroup:group-cartePrincipale"
-                     position="6 0 4.6" src="#map" look-at="#cam"></a-image>
+                     position="6 0 4.6" src="#map" look-at="#cam" sound="src:son/BOUP.mp3; on: click"></a-image>
         </a-entity>
 
 
@@ -859,11 +859,11 @@
                       text="value:Sortie;wrap-count:15; width:5; align:center;zOffset:0.05" ; look-at="#cam" position="9.972 -1.121 6.725"></a-entity>
 
             <a-image spot="linkto: #devantBibliotheque; spotgroup: group-devantBibliotheque"
-                     position="-6.68105 -1.65 1.00882" look-at="#cam" src="#fleche"></a-image>
+                     position="-6.68105 -1.65 1.00882" look-at="#cam" src="#fleche" sound="src:son/BOUP.mp3; on: click"></a-image>
             <a-image spot="linkto: #accueilCentral; spotgroup: group-accueilCentral"
-                     position="7.16276 -1.65 5.56906" look-at="#cam" src="#fleche"></a-image>
+                     position="7.16276 -1.65 5.56906" look-at="#cam" src="#fleche" sound="src:son/BOUP.mp3; on: click"></a-image>
             <a-image spot="linkto:#fondBlanc;spotgroup:group-cartePrincipale"
-                     position="0.8 -0.5 -6.8" src="#map" look-at="#cam"></a-image>
+                     position="0.8 -0.5 -6.8" src="#map" look-at="#cam" sound="src:son/BOUP.mp3; on: click"></a-image>
         </a-entity>
 
 
@@ -881,13 +881,13 @@
                       text="value:Infirmerie et administration;wrap-count:15; width:5; align:center;zOffset:0.05" ; look-at="#cam" position="8.248 -0.804 6.951"></a-entity>
 
             <a-image spot="linkto: #droitCentral; spotgroup: group-droitCentral"
-                     position="-7.385 -1.65 0.73417" look-at="#cam" src="#fleche"></a-image>
+                     position="-7.385 -1.65 0.73417" look-at="#cam" src="#fleche" sound="src:son/BOUP.mp3; on: click"></a-image>
             <a-image spot="linkto: #exterieurCentral; spotgroup: group-exterieurCentral"
-                     position="2.99072 -2.46 -4.97548" look-at="#cam" src="#fleche"></a-image>
+                     position="2.99072 -2.46 -4.97548" look-at="#cam" src="#fleche" sound="src:son/BOUP.mp3; on: click"></a-image>
             <a-image spot="linkto: #centreCentral; spotgroup: group-centreCentral"
-                     position="-4.37679 -2.46 7.25185" look-at="#cam" src="#fleche"></a-image>
+                     position="-4.37679 -2.46 7.25185" look-at="#cam" src="#fleche" sound="src:son/BOUP.mp3; on: click"></a-image>
             <a-image spot="linkto:#fondBlanc;spotgroup:group-cartePrincipale"
-                     position="-4.7 0 -4.2" src="#map" look-at="#cam"></a-image>
+                     position="-4.7 0 -4.2" src="#map" look-at="#cam" sound="src:son/BOUP.mp3; on: click"></a-image>
         </a-entity>
 
 
