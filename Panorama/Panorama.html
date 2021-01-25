@@ -129,8 +129,8 @@
 
     <a-sky id="skybox" src="#parking"></a-sky>
 
-        <a-entity id="cam" camera="active:false" position="0 1.6 0" look-controls>
-            <a-entity cursor="fuse:true;fuseTimeout:2000"
+        <a-entity id="cam" camera position="0 1.6 0" look-controls wasd-controls="enabled:false">
+            <a-entity cursor="fuse:true;fuseTimeout:1500"
                       geometry="primitive:ring;radiusInner:0.01;radiusOuter:0.02"
                       position="0 0 -1.8"
                       material="shader:flat;color:blue">
@@ -227,8 +227,8 @@
 
         <a-entity id="group-couloirA12" scale="0 0 0">
 
-            <a-entity slice9="width: 4; height: 1; left: 20; right: 43; top: 20; bottom: 43;src: tooltip.png"
-                      text="value:A12-Salle de TP;wrap-count:15; width:5; align:center" ; look-at="#cam" position="-7.5 1.8 -0.35"></a-entity>
+            <a-entity slice9="width: 5; height: 1; left: 20; right: 43; top: 20; bottom: 43;src: tooltip.png"
+                      text="value:A12-Salle de TP;wrap-count:15; width:5; align:center;zOffset:0.05" ; look-at="#cam" position="-7.5 1.8 -0.35"></a-entity>
 
             <a-image spot="linkto:#A12;spotgroup:group-A12"
                      position="-5 -0.8 1" src="#fleche"></a-image>
@@ -243,11 +243,11 @@
 
         <a-entity id="group-couloirA18A19" scale ="0 0 0">
 
-            <a-entity slice9="width: 4; height: 2; left: 20; right: 43; top: 20; bottom: 43;src: tooltip.png"
-                      text="value:A19-Salle de TP libre service;wrap-count:15; width:5; align:center" ; look-at="#cam" position="10.750 -0.336 2.441"></a-entity>
+            <a-entity slice9="width: 5; height: 2; left: 20; right: 43; top: 20; bottom: 43;src: tooltip.png"
+                      text="value:A19-Salle de TP libre service;wrap-count:15; width:5; align:center;zOffset:0.05" ; look-at="#cam" position="10.750 -0.336 2.441"></a-entity>
 
-            <a-entity slice9="width: 4; height: 1; left: 20; right: 43; top: 20; bottom: 43;src: tooltip.png"
-                      text="value:A18-Salle de TP;wrap-count:15; width:5; align:center" ; look-at="#cam" position="-7.5 1.8 -0.35"></a-entity>
+            <a-entity slice9="width: 5; height: 1; left: 20; right: 43; top: 20; bottom: 43;src: tooltip.png"
+                      text="value:A18-Salle de TP;wrap-count:15; width:5; align:center;zOffset:0.05" ; look-at="#cam" position="-7.5 1.8 -0.35"></a-entity>
 
 
             <a-image spot="linkto:#A18;spotgroup:group-A18"
@@ -278,8 +278,8 @@
 
 
         <a-entity id="group-couloirA23" scale ="0 0 0">
-            <a-entity slice9="width: 4; height: 1; left: 20; right: 43; top: 20; bottom: 43;src: tooltip.png"
-                      text="value:A23-Salle de TP;wrap-count:15; width:5; align:center" ;
+            <a-entity slice9="width: 5; height: 1; left: 20; right: 43; top: 20; bottom: 43;src: tooltip.png"
+                      text="value:A23-Salle de TP;wrap-count:15; width:5; align:center;zOffset:0.05" ;
                       look-at="#cam" position="6.312 1.052 -0.047"></a-entity>
 
             <a-image spot="linkto:#A23;spotgroup:group-A23"
@@ -294,12 +294,12 @@
 
 
         <a-entity id="group-gaucheA" scale="0 0 0">
-            <a-entity slice9="width: 4; height: 2; left: 20; right: 43; top: 20; bottom: 43;src: tooltip.png"
-                      text="value:Sortie arriere du batiment;wrap-count:15; width:5; align:center" ; look-at="#cam" position="-7.5 1.8 -0.35"></a-entity>
+            <a-entity slice9="width: 5; height: 2; left: 20; right: 43; top: 20; bottom: 43;src: tooltip.png"
+                      text="value:Sortie arriere du batiment;wrap-count:15; width:5; align:center;zOffset:0.05" ; look-at="#cam" position="-7.5 1.8 -5"></a-entity>
 
 
-            <a-entity slice9="width: 4; height: 2; left: 20; right: 43; top: 20; bottom: 43;src: tooltip.png"
-                      text="value:Escaliers vers etages superieurs;wrap-count:15; width:5; align:center" ; look-at="#cam" position="8.514 -0.832 -1.886"></a-entity>
+            <a-entity slice9="width: 5; height: 2; left: 20; right: 43; top: 20; bottom: 43;src: tooltip.png"
+                      text="value:Escaliers vers etages superieurs;wrap-count:15; width:5; align:center;zOffset:0.05" ; look-at="#cam" position="8.514 -0.832 -1.886"></a-entity>
 
 
             <a-image spot="linkto:#couloirA23;spotgroup:group-couloirA23"
@@ -314,10 +314,10 @@
 
         <a-entity id="group-escalierGaucheA" scale ="0 0 0">
             <a-entity slice9="width: 4; height: 2; left: 20; right: 43; top: 20; bottom: 43;src: tooltip.png"
-                      text="value:Escaliers vers etage 1 et 2;wrap-count:15; width:5; align:center" ; look-at="#cam" position="-13.825 -0.664 -5.000"></a-entity>
+                      text="value:Escaliers vers etage 1 et 2;wrap-count:15; width:5; align:center;zOffset:0.05" ; look-at="#cam" position="-14 0 -5.000"></a-entity>
 
             <a-entity slice9="width: 4; height: 1; left: 20; right: 43; top: 20; bottom: 43;src: tooltip.png"
-                      text="value:Toilettes;wrap-count:15; width:5; align:center" ; look-at="#cam" position="-0.219 1.857 3.321"></a-entity>
+                      text="value:Toilettes;wrap-count:15; width:5; align:center;zOffset:0.05" ; look-at="#cam" position="-0.438 3 6.642"></a-entity>
 
             <a-image spot="linkto:#gaucheA;spotgroup:group-gaucheA"
                      position="1 -1.5 -5" src="#fleche"></a-image>
@@ -330,7 +330,7 @@
 
         <a-entity id="group-escalierMilieuA" scale ="0 0 0">
             <a-entity slice9="width: 6; height: 2; left: 20; right: 43; top: 20; bottom: 43;src: tooltip.png"
-                      text="value:1er etage : couloir B;wrap-count:15; width:5; align:center" ; look-at="#cam" position="-8.563 1.454 -1.324"></a-entity>
+                      text="value:1er etage : couloir B;wrap-count:15; width:5; align:center;zOffset:0.05" ; look-at="#cam" position="-8.563 1.454 -1.324"></a-entity>
 
             <a-image spot="linkto:#milieuA;spotgroup:group-milieuA"
                      position="0 -1.2 -5.4" src="#fleche"></a-image>
@@ -342,14 +342,14 @@
 
 
         <a-entity id="group-milieuA" scale ="0 0 0">
-            <a-entity slice9="width: 4; height: 1; left: 20; right: 43; top: 20; bottom: 43;src: tooltip.png"
-                      text="value:Escalier;wrap-count:15; width:5; align:center" ; look-at="#cam" position="12.334 0 5.999"></a-entity>
+            <a-entity slice9="width: 5; height: 1; left: 20; right: 43; top: 20; bottom: 43;src: tooltip.png"
+                      text="value:Escalier;wrap-count:15; width:5; align:center;zOffset:0.05" ; look-at="#cam" position="12.334 0 5.999"></a-entity>
 
-            <a-entity slice9="width: 4; height: 2; left: 20; right: 43; top: 20; bottom: 43;src: tooltip.png"
-                      text="value:Couloir informatique (A);wrap-count:15; width:5; align:center" ; look-at="#cam" position="0.369 0.4 10.419"></a-entity>
+            <a-entity slice9="width: 5; height: 2; left: 20; right: 43; top: 20; bottom: 43;src: tooltip.png"
+                      text="value:Couloir informatique (A);wrap-count:15; width:5; align:center;zOffset:0.05" ; look-at="#cam" position="0.369 0.4 10.419"></a-entity>
 
-            <a-entity slice9="width: 4; height: 1; left: 20; right: 43; top: 20; bottom: 43;src: tooltip.png"
-                      text="value:Couloir RT;wrap-count:15; width:5; align:center" ; look-at="#cam" position="-5.060 -0.784 -14.613"></a-entity>
+            <a-entity slice9="width: 5; height: 1; left: 20; right: 43; top: 20; bottom: 43;src: tooltip.png"
+                      text="value:Couloir RT;wrap-count:15; width:5; align:center;zOffset:0.05" ; look-at="#cam" position="-5.060 -0.784 -14.613"></a-entity>
 
             <a-image spot="linkto:#exterieurMilieu;spotgroup:group-exterieurMilieu"
                      position="7.9 -0.5 -1.58" src="#fleche"></a-image>
@@ -459,16 +459,16 @@
         <a-entity id="group-couloirB12" scale="0 0 0">
 
             <a-entity slice9="width: 6; height: 3; left: 20; right: 43; top: 20; bottom: 43;src: tooltip.png"
-                      text="value:Panneaux informatifs avec les emplois du temps des eleves;wrap-count:15; width:5; align:center" ; look-at="#cam" position="-9 4 11"></a-entity>
-
-            <a-entity slice9="width: 4; height: 2; left: 20; right: 43; top: 20; bottom: 43;src: tooltip.png"
-                      text="value:Secreteriat departement Informatique;wrap-count:15; width:5; align:center" ; look-at="#cam" position="-6 2 -7"></a-entity>
-
-            <a-entity slice9="width: 6; height: 2; left: 20; right: 43; top: 20; bottom: 43;src: tooltip.png"
-                      text="value:B12-Salle de TP et de tutorat;wrap-count:15; width:5; align:center" ; look-at="#cam" position="-0.320 1.716 8.479"></a-entity>
+                      text="value:Panneaux informatifs avec les emplois du temps des eleves;wrap-count:15; width:5; align:center;zOffset:0.05" ; look-at="#cam" position="-9 4 11"></a-entity>
 
             <a-entity slice9="width: 5; height: 2; left: 20; right: 43; top: 20; bottom: 43;src: tooltip.png"
-                      text="value:Escalier vers rez de chausse;wrap-count:15; width:5; align:center" ; look-at="#cam" position="-15.5 -0.082 7.727"></a-entity>
+                      text="value:Secreteriat departement Informatique;wrap-count:15; width:5; align:center;zOffset:0.05" ; look-at="#cam" position="-6 2 -7"></a-entity>
+
+            <a-entity slice9="width: 6; height: 2; left: 20; right: 43; top: 20; bottom: 43;src: tooltip.png"
+                      text="value:B12-Salle de TP et de tutorat;wrap-count:15; width:5; align:center;zOffset:0.05" ; look-at="#cam" position="-0.320 1.716 8.479"></a-entity>
+
+            <a-entity slice9="width: 5; height: 2; left: 20; right: 43; top: 20; bottom: 43;src: tooltip.png"
+                      text="value:Escalier vers rez de chaussee;wrap-count:15; width:5; align:center;zOffset:0.05" ; look-at="#cam" position="-15.5 -0.082 7.727"></a-entity>
 
             <a-image spot="linkto: #B12; spotgroup: group-B12"
                      position="1.967 0.1291 5.53" look-at="#cam" src="#fleche"></a-image>
@@ -499,11 +499,11 @@
 
         <a-entity id="group-couloirB18B19" scale="0 0 0">
 
-            <a-entity slice9="width: 4; height: 1; left: 20; right: 43; top: 20; bottom: 43;src: tooltip.png"
-                      text="value:B18-Salle de TP;wrap-count:15; width:5; align:center" ; look-at="#cam" position="3.636 1.697 -0.932"></a-entity>
+            <a-entity slice9="width: 5; height: 1; left: 20; right: 43; top: 20; bottom: 43;src: tooltip.png"
+                      text="value:B18-Salle de TP;wrap-count:15; width:5; align:center;zOffset:0.05" ; look-at="#cam" position="3.636 1.697 -0.932"></a-entity>
 
-            <a-entity slice9="width: 4; height: 1; left: 20; right: 43; top: 20; bottom: 43;src: tooltip.png"
-                      text="value:B19-Salle de TP;wrap-count:15; width:5; align:center" ; look-at="#cam" position="-7.5 1.8 -0.35"></a-entity>
+            <a-entity slice9="width: 5; height: 1; left: 20; right: 43; top: 20; bottom: 43;src: tooltip.png"
+                      text="value:B19-Salle de TP;wrap-count:15; width:5; align:center;zOffset:0.05" ; look-at="#cam" position="-7.5 1.8 -0.35"></a-entity>
 
             <a-image spot="linkto: #B18; spotgroup: group-B18"
                      position="5.4 0.36694 -2.2" look-at="#cam" src="#fleche"></a-image>
@@ -520,8 +520,8 @@
 
         <a-entity id="group-couloirB20B21B22B23" scale="0 0 0">
 
-            <a-entity slice9="width: 4; height: 1; left: 20; right: 43; top: 20; bottom: 43;src: tooltip.png"
-                      text="value:B20-Salle de TP;wrap-count:15; width:5; align:center" ; look-at="#cam" position="-7.5 1.8 -6.3"></a-entity>
+            <a-entity slice9="width: 5; height: 1; left: 20; right: 43; top: 20; bottom: 43;src: tooltip.png"
+                      text="value:B20-Salle de TP;wrap-count:15; width:5; align:center;zOffset:0.05" ; look-at="#cam" position="-7.5 1.8 -6.3"></a-entity>
 
             <a-image spot="linkto: #B20; spotgroup: group-B20"
                      position="-7.29631 -0.95567 -3.93664" look-at="#cam" src="#fleche"></a-image>
@@ -554,13 +554,13 @@
         <a-entity id="group-escalierMilieuB" scale="0 0 0">
 
             <a-entity slice9="width: 6; height: 2; left: 20; right: 43; top: 20; bottom: 43;src: tooltip.png"
-                      text="value:Rez de chausse : couloir A et sortie;wrap-count:15; width:5; align:center" ; look-at="#cam" position="5.406 -2.713 3.923"></a-entity>
+                      text="value:Rez de chaussee : couloir A et sortie;wrap-count:15; width:5; align:center;zOffset:0.05" ; look-at="#cam" position="5.406 -1.2 3.923"></a-entity>
 
             <a-entity slice9="width: 6; height: 2; left: 20; right: 43; top: 20; bottom: 43;src: tooltip.png"
-                      text="value:1er etage : couloir B;wrap-count:15; width:5; align:center" ; look-at="#cam" position="-7.234 0.048 3.094"></a-entity>
+                      text="value:1er etage : couloir B;wrap-count:15; width:5; align:center;zOffset:0.05" ; look-at="#cam" position="-7.234 0.048 3.094"></a-entity>
 
             <a-entity slice9="width: 6; height: 3; left: 20; right: 43; top: 20; bottom: 43;src: tooltip.png"
-                      text="value:2eme etage : bureaux des professeurs;wrap-count:15; width:5; align:center" ; look-at="#cam" position="0.199 0.569 8.327"></a-entity>
+                      text="value:2eme etage : bureaux des professeurs;wrap-count:15; width:5; align:center;zOffset:0.05" ; look-at="#cam" position="0.199 0.569 8.327"></a-entity>
 
 
             <a-image spot="linkto: #escalierMilieuA; spotgroup: group-escalierMilieuA"
@@ -576,7 +576,7 @@
 
 
             <a-entity slice9="width: 6; height: 2; left: 20; right: 43; top: 20; bottom: 43;src: tooltip.png"
-                      text="value:Escalier vers rez de chausse;wrap-count:15; width:5; align:center" ; look-at="#cam" position="-0.9 1.2 -10">
+                      text="value:Escalier vers rez de chaussee;wrap-count:15; width:5; align:center;zOffset:0.05" ; look-at="#cam" position="-0.9 1.2 -10">
             </a-entity>
 
             <a-image spot="linkto: #B23; spotgroup: group-B23"
@@ -593,16 +593,16 @@
         <a-entity id="group-milieuB" scale="0 0 0">
 
             <a-entity slice9="width: 6; height: 1; left: 20; right: 43; top: 20; bottom: 43;src: tooltip.png"
-                      text="value:B10-Salle de TP;wrap-count:15; width:5; align:center" ; look-at="#cam" position="-15 0.2 -1.825"></a-entity>
+                      text="value:B10-Salle de TP;wrap-count:15; width:5; align:center;zOffset:0.05" ; look-at="#cam" position="-15 0.2 -1.825"></a-entity>
+
+            <a-entity slice9="width: 6; height: 2; left: 20; right: 43; top: 20; bottom: 43;src: tooltip.png"
+                      text="value:Rez de chaussee : couloir A;wrap-count:15; width:5; align:center;zOffset:0.05" ; look-at="#cam" position="10 0.4 -15"></a-entity>
 
             <a-entity slice9="width: 6; height: 1; left: 20; right: 43; top: 20; bottom: 43;src: tooltip.png"
-                      text="value:Rez de chausse : couloir A;wrap-count:15; width:5; align:center" ; look-at="#cam" position="10 0.4 -15"></a-entity>
+                      text="value:Departement RT;wrap-count:15; width:5; align:center;zOffset:0.05" ; look-at="#cam" position="-8.8 0.1 -7.259"></a-entity>
 
             <a-entity slice9="width: 6; height: 1; left: 20; right: 43; top: 20; bottom: 43;src: tooltip.png"
-                      text="value:Departement RT;wrap-count:15; width:5; align:center" ; look-at="#cam" position="-8.8 0.1 -7.259"></a-entity>
-
-            <a-entity slice9="width: 6; height: 1; left: 20; right: 43; top: 20; bottom: 43;src: tooltip.png"
-                      text="value:Couloir B;wrap-count:15; width:5; align:center" ; look-at="#cam" position="9 0 6"></a-entity>
+                      text="value:Couloir B;wrap-count:15; width:5; align:center;zOffset:0.05" ; look-at="#cam" position="9 0 6"></a-entity>
 
             <a-image spot="linkto: #B10; spotgroup: group-B10"
                      position="-7.5 -0.12484 -1.41482" look-at="#cam" src="#fleche"></a-image>
@@ -619,10 +619,10 @@
         <a-entity id="group-exterieurMilieu" scale="0 0 0">
 
             <a-entity slice9="width: 5; height: 3; left: 20; right: 43; top: 20; bottom: 43;src: tooltip.png"
-                      text="value:Entree principale batiment informatique et RT;wrap-count:15; width:5; align:center" ; look-at="#cam" position="-8.346 1.154 7.389"></a-entity>
+                      text="value:Entree principale batiment informatique et RT;wrap-count:15; width:5; align:center;zOffset:0.05" ; look-at="#cam" position="-8.346 1.154 7.389"></a-entity>
 
             <a-entity slice9="width: 5; height: 1; left: 20; right: 43; top: 20; bottom: 43;src: tooltip.png"
-                      text="value:Amphitheatres;wrap-count:15; width:5; align:center" ; look-at="#cam" position="6.213 1.120 10.868"></a-entity>
+                      text="value:Amphitheatres;wrap-count:15; width:5; align:center;zOffset:0.05" ; look-at="#cam" position="6.213 1.120 10.868"></a-entity>
 
             <a-image spot="linkto:#milieuA;spotgroup:group-milieuA"
                      position="-7 0 0.5" src="#fleche" look-at="#cam"></a-image>
@@ -638,12 +638,12 @@
 
         <a-entity id="group-parking">
 
-            <a-entity slice9="width: 2; height: 1; left: 20; right: 43; top: 20; bottom: 43;src: tooltip.png"  text="value:Departement Informatique ; width:3.5; align:center" ; look-at="#cam" position="0.021 1.5 -5"></a-entity>
-            <a-entity slice9="width: 4; height: 1; left: 20; right: 43; top: 20; bottom: 43;src: tooltip.png"  text="value:Departement RT ; width:7; align:center" ; look-at="#cam" position="7 0.9 -7"></a-entity>
-            <a-entity slice9="width: 4; height: 1; left: 20; right: 43; top: 20; bottom: 43;src: tooltip.png"  text="value:Batiment central ; width:7; align:center" ; look-at="#cam" position="-11 0.636 -0.717"></a-entity>
-            <a-entity slice9="width: 6; height: 8; left: 20; right: 43; top: 20; bottom: 43;src: tooltip.png"  text="value:Cette visite virtuelle a ete cree par Victor Mommalier, Clement Ferrere, Enzo Mazella,
-                      Clara Poncet et Lucile Velut dans le cadre du projet tutore de deuxieme annee de DUT Informatique ;
-                      ;width:5;align:center;wrap-count:15" ; look-at="#cam" position="4.111 0.636 21.696"></a-entity>
+            <a-entity slice9="width: 3; height: 1; left: 20; right: 43; top: 20; bottom: 43;src: tooltip.png"  text="value:Departement Informatique ; width:5; align:center;zOffset:0.05" ; look-at="#cam" position="0.021 1.7 -5"></a-entity>
+            <a-entity slice9="width: 3; height: 1; left: 20; right: 43; top: 20; bottom: 43;src: tooltip.png"  text="value:Departement RT ; width:7; align:center;zOffset:0.05" ; look-at="#cam" position="7 0.9 -7"></a-entity>
+            <a-entity slice9="width: 4; height: 1; left: 20; right: 43; top: 20; bottom: 43;src: tooltip.png"  text="value:Batiment central ; width:9; align:center;zOffset:0.05" ; look-at="#cam" position="-11 0.636 -0.717"></a-entity>
+            <a-entity slice9="width: 6; height: 9; left: 20; right: 43; top: 20; bottom: 43;src: tooltip.png"  text="value:Cette visite virtuelle a ete cree par Victor Mommalier, Clement Ferrere, Enzo Mazella,
+                      Clara Poncet et Lucile Velut dans le cadre du projet tutore de deuxieme annee de DUT Informatique
+                      ;width:5;align:center;wrap-count:15;zOffset:0.05" ; look-at="#cam" position="4.111 0.636 21.696"></a-entity>
 
             <a-image src="#planIUT" look-at="#cam" position="3.58453 0.775 18.16268" material="opacity: 0.25" geometry="" rotation="-175.73018266668285 -9.563956160404992 -179.28929675951915"></a-image>
             <a-image spot="linkto: #exterieurMilieu; spotgroup: group-exterieurMilieu"
@@ -657,8 +657,6 @@
 
         </a-entity>
 
-
-
         <a-entity id="group-exterieurDroit" scale="0 0 0">
             <a-image spot="linkto: #parking; spotgroup: group-parking"
                      position="7.26916 1.13569 3.76474" src="#fleche" look-at="#cam"></a-image>
@@ -670,7 +668,7 @@
         <a-entity id="group-exterieurCentral" scale="0 0 0">
 
             <a-entity slice9="width: 6; height: 2; left: 20; right: 43; top: 20; bottom: 43;src: tooltip.png"
-                      text="value:Entree du batiment central;wrap-count:15; width:5; align:center" ; look-at="#cam" position="-10.571 3.779 5.809"></a-entity>
+                      text="value:Entree du batiment central;wrap-count:15; width:5; align:center;zOffset:0.05" ; look-at="#cam" position="-10.571 3.779 5.809"></a-entity>
 
             <a-image spot="linkto: #parking; spotgroup: group-parking"
                      position="-3.72751 0.89279 -6.31928" src="#fleche" look-at="#cam"></a-image>
@@ -683,10 +681,10 @@
 
         <a-entity id="group-croisementChemin" scale="0 0 0">
             <a-entity slice9="width: 6.5; height: 3; left: 20; right: 43; top: 20; bottom: 43;src: tooltip.png"
-                      text="value:Amphi et entree arriere batiment central;wrap-count:15; width:5; align:center" ; look-at="#cam" position="-16.350 0 1.414"></a-entity>
+                      text="value:Amphi et entree arriere batiment central;wrap-count:15; width:5; align:center;zOffset:0.05" ; look-at="#cam" position="-16.350 1.5 1.414"></a-entity>
 
             <a-entity slice9="width: 6.5; height: 3; left: 20; right: 43; top: 20; bottom: 43;src: tooltip.png"
-                      text="value:Departement biologie et entree arriere batiment informatique ;wrap-count:15; width:5; align:center" ; look-at="#cam" position="-1.323 0.614 -19.618"></a-entity>
+                      text="value:Departement biologie et entree arriere batiment informatique ;wrap-count:15; width:5; align:center;zOffset:0.05" ; look-at="#cam" position="-1.323 0.614 -19.618"></a-entity>
 
             <a-image spot="linkto:#exterieurMilieu;spotgroup:group-exterieurMilieu"
                      position="0 -0.8 8" src="#fleche" look-at="#cam"></a-image>
@@ -702,10 +700,10 @@
         <a-entity id="group-coinGauche" scale="0 0 0">
 
             <a-entity slice9="width: 5; height: 3; left: 20; right: 43; top: 20; bottom: 43;src: tooltip.png"
-                      text="value:Entree arriere batiment informatique;wrap-count:15; width:5; align:center" ; look-at="#cam" position="10.350 1.684 -3.803"></a-entity>
+                      text="value:Entree arriere batiment informatique;wrap-count:15; width:5; align:center;zOffset:0.05" ; look-at="#cam" position="10.350 1.684 -3.803"></a-entity>
 
             <a-entity slice9="width: 4; height: 2; left: 20; right: 43; top: 20; bottom: 43;src: tooltip.png"
-                      text="value:Departement biologie ;wrap-count:15; width:5; align:center" ; look-at="#cam" position="-10.8 0.163 -4.246"></a-entity>
+                      text="value:Departement biologie ;wrap-count:15; width:5; align:center;zOffset:0.05" ; look-at="#cam" position="-10.8 0.163 -4.246"></a-entity>
 
             <a-image spot="linkto:#croisementChemin;spotgroup:group-croisementChemin"
                      position="2.4 -0.17 15.36" src="#fleche" look-at="#cam"></a-image>
@@ -728,20 +726,20 @@
 
         <a-entity id="group-devantAmphi" scale="0 0 0">
 
-            <a-entity slice9="width: 4; height: 2; left: 20; right: 43; top: 20; bottom: 43;src: tooltip.png"
-                      text="value:Departement Informatique ;wrap-count:15; width:5; align:center" ; look-at="#cam" position="-7.560 -0.637 -11.469"></a-entity>
+            <a-entity slice9="width: 5; height: 2; left: 20; right: 43; top: 20; bottom: 43;src: tooltip.png"
+                      text="value:Departement Informatique ;wrap-count:15; width:5; align:center;zOffset:0.05" ; look-at="#cam" position="-7.560 -0.637 -11.469"></a-entity>
 
 
-            <a-entity slice9="width: 4; height: 1; left: 20; right: 43; top: 20; bottom: 43;src: tooltip.png"
-                      text="value:Amphi A ;wrap-count:15; width:5; align:center" ; look-at="#cam" position="-5.271 -0.327 11.579"></a-entity>
+            <a-entity slice9="width: 5; height: 1; left: 20; right: 43; top: 20; bottom: 43;src: tooltip.png"
+                      text="value:Amphi A ;wrap-count:15; width:5; align:center;zOffset:0.05" ; look-at="#cam" position="-5.271 -0.327 11.579"></a-entity>
 
 
-            <a-entity slice9="width: 4; height: 1; left: 20; right: 43; top: 20; bottom: 43;src: tooltip.png"
-                      text="value:Amphi B;wrap-count:15; width:5; align:center" ; look-at="#cam" position="-11.571 -0.244 4.487"></a-entity>
+            <a-entity slice9="width: 5; height: 1; left: 20; right: 43; top: 20; bottom: 43;src: tooltip.png"
+                      text="value:Amphi B;wrap-count:15; width:5; align:center;zOffset:0.05" ; look-at="#cam" position="-11.571 -0.244 4.487"></a-entity>
 
 
-            <a-entity slice9="width: 4; height: 2; left: 20; right: 43; top: 20; bottom: 43;src: tooltip.png"
-                      text="value:Entree arriere batiment central ;wrap-count:15; width:5; align:center" ; look-at="#cam" position="9.304 0.992 -7.843"></a-entity>
+            <a-entity slice9="width: 5; height: 2; left: 20; right: 43; top: 20; bottom: 43;src: tooltip.png"
+                      text="value:Entree arriere batiment central ;wrap-count:15; width:5; align:center;zOffset:0.05" ; look-at="#cam" position="9.304 0.992 -7.843"></a-entity>
 
             <a-image spot="linkto:#croisementChemin;spotgroup:group-croisementChemin"
                      position="-6.239 -1.17 -7.336" src="#fleche" look-at="#cam"></a-image>
@@ -755,14 +753,14 @@
         <!-- GROUPE CENTRAL -->
         <a-entity id="group-coinCafet" scale="0 0 0">
 
-            <a-entity slice9="width: 4; height: 1; left: 20; right: 43; top: 20; bottom: 43;src: tooltip.png"
-                      text="value:Cafeteria ;wrap-count:15; width:5; align:center" ; look-at="#cam" position="7.779 -1.183 3.935"></a-entity>
+            <a-entity slice9="width: 5; height: 1; left: 20; right: 43; top: 20; bottom: 43;src: tooltip.png"
+                      text="value:Cafeteria ;wrap-count:15; width:5; align:center;zOffset:0.05" ; look-at="#cam" position="7.779 -1.183 3.935"></a-entity>
 
             <a-entity slice9="width: 5; height: 2; left: 20; right: 43; top: 20; bottom: 43;src: tooltip.png"
-                      text="value:Sortie vers amphi ;wrap-count:15; width:5; align:center" ; look-at="#cam" position="-5.694 -0.762 6.374"></a-entity>
+                      text="value:Sortie vers amphi ;wrap-count:15; width:5; align:center;zOffset:0.05" ; look-at="#cam" position="-5.694 -0.3 6.374"></a-entity>
 
-            <a-entity slice9="width: 4; height: 2; left: 20; right: 43; top: 20; bottom: 43;src: tooltip.png"
-                      text="value:Bibliotheque et accueil ;wrap-count:15; width:5; align:center" ; look-at="#cam" position="4.497 0.074 -4.625"></a-entity>
+            <a-entity slice9="width: 5; height: 2; left: 20; right: 43; top: 20; bottom: 43;src: tooltip.png"
+                      text="value:Bibliotheque et accueil ;wrap-count:15; width:5; align:center;zOffset:0.05" ; look-at="#cam" position="4.497 0.5 -4.625"></a-entity>
 
             <a-image spot="linkto: #devantAmphi; spotgroup: group-devantAmphi"
                      position="-4.67079 -1.65 5.53263" look-at="#cam" src="#fleche"></a-image>
@@ -776,11 +774,11 @@
 
 
         <a-entity id="group-entreeCafet" scale="0 0 0">
-            <a-entity slice9="width: 4; height: 2; left: 20; right: 43; top: 20; bottom: 43;src: tooltip.png"
-                      text="value:Cafeteria : plats chauds  ;wrap-count:15; width:5; align:center" ; look-at="#cam" position="9.216 0.059 -2.446"></a-entity>
+            <a-entity slice9="width: 5; height: 2; left: 20; right: 43; top: 20; bottom: 43;src: tooltip.png"
+                      text="value:Cafeteria : plats chauds  ;wrap-count:15; width:5; align:center;zOffset:0.05" ; look-at="#cam" position="9.216 0.059 -2.446"></a-entity>
 
-            <a-entity slice9="width: 4; height: 2; left: 20; right: 43; top: 20; bottom: 43;src: tooltip.png"
-                      text="value:Cafeteria : sandwichs;wrap-count:15; width:5; align:center" ; look-at="#cam" position="-1.642 0.006 -8.530"></a-entity>
+            <a-entity slice9="width: 5; height: 2; left: 20; right: 43; top: 20; bottom: 43;src: tooltip.png"
+                      text="value:Cafeteria : sandwichs;wrap-count:15; width:5; align:center;zOffset:0.05" ; look-at="#cam" position="-1.642 0.5 -8.530"></a-entity>
 
             <a-image spot="linkto: #coinCafet; spotgroup:group-coinCafet"
                      position="0.80785 -2.27172 6.03043" look-at="#cam" src="#fleche"></a-image>
@@ -795,8 +793,8 @@
 
         <a-entity id="group-sandwich" scale="0 0 0">
 
-            <a-entity slice9="width: 4; height: 2; left: 20; right: 43; top: 20; bottom: 43;src: tooltip.png"
-                      text="value:Vente sandwichs;wrap-count:15; width:5; align:center" ; look-at="#cam" position="7.675 0.170 4.792"></a-entity>
+            <a-entity slice9="width: 5; height: 2; left: 20; right: 43; top: 20; bottom: 43;src: tooltip.png"
+                      text="value:Vente sandwichs;wrap-count:15; width:5; align:center;zOffset:0.05" ; look-at="#cam" position="7.675 0.170 4.792"></a-entity>
 
             <a-image spot="linkto: #entreeCafet; spotgroup: group-entreeCafet"
                      position="-3.45167 -1.65 5.05973" look-at="#cam" src="#fleche"></a-image>
@@ -815,18 +813,18 @@
 
         <a-entity id="group-devantBibliotheque" scale="0 0 0" >
 
-            <a-entity slice9="width: 4; height: 1; left: 20; right: 43; top: 20; bottom: 43;src: tooltip.png"
-                      text="value:Bibliotheque;wrap-count:15; width:5; align:center" ; look-at="#cam" position="1.928 0.157 8.622"></a-entity>
+            <a-entity slice9="width: 5; height: 1; left: 20; right: 43; top: 20; bottom: 43;src: tooltip.png"
+                      text="value:Bibliotheque;wrap-count:15; width:5; align:center;zOffset:0.05" ; look-at="#cam" position="1.928 0.157 8.622"></a-entity>
 
 
-            <a-entity slice9="width: 4; height: 1; left: 20; right: 43; top: 20; bottom: 43;src: tooltip.png"
-                      text="value:Cour;wrap-count:15; width:5; align:center" ; look-at="#cam" position="-8.448 -2.065 -7.040"></a-entity>
+            <a-entity slice9="width: 5; height: 1; left: 20; right: 43; top: 20; bottom: 43;src: tooltip.png"
+                      text="value:Cour;wrap-count:15; width:5; align:center;zOffset:0.05" ; look-at="#cam" position="-8.448 -2.065 -7.040"></a-entity>
 
             <a-entity slice9="width: 6; height: 3; left: 20; right: 43; top: 20; bottom: 43;src: tooltip.png"
-                      text="value:Cafeteria et sortie vers amphi;wrap-count:15; width:5; align:center" ; look-at="#cam" position="7.570 0.772 -3.315"></a-entity>
+                      text="value:Cafeteria et sortie vers amphi;wrap-count:15; width:5; align:center;zOffset:0.05" ; look-at="#cam" position="7.570 0.772 -3.315"></a-entity>
 
-            <a-entity slice9="width: 5; height: 3; left: 20; right: 43; top: 20; bottom: 43;src: tooltip.png"
-                      text="value:Acceuil batiment central;wrap-count:15; width:5; align:center" ; look-at="#cam" position="-9.989 0.646 3.155"></a-entity>
+            <a-entity slice9="width: 5; height: 2; left: 20; right: 43; top: 20; bottom: 43;src: tooltip.png"
+                      text="value:Accueil batiment central;wrap-count:15; width:5; align:center;zOffset:0.05" ; look-at="#cam" position="-9.989 0.646 3.155"></a-entity>
 
             <a-image spot="linkto: #coinCafet; spotgroup: group-coinCafet"
                      position="7.70431 -1.65 -0.61523" look-at="#cam" src="#fleche"></a-image>
@@ -851,14 +849,14 @@
 
         <a-entity id="group-droitCentral" scale="0 0 0">
 
-            <a-entity slice9="width: 4; height: 2; left: 20; right: 43; top: 20; bottom: 43;src: tooltip.png"
-                      text="value:Bibliotheque et cafeteria ;wrap-count:15; width:5; align:center" ; look-at="#cam" position="-8.631 -1.257 0.481"></a-entity>
+            <a-entity slice9="width: 5; height: 2; left: 20; right: 43; top: 20; bottom: 43;src: tooltip.png"
+                      text="value:Bibliotheque et cafeteria ;wrap-count:15; width:5; align:center;zOffset:0.05" ; look-at="#cam" position="-8.631 -0.3 0.481"></a-entity>
 
             <a-entity slice9="width: 6; height: 3; left: 20; right: 43; top: 20; bottom: 43;src: tooltip.png"
-                      text="value:Departement GEA et salles d'anglais;wrap-count:15; width:5; align:center" ; look-at="#cam" position="-3.604 -0.754 -9.348"></a-entity>
+                      text="value:Departement GEA et salles d'anglais;wrap-count:15; width:5; align:center;zOffset:0.05" ; look-at="#cam" position="-3.604 -0.754 -9.348"></a-entity>
 
-            <a-entity slice9="width: 4; height: 1; left: 20; right: 43; top: 20; bottom: 43;src: tooltip.png"
-                      text="value:Sortie;wrap-count:15; width:5; align:center" ; look-at="#cam" position="9.972 -1.121 6.725"></a-entity>
+            <a-entity slice9="width: 5; height: 1; left: 20; right: 43; top: 20; bottom: 43;src: tooltip.png"
+                      text="value:Sortie;wrap-count:15; width:5; align:center;zOffset:0.05" ; look-at="#cam" position="9.972 -1.121 6.725"></a-entity>
 
             <a-image spot="linkto: #devantBibliotheque; spotgroup: group-devantBibliotheque"
                      position="-6.68105 -1.65 1.00882" look-at="#cam" src="#fleche"></a-image>
@@ -871,16 +869,16 @@
 
         <a-entity id="group-accueilCentral" scale="0 0 0">
 
-            <a-entity slice9="width: 4; height: 1; left: 20; right: 43; top: 20; bottom: 43;src: tooltip.png"
-                      text="value:Cour;wrap-count:15; width:5; align:center" ; look-at="#cam" position="-4.37679 -1.061 7.2518"></a-entity>
+            <a-entity slice9="width: 5; height: 1; left: 20; right: 43; top: 20; bottom: 43;src: tooltip.png"
+                      text="value:Cour;wrap-count:15; width:5; align:center;zOffset:0.05" ; look-at="#cam" position="-4.37679 -1.061 7.2518"></a-entity>
 
 
-            <a-entity slice9="width: 4; height: 2; left: 20; right: 43; top: 20; bottom: 43;src: tooltip.png"
-                      text="value:Bibliotheque et cafeteria;wrap-count:15; width:5; align:center" ; look-at="#cam" position="-10.298 -1.284 1.112"></a-entity>
+            <a-entity slice9="width: 5; height: 2; left: 20; right: 43; top: 20; bottom: 43;src: tooltip.png"
+                      text="value:Bibliotheque et cafeteria;wrap-count:15; width:5; align:center;zOffset:0.05" ; look-at="#cam" position="-10.298 -1 1.112"></a-entity>
 
 
-            <a-entity slice9="width: 4; height: 2; left: 20; right: 43; top: 20; bottom: 43;src: tooltip.png"
-                      text="value:Infirmerie et administration;wrap-count:15; width:5; align:center" ; look-at="#cam" position="8.248 -0.804 6.951"></a-entity>
+            <a-entity slice9="width: 5; height: 2; left: 20; right: 43; top: 20; bottom: 43;src: tooltip.png"
+                      text="value:Infirmerie et administration;wrap-count:15; width:5; align:center;zOffset:0.05" ; look-at="#cam" position="8.248 -0.804 6.951"></a-entity>
 
             <a-image spot="linkto: #droitCentral; spotgroup: group-droitCentral"
                      position="-7.385 -1.65 0.73417" look-at="#cam" src="#fleche"></a-image>
