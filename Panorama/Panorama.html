@@ -129,8 +129,8 @@
 
     <a-sky id="skybox" src="#parking"></a-sky>
 
-        <a-entity id="cam" camera="active:false" position="0 1.6 0" look-controls>
-            <a-entity cursor="fuse:true;fuseTimeout:2000"
+        <a-entity id="cam" camera position="0 1.6 0" look-controls wasd-controls="enabled:false">
+            <a-entity cursor="fuse:true;fuseTimeout:1500"
                       geometry="primitive:ring;radiusInner:0.01;radiusOuter:0.02"
                       position="0 0 -1.8"
                       material="shader:flat;color:blue">
@@ -642,7 +642,7 @@
             <a-entity slice9="width: 3; height: 1; left: 20; right: 43; top: 20; bottom: 43;src: tooltip.png"  text="value:Departement RT ; width:7; align:center;zOffset:0.05" ; look-at="#cam" position="7 0.9 -7"></a-entity>
             <a-entity slice9="width: 4; height: 1; left: 20; right: 43; top: 20; bottom: 43;src: tooltip.png"  text="value:Batiment central ; width:9; align:center;zOffset:0.05" ; look-at="#cam" position="-11 0.636 -0.717"></a-entity>
             <a-entity slice9="width: 6; height: 9; left: 20; right: 43; top: 20; bottom: 43;src: tooltip.png"  text="value:Cette visite virtuelle a ete cree par Victor Mommalier, Clement Ferrere, Enzo Mazella,
-                      Clara Poncet et Lucile Velut dans le cadre du projet tutore de deuxieme annee de DUT Informatique ;
+                      Clara Poncet et Lucile Velut dans le cadre du projet tutore de deuxieme annee de DUT Informatique
                       ;width:5;align:center;wrap-count:15;zOffset:0.05" ; look-at="#cam" position="4.111 0.636 21.696"></a-entity>
 
             <a-image src="#planIUT" look-at="#cam" position="3.58453 0.775 18.16268" material="opacity: 0.25" geometry="" rotation="-175.73018266668285 -9.563956160404992 -179.28929675951915"></a-image>
@@ -656,8 +656,6 @@
                      position="-6 0 -5.6" src="#map" look-at="#cam"></a-image>
 
         </a-entity>
-
-
 
         <a-entity id="group-exterieurDroit" scale="0 0 0">
             <a-image spot="linkto: #parking; spotgroup: group-parking"
