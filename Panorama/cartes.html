@@ -23,6 +23,7 @@
         <img id="logoVert" src="image/logoVert.png" alt=""/>
         <img id="logoJaune" src="image/logoJaune.png" alt=""/>
         <img id="logoRouge" src="image/logoRouge.png" alt=""/>
+        <a-sound id="boup" src="son/BOUP.mp3"></a-sound>
 
     </a-assets>
 
@@ -45,11 +46,11 @@
         <a-entity id="group-cartePrincipale">
 
             <a-plane position="-1.89574 1.6 -1.96425" src="#cartePrincipale" look-at="#cam" height="4" width="6" material="" geometry="" rotation="0 43.98317825991033 0"></a-plane>
-            <a-image height="0.480" width="0.300" link="href:batCentral.html; on:click" position="-0.852 1.275 -2.810" src="#logoVert" sound="src:son/BOUP.mp3; on: click"></a-image>
-            <a-image height="0.480" width="0.300" link="href:index.html; on:click" position="-0.058 1.125 -3.527" src="#logoJaune" sound="src:son/BOUP.mp3; on: click"></a-image>
-            <a-image height="0.480" width="0.300" link="href:exterieurAmphi.html; on:click" position="-1.296 2.302 -2.487" src="#logoVert" sound="src:son/BOUP.mp3; on: click"></a-image>
-            <a-image height="0.480" width="0.300" link="href:exterieurInfoGauche.html; on:click" position="-0.86567 2.98873 -2.84189" src="#logoJaune" sound="src:son/BOUP.mp3; on: click"></a-image>
-            <a-image height="0.480" width="0.300" link="href:exterieurInfoMilieu.html; on:click" position="-0.63693 2.00661 -3.01714" src="#logoJaune" sound="src:son/BOUP.mp3; on: click"></a-image>
+            <a-image height="0.480" width="0.300" link="href:batCentral.html; on:click" look-at="#cam" position="-0.852 1.275 -2.810" src="#logoVert" sound="src:#boup; on: click"></a-image>
+            <a-image height="0.480" width="0.300" link="href:exterieur.html; on:click" look-at="#cam" position="-0.058 1.125 -3.527" src="#logoJaune" sound="src:#boup; on: click"></a-image>
+            <a-image height="0.480" width="0.300" link="href:batCentralR.html; on:click" look-at="#cam" position="-1.102 2.144 -2.342" src="#logoVert" sound="src:#boup; on: click"></a-image>
+            <a-image height="0.480" width="0.300" link="href:exterieurInfoGauche.html; on:click" look-at="#cam" position="-0.86567 2.98873 -2.84189" src="#logoJaune" sound="src:#boup; on: click"></a-image>
+            <a-image height="0.480" width="0.300" link="href:exterieurInfoMilieu.html; on:click" look-at="#cam" position="-0.63693 2.00661 -3.01714" src="#logoJaune" sound="src:#boup; on: click"></a-image>
         </a-entity>
     </a-entity>
 </a-scene>
