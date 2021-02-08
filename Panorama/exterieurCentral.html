@@ -19,9 +19,9 @@
         <img id="map" src="icones/map.png" height="256" width="256" alt=""/>
 
             <!-- Extérieur -->
+        <img id="exterieurCentral" src="image/exterieurCentral.jpg" height="2688" width="5376" alt=""/>
         <img id="parking" src="image/parking.jpg" height="2688" width="5376" alt=""/>
         <img id="exterieurMilieu" src="image/exterieurMilieu.JPG" height="2688" width="5376" alt=""/>
-        <img id="exterieurCentral" src="image/exterieurCentral.jpg" height="2688" width="5376" alt=""/>
         <img id="exterieurDroit" src="image/exterieurDroit.jpg" height="2688" width="5376" alt=""/>
         <img id="croisementChemin" src="image/croisementChemin.JPG" height="2688" width="5376" alt=""/>
         <img id="devantAmphi" src="image/devantAmphi.jpg" height="2688" width="5376" alt=""/>
@@ -39,7 +39,17 @@
         </a-entity>
     <a-entity id="spots" hotspots>
         <!-- GROUPE EXTERIEUR -->
-        <a-entity id="group-parking">
+        <a-entity id="group-exterieurCentral">
+            <a-entity slice9="width: 6; height: 2; left: 20; right: 43; top: 20; bottom: 43;src: tooltip.png"
+                      text="value:Entree du batiment central;wrap-count:15; width:5; align:center;zOffset:0.05" ; look-at="#cam" position="-10.571 3.779 5.809" sound="src:son/BOUP.mp3; on: click"></a-entity>
+            <a-image spot="linkto: #parking; spotgroup: group-parking"
+                     position="-3.72751 0.89279 -6.31928" src="#fleche" look-at="#cam" sound="src:son/BOUP.mp3; on: click"></a-image>
+            <a-image link="href:batCentral.html; on:click"
+                     position="-5.80567 0.71139 3.12434" src="#fleche" look-at="#cam" sound="src:son/BOUP.mp3; on: click"></a-image>
+            <a-image link="href:cartes.html; on:click"
+                     position="-7.3 0 -2.8" src="#map" look-at="#cam" sound="src:son/BOUP.mp3; on: click"></a-image>
+        </a-entity>
+        <a-entity id="group-parking" scale="0 0 0">
             <a-entity slice9="width: 3; height: 1; left: 20; right: 43; top: 20; bottom: 43;src: tooltip.png"  text="value:Departement Informatique ; width:5; align:center;zOffset:0.05" ; look-at="#cam" position="0.021 1.7 -5"></a-entity>
             <a-entity slice9="width: 3; height: 1; left: 20; right: 43; top: 20; bottom: 43;src: tooltip.png"  text="value:Departement RT ; width:7; align:center;zOffset:0.05" ; look-at="#cam" position="7 0.9 -7"></a-entity>
             <a-entity slice9="width: 4; height: 1; left: 20; right: 43; top: 20; bottom: 43;src: tooltip.png"  text="value:Batiment central ; width:9; align:center;zOffset:0.05" ; look-at="#cam" position="-11 0.636 -0.717"></a-entity>
@@ -69,17 +79,6 @@
                      position="-1 0 -9" src="#fleche" look-at="#cam" sound="src:son/BOUP.mp3; on: click"></a-image>
             <a-image link="href:cartes.html; on:click"
                      position="-6 0 -5.6" src="#map" look-at="#cam" sound="src:son/BOUP.mp3; on: click"></a-image>
-        </a-entity>
-
-        <a-entity id="group-exterieurCentral" scale="0 0 0">
-            <a-entity slice9="width: 6; height: 2; left: 20; right: 43; top: 20; bottom: 43;src: tooltip.png"
-                      text="value:Entree du batiment central;wrap-count:15; width:5; align:center;zOffset:0.05" ; look-at="#cam" position="-10.571 3.779 5.809" sound="src:son/BOUP.mp3; on: click"></a-entity>
-            <a-image spot="linkto: #parking; spotgroup: group-parking"
-                     position="-3.72751 0.89279 -6.31928" src="#fleche" look-at="#cam" sound="src:son/BOUP.mp3; on: click"></a-image>
-            <a-image link="href:batCentral.html; on:click"
-                     position="-5.80567 0.71139 3.12434" src="#fleche" look-at="#cam" sound="src:son/BOUP.mp3; on: click"></a-image>
-            <a-image link="href:cartes.html; on:click"
-                     position="-7.3 0 -2.8" src="#map" look-at="#cam" sound="src:son/BOUP.mp3; on: click"></a-image>
         </a-entity>
 
         <a-entity id="group-exterieurDroit" scale="0 0 0">

@@ -1,0 +1,260 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Panorama</title>
+    <script src="https://aframe.io/releases/1.0.4/aframe.min.js"></script>
+    <script src="https://unpkg.com/aframe-slice9-component/dist/aframe-slice9-component.min.js"></script>
+    <script src="https://unpkg.com/aframe-look-at-component@0.5.1/dist/aframe-look-at-component.min.js"></script>
+    <!--animation component script-->
+    <script src="https://unpkg.com/aframe-animation-component@^4.1.2/dist/aframe-animation-component.min.js"></script>
+
+    <script>
+        AFRAME.registerComponent('hotspots',{
+            init:function(){
+                this.el.addEventListener('reloadspots',function(evt){
+
+                    //get the entire current spot group and scale it to 0
+                    var currspotgroup=document.getElementById(evt.detail.currspots);
+                    currspotgroup.setAttribute("scale","0 0 0");
+
+                    //get the entire new spot group and scale it to 1
+                    var newspotgroup=document.getElementById(evt.detail.newspots);
+                    newspotgroup.setAttribute("scale","1 1 1");
+
+
+                    var laCam = document.getElementById("cam");
+                    laCam.setAttribute("rotation","0 0 0");
+
+                });
+            }
+        });
+
+        AFRAME.registerComponent('spot',{
+            schema:{
+                linkto:{type:"string",default:""},
+                spotgroup:{type:"string",default:""}
+            },
+            init:function(){
+
+                //add image source of hotspot icon
+                //this.el.setAttribute("src","#fleche");
+                //make the icon look at the camera all the time
+                this.el.setAttribute("look-at","#cam");
+
+
+                var data=this.data;
+
+                this.el.addEventListener('click',function(){
+                    //set the skybox source to the new image as per the spot
+                    var sky=document.getElementById("skybox");
+                    sky.setAttribute("src",data.linkto);
+
+                    var spotcomp=document.getElementById("spots");
+                    var currspots=this.parentElement.getAttribute("id");
+                    //create event for spots component to change the spots data
+                    spotcomp.emit('reloadspots',{newspots:data.spotgroup,currspots:currspots});
+                });
+            }
+        });
+    </script>
+</head>
+<body>
+<a-scene id="notreScene">
+    <a-assets timeout="30000">
+
+        <img id="fleche" src="icones/fleche.png" height="357" width="367" alt=""/>
+        <img id="map" src="icones/map.png" height="256" width="256" alt=""/>
+
+        <!-- Bat Info RDC-->
+
+        <img id="gaucheA" src="image/gaucheA.JPG" height="2688" width="5376" alt=""/>
+        <img id="A23" src="image/A23.JPG" height="2688" width="5376" alt=""/>
+        <img id="couloirA23" src="image/couloirA23.JPG" height="2688" width="5376" alt=""/>
+        <img id="A22" src="image/A22.JPG" height="2688" width="5376" alt=""/>
+        <img id="A21" src="image/A21.JPG" height="2688" width="5376" alt=""/>
+        <img id="couloirA21A22" src="image/couloirA21A22.JPG" height="2688" width="5376" alt=""/>
+        <img id="A19" src="image/A19.JPG" height="2688" width="5376" alt="">
+        <img id="A18" src="image/A18.JPG" height="2688" width="5376" alt=""/>
+        <img id="couloirA18A19" src="image/couloirA18A19.JPG" height="2688" width="5376" alt=""/>
+        <img id="A12" src="image/A12.JPG" height="2688" width="5376" alt=""/>
+        <img id="couloirA12" src="image/couloirA12.JPG" height="2688" width="5376" alt=""/>
+        <img id="milieuA" src="image/milieuA.JPG" height="2688" width="5376" alt=""/>
+
+        <!-- Bat Info 1er étage
+        <img id="escalierGaucheA" src="image/escalierGaucheA.JPG" height="2688" width="5376" alt=""/>
+        <img id="B10" src="image/B10.JPG" height="2688" width="5376" alt=""/>
+        <img id="B12" src="image/B12.JPG" height="2688" width="5376" alt=""/>
+        <img id="B14" src="image/B14.JPG" height="2688" width="5376" alt=""/>
+        <img id="B17" src="image/B17.JPG" height="2688" width="5376" alt=""/>
+        <img id="B18" src="image/B18.JPG" height="2688" width="5376" alt=""/>
+        <img id="B19" src="image/B19.JPG" height="2688" width="5376" alt=""/>
+        <img id="B20" src="image/B20.JPG" height="2688" width="5376" alt=""/>
+        <img id="B21" src="image/B21.JPG" height="2688" width="5376" alt=""/>
+        <img id="B22" src="image/B22.JPG" height="2688" width="5376" alt=""/>
+        <img id="B23" src="image/B23.JPG" height="2688" width="5376" alt=""/>
+        <img id="couloirB12" src="image/couloirB12.JPG" height="2688" width="5376" alt=""/>
+        <img id="couloirB14B17" src="image/couloirB14B17.JPG" height="2688" width="5376" alt=""/>
+        <img id="couloirB18B19" src="image/couloirB18B19.JPG" height="2688" width="5376" alt=""/>
+        <img id="couloirB20B21B22B23" src="image/couloirB20B21B22B23.JPG" height="2688" width="5376" alt=""/>
+        <img id="escalierGaucheB" src="image/escalierGaucheB.JPG" height="2688" width="5376" alt=""/>
+        <img id="escalierMilieuB" src="image/escalierMilieuB.JPG" height="2688" width="5376" alt=""/>
+        <img id="gaucheB" src="image/gaucheB.JPG" height="2688" width="5376" alt=""/>
+        <img id="milieuB" src="image/milieuB.JPG" height="2688" width="5376" alt=""/>
+        <img id="secretariat" src="image/secretariat.JPG" height="2688" width="5376" alt=""/>
+        -->
+
+        <!-- Cartes
+        <img id="fondBlanc" src="image/fondBlanc.jpg" alt=""/>
+        <img id="batInfo" src="image/batInfo.jpg" alt=""/>
+        <img id="cartePrincipale" src="image/planPrincipal.jpg" alt=""/>
+        <img id="logoBleu" src="image/logoBleu.png" alt=""/>
+        <img id="logoVert" src="image/logoVert.png" alt=""/>
+        <img id="logoJaune" src="image/logoJaune.png" alt=""/>
+        <img id="logoRouge" src="image/logoRouge.png" alt=""/>
+        -->
+    </a-assets>
+
+    <a-sky id="skybox" src="#gaucheA"></a-sky>
+
+        <a-entity id="cam" camera position="0 1.6 0" look-controls wasd-controls="enabled:false">
+            <a-entity cursor="fuse:true;fuseTimeout:2000"
+                      geometry="primitive:ring;radiusInner:0.01;radiusOuter:0.02"
+                      position="0 0 -1.8"
+                      material="shader:flat;color:blue">
+            </a-entity>
+        </a-entity>
+
+
+    <a-entity id="spots" hotspots>
+        <!-- GROUPE A -->
+        <a-entity id="group-milieuA" scale ="0 0 0">
+            <a-entity slice9="width: 5; height: 1; left: 20; right: 43; top: 20; bottom: 43;src: tooltip.png"
+                      text="value:Escalier;wrap-count:15; width:5; align:center;zOffset:0.05" ; look-at="#cam" position="12.334 0 5.999"></a-entity>
+            <a-entity slice9="width: 5; height: 2; left: 20; right: 43; top: 20; bottom: 43;src: tooltip.png"
+                      text="value:Couloir informatique (A);wrap-count:15; width:5; align:center;zOffset:0.05" ; look-at="#cam" position="0.369 0.4 10.419"></a-entity>
+            <a-entity slice9="width: 5; height: 1; left: 20; right: 43; top: 20; bottom: 43;src: tooltip.png"
+                      text="value:Couloir RT;wrap-count:15; width:5; align:center;zOffset:0.05" ; look-at="#cam" position="-5.060 -0.784 -14.613"></a-entity>
+            <a-image link="href:exterieurInfoMilieu.html; on:click"
+                     position="7.9 -0.5 -1.58" src="#fleche" look-at="#cam" sound="src:son/BOUP.mp3; on: click"></a-image>
+            <a-image spot="linkto:#couloirA12;spotgroup:group-couloirA12"
+                     position="0.6 -0.8 8.9" src="#fleche" sound="src:son/BOUP.mp3; on: click"></a-image>
+            <a-image link="href:batInfo1st.html; on:click"
+                     position="9.9 -0.5 4.3" src="#fleche" look-at="#cam" sound="src:son/BOUP.mp3; on: click"></a-image>
+            <a-image link="href:cartes.html; on:click"
+                     position="-5.2 0 2.4" src="#map" look-at="#cam" sound="src:son/BOUP.mp3; on: click"></a-image>
+        </a-entity>
+
+        <a-entity id="group-couloirA12" scale="0 0 0">
+            <a-entity slice9="width: 5; height: 1; left: 20; right: 43; top: 20; bottom: 43;src: tooltip.png"
+                      text="value:A12-Salle de TP;wrap-count:15; width:5; align:center;zOffset:0.05" ; look-at="#cam" position="-7.5 1.8 -0.35"></a-entity>
+            <a-image spot="linkto:#A12;spotgroup:group-A12"
+                     position="-5 -0.8 1" src="#fleche" sound="src:son/BOUP.mp3; on: click"></a-image>
+            <a-image spot="linkto:#couloirA18A19;spotgroup:group-couloirA18A19"
+                     position="1.6 -0.6 8.9" src="#fleche" sound="src:son/BOUP.mp3; on: click"></a-image>
+            <a-image spot="linkto:#milieuA;spotgroup:group-milieuA"
+                     position="-1.2 -1 -7.5" src="#fleche" sound="src:son/BOUP.mp3; on: click"></a-image>
+            <a-image link="href:cartes.html; on:click"
+                     position="-3.2 0 7" src="#map" look-at="#cam" sound="src:son/BOUP.mp3; on: click"></a-image>
+        </a-entity>
+        <a-entity id="group-A12" scale="0 0 0">
+            <a-image spot="linkto:#couloirA12;spotgroup:group-couloirA12"
+                     position="-7.5 -0.18 -0.7" src="#fleche" sound="src:son/BOUP.mp3; on: click"></a-image>
+            <a-image link="href:cartes.html; on:click"
+                     position="-7 0.5 2.9" src="#map" look-at="#cam" sound="src:son/BOUP.mp3; on: click"></a-image>
+        </a-entity>
+
+        <a-entity id="group-couloirA18A19" scale ="0 0 0">
+            <a-entity slice9="width: 5; height: 2; left: 20; right: 43; top: 20; bottom: 43;src: tooltip.png"
+                      text="value:A19-Salle de TP libre service;wrap-count:15; width:5; align:center;zOffset:0.05" ; look-at="#cam" position="10.750 -0.336 2.441"></a-entity>
+            <a-entity slice9="width: 5; height: 1; left: 20; right: 43; top: 20; bottom: 43;src: tooltip.png"
+                      text="value:A18-Salle de TP;wrap-count:15; width:5; align:center;zOffset:0.05" ; look-at="#cam" position="-7.5 1.8 -0.35"></a-entity>
+            <a-image spot="linkto:#A18;spotgroup:group-A18"
+                     position="-4.2 0 -1.6" src="#fleche" sound="src:son/BOUP.mp3; on: click"></a-image>
+            <a-image spot="linkto:#A19;spotgroup:group-A19"
+                     position="4.6 0 2.6" src="#fleche" sound="src:son/BOUP.mp3; on: click"></a-image>
+            <a-image spot="linkto:#couloirA12;spotgroup:group-couloirA12"
+                     position="-0.8 -1 -6.7" src="#fleche" sound="src:son/BOUP.mp3; on: click"></a-image>
+            <a-image spot="linkto:#couloirA21A22;spotgroup:group-couloirA21A22"
+                     position="0.4 -0.8 8.9" src="#fleche" sound="src:son/BOUP.mp3; on: click"></a-image>
+            <a-image link="href:cartes.html; on:click"
+                     position="-3.6 0 5" src="#map" look-at="#cam" sound="src:son/BOUP.mp3; on: click"></a-image>
+        </a-entity>
+        <a-entity id="group-A18" scale ="0 0 0">
+            <a-image spot="linkto:#couloirA18A19;spotgroup:group-couloirA18A19"
+                     position="8.6 0 -1.2" src="#fleche" sound="src:son/BOUP.mp3; on: click"></a-image>
+            <a-image link="href:cartes.html; on:click"
+                     position="5.8 0 -5.3" src="#map" look-at="#cam" sound="src:son/BOUP.mp3; on: click"></a-image>
+        </a-entity>
+
+        <a-entity id="group-A19" scale="0 0 0">
+            <a-image spot="linkto:#couloirA18A19;spotgroup:group-couloirA18A19"
+                     position="6.9 0 4.5" src="#fleche" sound="src:son/BOUP.mp3; on: click"></a-image>
+            <a-image link="href:cartes.html; on:click"
+                     position="5.2 0 -0.5" src="#map" look-at="#cam" sound="src:son/BOUP.mp3; on: click"></a-image>
+        </a-entity>
+
+        <a-entity id="group-couloirA21A22" scale ="0 0 0">
+            <a-image spot="linkto:#A21;spotgroup:group-A21"
+                     position="4.2 0.2 2.8" src="#fleche" sound="src:son/BOUP.mp3; on: click"></a-image>
+            <a-image spot="linkto:#A22;spotgroup:group-A22"
+                     position="-4.2 0.5 -2.6" src="#fleche" sound="src:son/BOUP.mp3; on: click"></a-image>
+            <a-image spot="linkto:#couloirA18A19;spotgroup:group-couloirA18A19"
+                     position="-0.4 -0.5 -7" src="#fleche" sound="src:son/BOUP.mp3; on: click"></a-image>
+            <a-image spot="linkto:#couloirA23;spotgroup:group-couloirA23"
+                     position="0 -1.2 6.6" src="#fleche" sound="src:son/BOUP.mp3; on: click"></a-image>
+            <a-image link="href:cartes.html; on:click"
+                     position="-3.6 0 3.4" src="#map" look-at="#cam" sound="src:son/BOUP.mp3; on: click"></a-image>
+        </a-entity>
+        <a-entity id="group-A21" scale="0 0 0">
+            <a-image spot="linkto:#couloirA21A22;spotgroup:group-couloirA21A22"
+                     position="9 0.5 -4.3" src="#fleche" sound="src:son/BOUP.mp3; on: click"></a-image>
+            <a-image link="href:cartes.html; on:click"
+                     position="4.3 0 -6.2" src="#map" look-at="#cam" sound="src:son/BOUP.mp3; on: click"></a-image>
+        </a-entity>
+        <a-entity id="group-A22" scale="0 0 0">
+            <a-image spot="linkto:#couloirA21A22;spotgroup:group-couloirA21A22"
+                     position="-8.6 0.5 0" src="#fleche" sound="src:son/BOUP.mp3; on: click"></a-image>
+            <a-image link="href:cartes.html; on:click"
+                     position="-7 0 -2.2" src="#map" look-at="#cam" sound="src:son/BOUP.mp3; on: click"></a-image>
+        </a-entity>
+
+        <a-entity id="group-couloirA23" scale ="0 0 0">
+            <a-entity slice9="width: 5; height: 1; left: 20; right: 43; top: 20; bottom: 43;src: tooltip.png"
+                      text="value:A23-Salle de TP;wrap-count:15; width:5; align:center;zOffset:0.05" ;
+                      look-at="#cam" position="6.312 1.052 -0.047"></a-entity>
+            <a-image spot="linkto:#A23;spotgroup:group-A23"
+                     position="5.4 0 0" src="#fleche" sound="src:son/BOUP.mp3; on: click"></a-image>
+            <a-image spot="linkto:#couloirA21A22;spotgroup:group-couloirA21A22"
+                     position="0.5 -0.6 -7.9" src="#fleche" sound="src:son/BOUP.mp3; on: click"></a-image>
+            <a-image spot="linkto:#gaucheA;spotgroup:group-gaucheA"
+                     position="-0.3 -0.5 7.8" src="#fleche" sound="src:son/BOUP.mp3; on: click"></a-image>
+            <a-image link="href:cartes.html; on:click"
+                     position="-4.2 0 4.6" src="#map" look-at="#cam" sound="src:son/BOUP.mp3; on: click"></a-image>
+        </a-entity>
+        <a-entity id="group-A23" scale="0 0 0">
+            <a-image spot="linkto:#couloirA23;spotgroup:group-couloirA23"
+                     position="-6.2 0 9" src="#fleche" sound="src:son/BOUP.mp3; on: click"></a-image>
+            <a-image link="href:cartes.html; on:click"
+                     position="-6.2 0 2.8" src="#map" look-at="#cam" sound="src:son/BOUP.mp3; on: click"></a-image>
+        </a-entity>
+
+        <a-entity id="group-gaucheA">
+            <a-entity slice9="width: 5; height: 2; left: 20; right: 43; top: 20; bottom: 43;src: tooltip.png"
+                      text="value:Sortie arriere du batiment;wrap-count:15; width:5; align:center;zOffset:0.05" ; look-at="#cam" position="-7.5 1.8 -5"></a-entity>
+            <a-entity slice9="width: 5; height: 2; left: 20; right: 43; top: 20; bottom: 43;src: tooltip.png"
+                      text="value:Escaliers vers etages superieurs;wrap-count:15; width:5; align:center;zOffset:0.05" ; look-at="#cam" position="8.514 -0.832 -1.886"></a-entity>
+            <a-image spot="linkto:#couloirA23;spotgroup:group-couloirA23"
+                     position="3.1 -1 6.6" src="#fleche" sound="src:son/BOUP.mp3; on: click"></a-image>
+            <a-image link="href:batInfo1stR.html; on:click"
+                     position="5.1 -1.2 -1.6" src="#fleche" look-at="#cam" sound="src:son/BOUP.mp3; on: click"></a-image>
+            <a-image link="href:exterieurInfoGauche.html; on:click"
+                     position="-2 -0.5 -3.8" src="#fleche" look-at="#cam" sound="src:son/BOUP.mp3; on: click"></a-image>
+            <a-image link="href:cartes.html; on:click"
+                     position="4.5 0 1.6" src="#map" look-at="#cam" sound="src:son/BOUP.mp3; on: click"></a-image>
+        </a-entity>
+
+    </a-entity>
+</a-scene>
+</body>
+</html>

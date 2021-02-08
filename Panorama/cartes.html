@@ -1,0 +1,129 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Panorama</title>
+    <script src="https://aframe.io/releases/1.0.4/aframe.min.js"></script>
+    <script src="https://unpkg.com/aframe-slice9-component/dist/aframe-slice9-component.min.js"></script>
+    <script src="https://unpkg.com/aframe-look-at-component@0.5.1/dist/aframe-look-at-component.min.js"></script>
+    <!--animation component script-->
+    <script src="https://unpkg.com/aframe-animation-component@^4.1.2/dist/aframe-animation-component.min.js"></script>
+
+    <script>
+        AFRAME.registerComponent('hotspots',{
+            init:function(){
+                this.el.addEventListener('reloadspots',function(evt){
+
+                    //get the entire current spot group and scale it to 0
+                    var currspotgroup=document.getElementById(evt.detail.currspots);
+                    currspotgroup.setAttribute("scale","0 0 0");
+
+                    //get the entire new spot group and scale it to 1
+                    var newspotgroup=document.getElementById(evt.detail.newspots);
+                    newspotgroup.setAttribute("scale","1 1 1");
+
+
+                    var laCam = document.getElementById("cam");
+                    laCam.setAttribute("rotation","0 0 0");
+
+                });
+            }
+        });
+
+        AFRAME.registerComponent('spot',{
+            schema:{
+                linkto:{type:"string",default:""},
+                spotgroup:{type:"string",default:""}
+            },
+            init:function(){
+
+                //add image source of hotspot icon
+                //this.el.setAttribute("src","#fleche");
+                //make the icon look at the camera all the time
+                this.el.setAttribute("look-at","#cam");
+
+
+                var data=this.data;
+
+                this.el.addEventListener('click',function(){
+                    //set the skybox source to the new image as per the spot
+                    var sky=document.getElementById("skybox");
+                    sky.setAttribute("src",data.linkto);
+
+                    var spotcomp=document.getElementById("spots");
+                    var currspots=this.parentElement.getAttribute("id");
+                    //create event for spots component to change the spots data
+                    spotcomp.emit('reloadspots',{newspots:data.spotgroup,currspots:currspots});
+                });
+            }
+        });
+    </script>
+</head>
+<body>
+<a-scene id="notreScene">
+    <a-assets timeout="30000">
+
+        <!-- Cartes -->
+        <img id="fondBlanc" src="image/fondBlanc.jpg" alt=""/>
+        <img id="batInfo" src="image/batInfo.jpg" alt=""/>
+        <img id="cartePrincipale" src="image/planPrincipal.jpg" alt=""/>
+        <img id="logoBleu" src="image/logoBleu.png" alt=""/>
+        <img id="logoVert" src="image/logoVert.png" alt=""/>
+        <img id="logoJaune" src="image/logoJaune.png" alt=""/>
+        <img id="logoRouge" src="image/logoRouge.png" alt=""/>
+
+    </a-assets>
+
+
+    <a-sky id="skybox" src="#fondBlanc"></a-sky>
+
+        <a-entity id="cam" camera position="0 1.6 0" look-controls wasd-controls="enabled:false">
+            <a-entity cursor="fuse:true;fuseTimeout:2000"
+                      geometry="primitive:ring;radiusInner:0.01;radiusOuter:0.02"
+                      position="0 0 -1.8"
+                      material="shader:flat;color:blue">
+            </a-entity>
+        </a-entity>
+
+
+    <a-entity id="spots" hotspots>
+
+        <!--Groupes Cartes-->
+
+        <a-entity id="group-cartePrincipale">
+
+
+            <a-plane position="-1.89574 1.6 -1.96425" src="#cartePrincipale" look-at="#cam" height="4" width="6" material="" geometry="" rotation="0 43.98317825991033 0">
+            </a-plane>
+
+            <a-image height="0.480" width="0.300" spot="linkto: #accueilCentral; spotgroup: group-accueilCentral" position="-0.852 1.275 -2.810" src="#logoVert" sound="src:son/BOUP.mp3; on: click"></a-image>
+            <a-image height="0.480" width="0.300" spot="linkto: #fondBlanc; spotgroup: group-carte-info" position="-0.396 2.34755 -3.29399" src="#logoRouge" sound="src:son/BOUP.mp3; on: click"></a-image>
+            <a-image height="0.480" width="0.300" spot="linkto: #parking; spotgroup: group-parking" position="-0.058 1.125 -3.527" src="#logoJaune" sound="src:son/BOUP.mp3; on: click"></a-image>
+            <a-image height="0.480" width="0.300" spot="linkto: #devantAmphi; spotgroup: group-devantAmphi" position="-1.296 2.302 -2.487" src="#logoVert" sound="src:son/BOUP.mp3; on: click"></a-image>
+            <a-image height="0.480" width="0.300" spot="linkto: #exterieurGauche; spotgroup: group-exterieurGauche" position="-0.86567 2.98873 -2.84189" src="#logoJaune" sound="src:son/BOUP.mp3; on: click"></a-image>
+            <a-image height="0.480" width="0.300" spot="linkto: #exterieurMilieu; spotgroup: group-exterieurMilieu" position="-0.63693 2.00661 -3.01714" src="#logoJaune" sound="src:son/BOUP.mp3; on: click"></a-image>
+
+        </a-entity>
+
+        <a-entity id="group-carte-info" scale="0 0 0">
+            <a-plane position="-3 1.6 -3" height="6" width="19" look-at="#cam" src="#batInfo">
+                <a-entity slice9="width: 1; height: 0.5; left: 20; right: 20; top: 20; bottom: 20;src: tooltip.png"  text="value:Carte Principale; width:3; align:center" ; position="3.680 1.567 0.159"></a-entity>
+                <a-entity slice9="width: 1; height: 0.5; left: 20; right: 20; top: 20; bottom: 20;src: tooltip.png"  text="value:Premier Etage; width:3; align:center" ; position="3.001 -0.189 0.049"></a-entity>
+                <a-entity slice9="width: 1; height: 0.5; left: 20; right: 20; top: 20; bottom: 20;src: tooltip.png"  text="value:Rez-De-Chausee; width:3; align:center" ; position="3.451 -1.313 0.007"></a-entity>
+                <a-entity slice9="width: 1; height: 0.5; left: 20; right: 20; top: 20; bottom: 20;src: tooltip.png"  text="value:Couloir A23; width:3; align:center" ; position="-4.634 -1.603 0.010"></a-entity>
+                <a-entity slice9="width: 1; height: 0.5; left: 20; right: 20; top: 20; bottom: 20;src: tooltip.png"  text="value:Couloir B21; width:3; align:center" ; position="-3.341 -0.568 0.116"></a-entity>
+
+            </a-plane>
+
+            <a-image height="0.640" width="0.400" spot="linkto:#milieuB;spotgroup:group-milieuB" position="-0.235 1.407 -5.351" src="#logoBleu" sound="src:son/BOUP.mp3; on: click"></a-image>
+            <a-image height="0.640" width="0.400" spot="linkto:#couloirB20B21B22B23;spotgroup:group-couloirB20B21B22B23" position="-5.670 1.185 0.283" src="#logoBleu" sound="src:son/BOUP.mp3; on: click"></a-image>
+            <a-image height="0.640" width="0.400" spot="linkto:#couloirA23;spotgroup:group-couloirA23" position="-6.310 0.290 0.981" src="#logoBleu" sound="src:son/BOUP.mp3; on: click"></a-image>
+            <a-image height="0.640" width="0.400" spot="linkto:#FondBlanc; spotgroup: group-cartePrincipale" position="0.456 3.204 -5.950" src="#logoRouge" sound="src:son/BOUP.mp3; on: click"></a-image>
+            <a-image height="0.640" width="0.400" spot="linkto:#milieuA;spotgroup:group-milieuA" position="0.140 0.378 -5.388" src="#logoBleu" sound="src:son/BOUP.mp3; on: click"></a-image>
+
+        </a-entity>
+
+    </a-entity>
+</a-scene>
+</body>
+</html>
