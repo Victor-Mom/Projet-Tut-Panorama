@@ -9,55 +9,7 @@
     <!--animation component script-->
     <script src="https://unpkg.com/aframe-animation-component@^4.1.2/dist/aframe-animation-component.min.js"></script>
 
-    <script>
-        AFRAME.registerComponent('hotspots',{
-            init:function(){
-                this.el.addEventListener('reloadspots',function(evt){
-
-                    //get the entire current spot group and scale it to 0
-                    var currspotgroup=document.getElementById(evt.detail.currspots);
-                    currspotgroup.setAttribute("scale","0 0 0");
-
-                    //get the entire new spot group and scale it to 1
-                    var newspotgroup=document.getElementById(evt.detail.newspots);
-                    newspotgroup.setAttribute("scale","1 1 1");
-
-
-                    var laCam = document.getElementById("cam");
-                    laCam.setAttribute("rotation","0 0 0");
-
-                });
-            }
-        });
-
-        AFRAME.registerComponent('spot',{
-            schema:{
-                linkto:{type:"string",default:""},
-                spotgroup:{type:"string",default:""}
-            },
-            init:function(){
-
-                //add image source of hotspot icon
-                //this.el.setAttribute("src","#fleche");
-                //make the icon look at the camera all the time
-                this.el.setAttribute("look-at","#cam");
-
-
-                var data=this.data;
-
-                this.el.addEventListener('click',function(){
-                    //set the skybox source to the new image as per the spot
-                    var sky=document.getElementById("skybox");
-                    sky.setAttribute("src",data.linkto);
-
-                    var spotcomp=document.getElementById("spots");
-                    var currspots=this.parentElement.getAttribute("id");
-                    //create event for spots component to change the spots data
-                    spotcomp.emit('reloadspots',{newspots:data.spotgroup,currspots:currspots});
-                });
-            }
-        });
-    </script>
+    <script src="scriptJS/spots.js"></script>
 </head>
 <body>
 <a-scene id="notreScene">
@@ -96,12 +48,12 @@
             <a-plane position="-1.89574 1.6 -1.96425" src="#cartePrincipale" look-at="#cam" height="4" width="6" material="" geometry="" rotation="0 43.98317825991033 0">
             </a-plane>
 
-            <a-image height="0.480" width="0.300" spot="linkto: #accueilCentral; spotgroup: group-accueilCentral" position="-0.852 1.275 -2.810" src="#logoVert" sound="src:son/BOUP.mp3; on: click"></a-image>
+            <a-image height="0.480" width="0.300" link="href:batCentral.html; on:click" position="-0.852 1.275 -2.810" src="#logoVert" sound="src:son/BOUP.mp3; on: click"></a-image>
             <a-image height="0.480" width="0.300" spot="linkto: #fondBlanc; spotgroup: group-carte-info" position="-0.396 2.34755 -3.29399" src="#logoRouge" sound="src:son/BOUP.mp3; on: click"></a-image>
-            <a-image height="0.480" width="0.300" spot="linkto: #parking; spotgroup: group-parking" position="-0.058 1.125 -3.527" src="#logoJaune" sound="src:son/BOUP.mp3; on: click"></a-image>
-            <a-image height="0.480" width="0.300" spot="linkto: #devantAmphi; spotgroup: group-devantAmphi" position="-1.296 2.302 -2.487" src="#logoVert" sound="src:son/BOUP.mp3; on: click"></a-image>
-            <a-image height="0.480" width="0.300" spot="linkto: #exterieurGauche; spotgroup: group-exterieurGauche" position="-0.86567 2.98873 -2.84189" src="#logoJaune" sound="src:son/BOUP.mp3; on: click"></a-image>
-            <a-image height="0.480" width="0.300" spot="linkto: #exterieurMilieu; spotgroup: group-exterieurMilieu" position="-0.63693 2.00661 -3.01714" src="#logoJaune" sound="src:son/BOUP.mp3; on: click"></a-image>
+            <a-image height="0.480" width="0.300" link="href:index.html; on:click" position="-0.058 1.125 -3.527" src="#logoJaune" sound="src:son/BOUP.mp3; on: click"></a-image>
+            <a-image height="0.480" width="0.300" link="href:exterieurAmphi.html; on:click" position="-1.296 2.302 -2.487" src="#logoVert" sound="src:son/BOUP.mp3; on: click"></a-image>
+            <a-image height="0.480" width="0.300" link="href:exterieurInfoGauche.html; on:click" position="-0.86567 2.98873 -2.84189" src="#logoJaune" sound="src:son/BOUP.mp3; on: click"></a-image>
+            <a-image height="0.480" width="0.300" link="href:exterieurInfoMilieu.html; on:click" position="-0.63693 2.00661 -3.01714" src="#logoJaune" sound="src:son/BOUP.mp3; on: click"></a-image>
 
         </a-entity>
 
