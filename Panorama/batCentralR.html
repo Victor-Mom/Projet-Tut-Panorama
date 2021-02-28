@@ -18,7 +18,7 @@
         <img id="fleche" src="icones/fleche.png" height="357" width="367" alt=""/>
         <img id="map" src="icones/map.png" height="256" width="256" alt=""/>
         <a-sound id="boup" src="son/BOUP.mp3"></a-sound>
-            <!-- Bâtiment central entrée parking -->
+        <!-- Bâtiment central entrée parking -->
 
         <img id="coinCafet" src="image/coinCafet.JPG" height="2688" width="5376" alt=""/>
         <img id="devantBibliotheque" src="image/devantBibliotheque.jpg" height="2688" width="5376" alt=""/>
@@ -35,13 +35,13 @@
 
     <a-sky id="skybox" src="#coinCafet"></a-sky>
 
-        <a-entity id="cam" camera position="0 1.6 0" look-controls wasd-controls="enabled:false">
-            <a-entity cursor="fuse:true;fuseTimeout:2000"
-                      geometry="primitive:ring;radiusInner:0.01;radiusOuter:0.02"
-                      position="0 0 -1.8"
-                      material="shader:flat;color:blue">
-            </a-entity>
+    <a-entity id="cam" camera position="0 1.6 0" look-controls wasd-controls="enabled:false">
+        <a-entity cursor="fuse:true;fuseTimeout:2000"
+                  geometry="primitive:ring;radiusInner:0.01;radiusOuter:0.02"
+                  position="0 0 -1.8"
+                  material="shader:flat;color:blue">
         </a-entity>
+    </a-entity>
 
 
     <a-entity id="spots" hotspots>
@@ -50,108 +50,235 @@
 
         <a-entity id="group-coinCafet">
             <a-entity slice9="width: 5; height: 1; left: 20; right: 43; top: 20; bottom: 43;src: tooltip.png"
-                      text="value:Cafeteria ;wrap-count:15; width:5; align:center;zOffset:0.05" ; look-at="#cam" position="7.779 -1.183 3.935"></a-entity>
+                      text="value:Cafeteria ;wrap-count:15; width:5; align:center;zOffset:0.05" ; look-at="#cam"
+                      position="7.779 -1.183 3.935"></a-entity>
             <a-entity slice9="width: 5; height: 2; left: 20; right: 43; top: 20; bottom: 43;src: tooltip.png"
-                      text="value:Sortie vers amphi ;wrap-count:15; width:5; align:center;zOffset:0.05" ; look-at="#cam" position="-5.694 -0.3 6.374"></a-entity>
+                      text="value:Sortie vers amphi ;wrap-count:15; width:5; align:center;zOffset:0.05" ; look-at="#cam"
+                      position="-5.694 -0.3 6.374"></a-entity>
             <a-entity slice9="width: 5; height: 2; left: 20; right: 43; top: 20; bottom: 43;src: tooltip.png"
-                      text="value:Bibliotheque et accueil ;wrap-count:15; width:5; align:center;zOffset:0.05" ; look-at="#cam" position="4.497 0.5 -4.625"></a-entity>
+                      text="value:Bibliotheque et accueil ;wrap-count:15; width:5; align:center;zOffset:0.05" ;
+                      look-at="#cam" position="4.497 0.5 -4.625"></a-entity>
             <a-image link="href:exterieurAmphi.html; on:click"
-                     position="-4.67079 -1.65 5.53263" look-at="#cam" src="#fleche" sound="src:#boup; on: click"></a-image>
+                     position="-4.67079 -1.65 5.53263" look-at="#cam" src="#fleche" sound="src:#boup; on: click"
+                     color="#FFFFFF"
+                     animation__ColorMouseEnter="property: color; to: #FFFF00; startEvents: mouseenter; dur: 300"
+                     animation__ColorMouseLeave="property: color; to: #FFFFFF; startEvents: mouseleave; dur: 300"
+                     animation__ScaleMouseEnter="property: scale; to: 1.2 1.2 1.2; startEvents: mouseenter; dur: 300"
+                     animation__ScaleMouseLeave="property: scale; to: 1 1 1; startEvents: mouseleave; dur: 300"
+            ></a-image>
             <a-image spot="linkto: #entreeCafet; spotgroup: group-entreeCafet"
-                     position="4.35943 -1.65 3.59501" look-at="#cam" src="#fleche" sound="src:#boup; on: click"></a-image>
+                     position="4.35943 -1.65 3.59501" look-at="#cam" src="#fleche" sound="src:#boup; on: click"
+                     color="#FFFFFF"
+                     animation__ColorMouseEnter="property: color; to: #FFFF00; startEvents: mouseenter; dur: 300"
+                     animation__ColorMouseLeave="property: color; to: #FFFFFF; startEvents: mouseleave; dur: 300"
+                     animation__ScaleMouseEnter="property: scale; to: 1.2 1.2 1.2; startEvents: mouseenter; dur: 300"
+                     animation__ScaleMouseLeave="property: scale; to: 1 1 1; startEvents: mouseleave; dur: 300"
+            ></a-image>
             <a-image spot="linkto: #devantBibliotheque; spotgroup: group-devantBibliotheque"
-                     position="5.02151 -1.65 -5.60137" look-at="#cam" src="#fleche" sound="src:#boup; on: click"></a-image>
+                     position="5.02151 -1.65 -5.60137" look-at="#cam" src="#fleche" sound="src:#boup; on: click"
+                     color="#FFFFFF"
+                     animation__ColorMouseEnter="property: color; to: #FFFF00; startEvents: mouseenter; dur: 300"
+                     animation__ColorMouseLeave="property: color; to: #FFFFFF; startEvents: mouseleave; dur: 300"
+                     animation__ScaleMouseEnter="property: scale; to: 1.2 1.2 1.2; startEvents: mouseenter; dur: 300"
+                     animation__ScaleMouseLeave="property: scale; to: 1 1 1; startEvents: mouseleave; dur: 300"
+            ></a-image>
             <a-image link="href:cartes.html; on:click"
                      position="-3.2 0 -3.8" src="#map" look-at="#cam" sound="src:#boup; on: click"></a-image>
         </a-entity>
 
-        <a-entity id="group-devantBibliotheque" scale="0 0 0" >
+        <a-entity id="group-devantBibliotheque" scale="0 0 0">
             <a-entity slice9="width: 5; height: 1; left: 20; right: 43; top: 20; bottom: 43;src: tooltip.png"
-                      text="value:Bibliotheque;wrap-count:15; width:5; align:center;zOffset:0.05" ; look-at="#cam" position="1.928 0.157 8.622"></a-entity>
+                      text="value:Bibliotheque;wrap-count:15; width:5; align:center;zOffset:0.05" ; look-at="#cam"
+                      position="1.928 0.157 8.622"></a-entity>
             <a-entity slice9="width: 5; height: 1; left: 20; right: 43; top: 20; bottom: 43;src: tooltip.png"
-                      text="value:Cour;wrap-count:15; width:5; align:center;zOffset:0.05" ; look-at="#cam" position="-8.448 -2.065 -7.040"></a-entity>
+                      text="value:Cour;wrap-count:15; width:5; align:center;zOffset:0.05" ; look-at="#cam"
+                      position="-8.448 -2.065 -7.040"></a-entity>
             <a-entity slice9="width: 6; height: 3; left: 20; right: 43; top: 20; bottom: 43;src: tooltip.png"
-                      text="value:Cafeteria et sortie vers amphi;wrap-count:15; width:5; align:center;zOffset:0.05" ; look-at="#cam" position="7.570 0.772 -3.315"></a-entity>
+                      text="value:Cafeteria et sortie vers amphi;wrap-count:15; width:5; align:center;zOffset:0.05" ;
+                      look-at="#cam" position="7.570 0.772 -3.315"></a-entity>
             <a-entity slice9="width: 5; height: 2; left: 20; right: 43; top: 20; bottom: 43;src: tooltip.png"
-                      text="value:Accueil batiment central;wrap-count:15; width:5; align:center;zOffset:0.05" ; look-at="#cam" position="-9.989 0.646 3.155"></a-entity>
+                      text="value:Accueil batiment central;wrap-count:15; width:5; align:center;zOffset:0.05" ;
+                      look-at="#cam" position="-9.989 0.646 3.155"></a-entity>
             <a-image spot="linkto: #coinCafet; spotgroup: group-coinCafet"
-                     position="7.70431 -1.65 -0.61523" look-at="#cam" src="#fleche" sound="src:#boup; on: click"></a-image>
+                     position="7.70431 -1.65 -0.61523" look-at="#cam" src="#fleche" sound="src:#boup; on: click"
+                     color="#FFFFFF"
+                     animation__ColorMouseEnter="property: color; to: #FFFF00; startEvents: mouseenter; dur: 300"
+                     animation__ColorMouseLeave="property: color; to: #FFFFFF; startEvents: mouseleave; dur: 300"
+                     animation__ScaleMouseEnter="property: scale; to: 1.2 1.2 1.2; startEvents: mouseenter; dur: 300"
+                     animation__ScaleMouseLeave="property: scale; to: 1 1 1; startEvents: mouseleave; dur: 300"
+            ></a-image>
             <a-image spot="linkto: #droitCentral; spotgroup: group-droitCentral"
-                     position="-10.87405 -1.65 0.67964" look-at="#cam" src="#fleche" sound="src:#boup; on: click"></a-image>
+                     position="-10.87405 -1.65 0.67964" look-at="#cam" src="#fleche" sound="src:#boup; on: click"
+                     color="#FFFFFF"
+                     animation__ColorMouseEnter="property: color; to: #FFFF00; startEvents: mouseenter; dur: 300"
+                     animation__ColorMouseLeave="property: color; to: #FFFFFF; startEvents: mouseleave; dur: 300"
+                     animation__ScaleMouseEnter="property: scale; to: 1.2 1.2 1.2; startEvents: mouseenter; dur: 300"
+                     animation__ScaleMouseLeave="property: scale; to: 1 1 1; startEvents: mouseleave; dur: 300"
+            ></a-image>
             <a-image spot="linkto: #centreCentral; spotgroup: group-centreCentral"
-                     position="-6.15781 -2.63442 -5" look-at="#cam" src="#fleche" sound="src:#boup; on: click"></a-image>
+                     position="-6.15781 -2.63442 -5" look-at="#cam" src="#fleche" sound="src:#boup; on: click"
+                     color="#FFFFFF"
+                     animation__ColorMouseEnter="property: color; to: #FFFF00; startEvents: mouseenter; dur: 300"
+                     animation__ColorMouseLeave="property: color; to: #FFFFFF; startEvents: mouseleave; dur: 300"
+                     animation__ScaleMouseEnter="property: scale; to: 1.2 1.2 1.2; startEvents: mouseenter; dur: 300"
+                     animation__ScaleMouseLeave="property: scale; to: 1 1 1; startEvents: mouseleave; dur: 300"
+            ></a-image>
             <a-image link="href:cartes.html; on:click"
                      position="2.4 0 -4.6" src="#map" look-at="#cam" sound="src:#boup; on: click"></a-image>
         </a-entity>
 
         <a-entity id="group-entreeCafet" scale="0 0 0">
             <a-entity slice9="width: 5; height: 2; left: 20; right: 43; top: 20; bottom: 43;src: tooltip.png"
-                      text="value:Cafeteria : plats chauds  ;wrap-count:15; width:5; align:center;zOffset:0.05" ; look-at="#cam" position="9.216 0.059 -2.446"></a-entity>
+                      text="value:Cafeteria : plats chauds  ;wrap-count:15; width:5; align:center;zOffset:0.05" ;
+                      look-at="#cam" position="9.216 0.059 -2.446"></a-entity>
             <a-entity slice9="width: 5; height: 2; left: 20; right: 43; top: 20; bottom: 43;src: tooltip.png"
-                      text="value:Cafeteria : sandwichs;wrap-count:15; width:5; align:center;zOffset:0.05" ; look-at="#cam" position="-1.642 0.5 -8.530"></a-entity>
+                      text="value:Cafeteria : sandwichs;wrap-count:15; width:5; align:center;zOffset:0.05" ;
+                      look-at="#cam" position="-1.642 0.5 -8.530"></a-entity>
             <a-image spot="linkto: #coinCafet; spotgroup:group-coinCafet"
-                     position="0.80785 -2.27172 6.03043" look-at="#cam" src="#fleche" sound="src:#boup; on: click"></a-image>
+                     position="0.80785 -2.27172 6.03043" look-at="#cam" src="#fleche" sound="src:#boup; on: click"
+                     color="#FFFFFF"
+                     animation__ColorMouseEnter="property: color; to: #FFFF00; startEvents: mouseenter; dur: 300"
+                     animation__ColorMouseLeave="property: color; to: #FFFFFF; startEvents: mouseleave; dur: 300"
+                     animation__ScaleMouseEnter="property: scale; to: 1.2 1.2 1.2; startEvents: mouseenter; dur: 300"
+                     animation__ScaleMouseLeave="property: scale; to: 1 1 1; startEvents: mouseleave; dur: 300"
+            ></a-image>
             <a-image spot="linkto: #cafet; spotgroup: group-cafet"
-                     position="7.22524 -1.65 -1.28208" look-at="#cam" src="#fleche" sound="src:#boup; on: click"></a-image>
+                     position="7.22524 -1.65 -1.28208" look-at="#cam" src="#fleche" sound="src:#boup; on: click"
+                     color="#FFFFFF"
+                     animation__ColorMouseEnter="property: color; to: #FFFF00; startEvents: mouseenter; dur: 300"
+                     animation__ColorMouseLeave="property: color; to: #FFFFFF; startEvents: mouseleave; dur: 300"
+                     animation__ScaleMouseEnter="property: scale; to: 1.2 1.2 1.2; startEvents: mouseenter; dur: 300"
+                     animation__ScaleMouseLeave="property: scale; to: 1 1 1; startEvents: mouseleave; dur: 300"
+            ></a-image>
             <a-image spot="linkto: #sandwich; spotgroup: group-sandwich"
-                     position="-0.8 -1.65 -9.73296" look-at="#cam" src="#fleche" sound="src:#boup; on: click"></a-image>
+                     position="-0.8 -1.65 -9.73296" look-at="#cam" src="#fleche" sound="src:#boup; on: click"
+                     color="#FFFFFF"
+                     animation__ColorMouseEnter="property: color; to: #FFFF00; startEvents: mouseenter; dur: 300"
+                     animation__ColorMouseLeave="property: color; to: #FFFFFF; startEvents: mouseleave; dur: 300"
+                     animation__ScaleMouseEnter="property: scale; to: 1.2 1.2 1.2; startEvents: mouseenter; dur: 300"
+                     animation__ScaleMouseLeave="property: scale; to: 1 1 1; startEvents: mouseleave; dur: 300"
+            ></a-image>
             <a-image link="href:cartes.html; on:click"
                      position="-3.1 0 2.8" src="#map" look-at="#cam" sound="src:#boup; on: click"></a-image>
         </a-entity>
 
         <a-entity id="group-droitCentral" scale="0 0 0">
             <a-entity slice9="width: 5; height: 2; left: 20; right: 43; top: 20; bottom: 43;src: tooltip.png"
-                      text="value:Bibliotheque et cafeteria ;wrap-count:15; width:5; align:center;zOffset:0.05" ; look-at="#cam" position="-8.631 -0.3 0.481"></a-entity>
+                      text="value:Bibliotheque et cafeteria ;wrap-count:15; width:5; align:center;zOffset:0.05" ;
+                      look-at="#cam" position="-8.631 -0.3 0.481"></a-entity>
             <a-entity slice9="width: 6; height: 3; left: 20; right: 43; top: 20; bottom: 43;src: tooltip.png"
-                      text="value:Departement GEA et salles d'anglais;wrap-count:15; width:5; align:center;zOffset:0.05" ; look-at="#cam" position="-3.604 -0.754 -9.348"></a-entity>
+                      text="value:Departement GEA et salles d'anglais;wrap-count:15; width:5; align:center;zOffset:0.05"
+                      ; look-at="#cam" position="-3.604 -0.754 -9.348"></a-entity>
             <a-entity slice9="width: 5; height: 1; left: 20; right: 43; top: 20; bottom: 43;src: tooltip.png"
-                      text="value:Sortie;wrap-count:15; width:5; align:center;zOffset:0.05" ; look-at="#cam" position="9.972 -1.121 6.725"></a-entity>
+                      text="value:Sortie;wrap-count:15; width:5; align:center;zOffset:0.05" ; look-at="#cam"
+                      position="9.972 -1.121 6.725"></a-entity>
             <a-image spot="linkto: #devantBibliotheque; spotgroup: group-devantBibliotheque"
-                     position="-6.68105 -1.65 1.00882" look-at="#cam" src="#fleche" sound="src:#boup; on: click"></a-image>
+                     position="-6.68105 -1.65 1.00882" look-at="#cam" src="#fleche" sound="src:#boup; on: click"
+                     color="#FFFFFF"
+                     animation__ColorMouseEnter="property: color; to: #FFFF00; startEvents: mouseenter; dur: 300"
+                     animation__ColorMouseLeave="property: color; to: #FFFFFF; startEvents: mouseleave; dur: 300"
+                     animation__ScaleMouseEnter="property: scale; to: 1.2 1.2 1.2; startEvents: mouseenter; dur: 300"
+                     animation__ScaleMouseLeave="property: scale; to: 1 1 1; startEvents: mouseleave; dur: 300"
+            ></a-image>
             <a-image spot="linkto: #accueilCentral; spotgroup: group-accueilCentral"
-                     position="7.16276 -1.65 5.56906" look-at="#cam" src="#fleche" sound="src:#boup; on: click"></a-image>
+                     position="7.16276 -1.65 5.56906" look-at="#cam" src="#fleche" sound="src:#boup; on: click"
+                     color="#FFFFFF"
+                     animation__ColorMouseEnter="property: color; to: #FFFF00; startEvents: mouseenter; dur: 300"
+                     animation__ColorMouseLeave="property: color; to: #FFFFFF; startEvents: mouseleave; dur: 300"
+                     animation__ScaleMouseEnter="property: scale; to: 1.2 1.2 1.2; startEvents: mouseenter; dur: 300"
+                     animation__ScaleMouseLeave="property: scale; to: 1 1 1; startEvents: mouseleave; dur: 300"
+            ></a-image>
             <a-image link="href:cartes.html; on:click"
                      position="0.8 -0.5 -6.8" src="#map" look-at="#cam" sound="src:#boup; on: click"></a-image>
         </a-entity>
 
         <a-entity id="group-centreCentral" scale="0 0 0">
             <a-image spot="linkto: #accueilCentral; spotgroup: group-accueilCentral"
-                     position="2 -1 10" look-at="#cam" src="#fleche" sound="src:#boup; on: click"></a-image>
+                     position="2 -1 10" look-at="#cam" src="#fleche" sound="src:#boup; on: click" color="#FFFFFF"
+                     animation__ColorMouseEnter="property: color; to: #FFFF00; startEvents: mouseenter; dur: 300"
+                     animation__ColorMouseLeave="property: color; to: #FFFFFF; startEvents: mouseleave; dur: 300"
+                     animation__ScaleMouseEnter="property: scale; to: 1.2 1.2 1.2; startEvents: mouseenter; dur: 300"
+                     animation__ScaleMouseLeave="property: scale; to: 1 1 1; startEvents: mouseleave; dur: 300"
+            ></a-image>
             <a-image spot="linkto: #devantBibliotheque; spotgroup: group-devantBibliotheque"
-                     position="9.4 0 0" look-at="#cam" src="#fleche" sound="src:#boup; on: click"></a-image>
+                     position="9.4 0 0" look-at="#cam" src="#fleche" sound="src:#boup; on: click" color="#FFFFFF"
+                     animation__ColorMouseEnter="property: color; to: #FFFF00; startEvents: mouseenter; dur: 300"
+                     animation__ColorMouseLeave="property: color; to: #FFFFFF; startEvents: mouseleave; dur: 300"
+                     animation__ScaleMouseEnter="property: scale; to: 1.2 1.2 1.2; startEvents: mouseenter; dur: 300"
+                     animation__ScaleMouseLeave="property: scale; to: 1 1 1; startEvents: mouseleave; dur: 300"
+            ></a-image>
             <a-image link="href:cartes.html; on:click"
-                     position="6 0 4.6" src="#map" look-at="#cam" sound="src:#boup; on: click"></a-image>
+                     position="6 0 4.6" src="#map" look-at="#cam" sound="src:#boup; on: click" color="#FFFFFF"
+                     animation__ColorMouseEnter="property: color; to: #FFFF00; startEvents: mouseenter; dur: 300"
+                     animation__ColorMouseLeave="property: color; to: #FFFFFF; startEvents: mouseleave; dur: 300"
+                     animation__ScaleMouseEnter="property: scale; to: 1.2 1.2 1.2; startEvents: mouseenter; dur: 300"
+                     animation__ScaleMouseLeave="property: scale; to: 1 1 1; startEvents: mouseleave; dur: 300"></a-image>
         </a-entity>
 
         <a-entity id="group-cafet" scale="0 0 0">
             <a-image spot="linkto: #entreeCafet; spotgroup: group-entreeCafet"
-                     position="6.05826 -1.65 3.84593" look-at="#cam" src="#fleche" sound="src:#boup; on: click"></a-image>
+                     position="6.05826 -1.65 3.84593" look-at="#cam" src="#fleche" sound="src:#boup; on: click"
+                     color="#FFFFFF"
+                     animation__ColorMouseEnter="property: color; to: #FFFF00; startEvents: mouseenter; dur: 300"
+                     animation__ColorMouseLeave="property: color; to: #FFFFFF; startEvents: mouseleave; dur: 300"
+                     animation__ScaleMouseEnter="property: scale; to: 1.2 1.2 1.2; startEvents: mouseenter; dur: 300"
+                     animation__ScaleMouseLeave="property: scale; to: 1 1 1; startEvents: mouseleave; dur: 300"
+            ></a-image>
             <a-image link="href:cartes.html; on:click"
                      position="2.2 0 5.8" src="#map" look-at="#cam" sound="src:#boup; on: click"></a-image>
         </a-entity>
 
         <a-entity id="group-sandwich" scale="0 0 0">
             <a-entity slice9="width: 5; height: 2; left: 20; right: 43; top: 20; bottom: 43;src: tooltip.png"
-                      text="value:Vente sandwichs;wrap-count:15; width:5; align:center;zOffset:0.05" ; look-at="#cam" position="7.675 0.170 4.792"></a-entity>
+                      text="value:Vente sandwichs;wrap-count:15; width:5; align:center;zOffset:0.05" ; look-at="#cam"
+                      position="7.675 0.170 4.792"></a-entity>
             <a-image spot="linkto: #entreeCafet; spotgroup: group-entreeCafet"
-                     position="-3.45167 -1.65 5.05973" look-at="#cam" src="#fleche" sound="src:#boup; on: click"></a-image>
+                     position="-3.45167 -1.65 5.05973" look-at="#cam" src="#fleche" sound="src:#boup; on: click"
+                     color="#FFFFFF"
+                     animation__ColorMouseEnter="property: color; to: #FFFF00; startEvents: mouseenter; dur: 300"
+                     animation__ColorMouseLeave="property: color; to: #FFFFFF; startEvents: mouseleave; dur: 300"
+                     animation__ScaleMouseEnter="property: scale; to: 1.2 1.2 1.2; startEvents: mouseenter; dur: 300"
+                     animation__ScaleMouseLeave="property: scale; to: 1 1 1; startEvents: mouseleave; dur: 300"></a-image>
             <a-image link="href:cartes.html; on:click"
                      position="-7 0 2.3" src="#map" look-at="#cam" sound="src:#boup; on: click"></a-image>
         </a-entity>
 
         <a-entity id="group-accueilCentral" scale="0 0 0">
             <a-entity slice9="width: 5; height: 1; left: 20; right: 43; top: 20; bottom: 43;src: tooltip.png"
-                      text="value:Cour;wrap-count:15; width:5; align:center;zOffset:0.05" ; look-at="#cam" position="-4.37679 -1.061 7.2518"></a-entity>
+                      text="value:Cour;wrap-count:15; width:5; align:center;zOffset:0.05" ; look-at="#cam"
+                      position="-4.37679 -1.061 7.2518"></a-entity>
             <a-entity slice9="width: 5; height: 2; left: 20; right: 43; top: 20; bottom: 43;src: tooltip.png"
-                      text="value:Bibliotheque et cafeteria;wrap-count:15; width:5; align:center;zOffset:0.05" ; look-at="#cam" position="-10.298 -1 1.112"></a-entity>
+                      text="value:Bibliotheque et cafeteria;wrap-count:15; width:5; align:center;zOffset:0.05" ;
+                      look-at="#cam" position="-10.298 -1 1.112"></a-entity>
             <a-entity slice9="width: 5; height: 2; left: 20; right: 43; top: 20; bottom: 43;src: tooltip.png"
-                      text="value:Infirmerie et administration;wrap-count:15; width:5; align:center;zOffset:0.05" ; look-at="#cam" position="8.248 -0.804 6.951"></a-entity>
+                      text="value:Infirmerie et administration;wrap-count:15; width:5; align:center;zOffset:0.05" ;
+                      look-at="#cam" position="8.248 -0.804 6.951"></a-entity>
             <a-image link="href:exterieurCentral.html; on:click"
-                     position="-7.385 -1.65 0.73417" look-at="#cam" src="#fleche" sound="src:#boup; on: click"></a-image>
+                     position="-7.385 -1.65 0.73417" look-at="#cam" src="#fleche" sound="src:#boup; on: click"
+                     color="#FFFFFF"
+                     animation__ColorMouseEnter="property: color; to: #FFFF00; startEvents: mouseenter; dur: 300"
+                     animation__ColorMouseLeave="property: color; to: #FFFFFF; startEvents: mouseleave; dur: 300"
+                     animation__ScaleMouseEnter="property: scale; to: 1.2 1.2 1.2; startEvents: mouseenter; dur: 300"
+                     animation__ScaleMouseLeave="property: scale; to: 1 1 1; startEvents: mouseleave; dur: 300"
+            ></a-image>
             <a-image spot="linkto: #exterieurCentral; spotgroup: group-exterieurCentral"
-                     position="2.99072 -2.46 -4.97548" look-at="#cam" src="#fleche" sound="src:#boup; on: click"></a-image>
+                     position="2.99072 -2.46 -4.97548" look-at="#cam" src="#fleche" sound="src:#boup; on: click"
+                     color="#FFFFFF"
+                     animation__ColorMouseEnter="property: color; to: #FFFF00; startEvents: mouseenter; dur: 300"
+                     animation__ColorMouseLeave="property: color; to: #FFFFFF; startEvents: mouseleave; dur: 300"
+                     animation__ScaleMouseEnter="property: scale; to: 1.2 1.2 1.2; startEvents: mouseenter; dur: 300"
+                     animation__ScaleMouseLeave="property: scale; to: 1 1 1; startEvents: mouseleave; dur: 300"
+
+            ></a-image>
             <a-image spot="linkto: #centreCentral; spotgroup: group-centreCentral"
-                     position="-4.37679 -2.46 7.25185" look-at="#cam" src="#fleche" sound="src:#boup; on: click"></a-image>
+                     position="-4.37679 -2.46 7.25185" look-at="#cam" src="#fleche" sound="src:#boup; on: click"
+                     color="#FFFFFF"
+                     animation__ColorMouseEnter="property: color; to: #FFFF00; startEvents: mouseenter; dur: 300"
+                     animation__ColorMouseLeave="property: color; to: #FFFFFF; startEvents: mouseleave; dur: 300"
+                     animation__ScaleMouseEnter="property: scale; to: 1.2 1.2 1.2; startEvents: mouseenter; dur: 300"
+                     animation__ScaleMouseLeave="property: scale; to: 1 1 1; startEvents: mouseleave; dur: 300"
+
+            ></a-image>
             <a-image link="href:cartes.html; on:click"
                      position="-4.7 0 -4.2" src="#map" look-at="#cam" sound="src:#boup; on: click"></a-image>
         </a-entity>
